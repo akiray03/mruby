@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class SystemExit - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,44 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>error.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Exception.html">Exception</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-c-new">::new</a>
+    
+    <li  ><a href="#method-i-status">#status</a>
+    
+    <li  ><a href="#method-i-success-3F">#success?</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +357,178 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class"  >class SystemExit</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >new</span>
+    
+            <span  >status</span>
+    
+            <span  >success?</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Raised by <code>exit</code> to initiate the termination of the script.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            new(status=0)   &rarr; system_exit
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Create a new <code>SystemExit</code> exception with the given status.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+exit_initialize(int argc, VALUE *argv, VALUE exc)
+{
+    VALUE status = INT2FIX(EXIT_SUCCESS);
+    if (argc &gt; 0 &amp;&amp; FIXNUM_P(argv[0])) {
+        status = *argv++;
+        --argc;
+    }
+    rb_call_super(argc, argv);
+    rb_iv_set(exc, &quot;status&quot;, status);
+    return exc;
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-status" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            status   &rarr; fixnum
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return the status value associated with this system exit.</p>
+          
+
+          
+          <div class="method-source-code" id="status-source">
+            <pre>static VALUE
+exit_status(VALUE exc)
+{
+    return rb_attr_get(exc, rb_intern(&quot;status&quot;));
+}</pre>
+          </div><!-- status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- status-method -->
+
+    
+      <div id="method-i-success-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            success?  &rarr; true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if exiting successful, <code>false</code> if not.</p>
+          
+
+          
+          <div class="method-source-code" id="success-3F-source">
+            <pre>static VALUE
+exit_success_p(VALUE exc)
+{
+    VALUE status_val = rb_attr_get(exc, rb_intern(&quot;status&quot;));
+    int status;
+
+    if (NIL_P(status_val))
+        return Qtrue;
+    status = NUM2INT(status_val);
+    if (WIFEXITED(status) &amp;&amp; WEXITSTATUS(status) == EXIT_SUCCESS)
+        return Qtrue;
+
+    return Qfalse;
+}</pre>
+          </div><!-- success-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- success-3F-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

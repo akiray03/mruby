@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+
+<title>class Class - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>class.c
+    <li>object.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Module.html">Module</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li style="background: #cfc;" ><a href="#method-c-new">::new</a>
+    
+    <li  ><a href="#method-i-allocate">#allocate</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-new">#new</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-superclass">#superclass</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./ext/syslog/syslog_txt.html">syslog</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li style="background: #ffc;"><a href="./Digest.html">Digest</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/Base.html">Digest::Base</a>
+  
+    <li ><a href="./Digest/Class.html">Digest::Class</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/HMAC.html">Digest::HMAC</a>
+  
+    <li ><a href="./Digest/Instance.html">Digest::Instance</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/SHA2.html">Digest::SHA2</a>
+  
+    <li ><a href="./Encoding.html">Encoding</a>
+  
+    <li ><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a>
+  
+    <li ><a href="./Encoding/Converter.html">Encoding::Converter</a>
+  
+    <li ><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a>
+  
+    <li ><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a>
+  
+    <li ><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a>
+  
+    <li ><a href="./Process.html">Process</a>
+  
+    <li ><a href="./Process/GID.html">Process::GID</a>
+  
+    <li ><a href="./Process/Status.html">Process::Status</a>
+  
+    <li ><a href="./Process/Sys.html">Process::Sys</a>
+  
+    <li ><a href="./Process/UID.html">Process::UID</a>
+  
+    <li ><a href="./Socket.html">Socket</a>
+  
+    <li ><a href="./Socket/AncillaryData.html">Socket::AncillaryData</a>
+  
+    <li ><a href="./Socket/Option.html">Socket::Option</a>
+  
+    <li ><a href="./Socket/UDPSource.html">Socket::UDPSource</a>
+  
+    <li ><a href="./Enumerator.html">Enumerator</a>
+  
+    <li ><a href="./Enumerator/Generator.html">Enumerator::Generator</a>
+  
+    <li ><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a>
+  
+    <li style="background: #ffc;"><a href="./File.html">File</a>
+  
+    <li ><a href="./File/Constants.html">File::Constants</a>
+  
+    <li ><a href="./File/Stat.html">File::Stat</a>
+  
+    <li style="background: #ffc;"><a href="./IO.html">IO</a>
+  
+    <li ><a href="./IO/WaitReadable.html">IO::WaitReadable</a>
+  
+    <li ><a href="./IO/WaitWritable.html">IO::WaitWritable</a>
+  
+    <li ><a href="./RubyVM.html">RubyVM</a>
+  
+    <li ><a href="./RubyVM/Env.html">RubyVM::Env</a>
+  
+    <li ><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a>
+  
+    <li style="background: #ffc;"><a href="./GC.html">GC</a>
+  
+    <li ><a href="./GC/Profiler.html">GC::Profiler</a>
+  
+    <li style="background: #ffc;"><a href="./Math.html">Math</a>
+  
+    <li ><a href="./Math/DomainError.html">Math::DomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Syslog.html">Syslog</a>
+  
+    <li ><a href="./Syslog/Constants.html">Syslog::Constants</a>
+  
+    <li ><a href="./ARGF.html">ARGF</a>
+  
+    <li ><a href="./Addrinfo.html">Addrinfo</a>
+  
+    <li style="background: #ffc;"><a href="./ArgumentError.html">ArgumentError</a>
+  
+    <li style="background: #ffc;"><a href="./Array.html">Array</a>
+  
+    <li style="background: #ffc;"><a href="./BasicObject.html">BasicObject</a>
+  
+    <li ><a href="./BasicSocket.html">BasicSocket</a>
+  
+    <li ><a href="./Bignum.html">Bignum</a>
+  
+    <li ><a href="./Binding.html">Binding</a>
+  
+    <li style="background: #ffc;"><a href="./Class.html">Class</a>
+  
+    <li style="background: #ffc;"><a href="./Comparable.html">Comparable</a>
+  
+    <li ><a href="./Complex.html">Complex</a>
+  
+    <li ><a href="./Continuation.html">Continuation</a>
+  
+    <li ><a href="./Data.html">Data</a>
+  
+    <li ><a href="./Dir.html">Dir</a>
+  
+    <li style="background: #ffc;"><a href="./ENV.html">ENV</a>
+  
+    <li style="background: #ffc;"><a href="./EOFError.html">EOFError</a>
+  
+    <li style="background: #ffc;"><a href="./EncodingError.html">EncodingError</a>
+  
+    <li style="background: #ffc;"><a href="./Enumerable.html">Enumerable</a>
+  
+    <li style="background: #ffc;"><a href="./Errno.html">Errno</a>
+  
+    <li style="background: #ffc;"><a href="./Exception.html">Exception</a>
+  
+    <li style="background: #ffc;"><a href="./FalseClass.html">FalseClass</a>
+  
+    <li ><a href="./Fiber.html">Fiber</a>
+  
+    <li ><a href="./FiberError.html">FiberError</a>
+  
+    <li ><a href="./FileTest.html">FileTest</a>
+  
+    <li style="background: #ffc;"><a href="./Fixnum.html">Fixnum</a>
+  
+    <li style="background: #ffc;"><a href="./Float.html">Float</a>
+  
+    <li style="background: #ffc;"><a href="./FloatDomainError.html">FloatDomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Hash.html">Hash</a>
+  
+    <li style="background: #ffc;"><a href="./IOError.html">IOError</a>
+  
+    <li ><a href="./IPSocket.html">IPSocket</a>
+  
+    <li style="background: #ffc;"><a href="./IndexError.html">IndexError</a>
+  
+    <li style="background: #ffc;"><a href="./Integer.html">Integer</a>
+  
+    <li ><a href="./Interrupt.html">Interrupt</a>
+  
+    <li style="background: #ffc;"><a href="./Kernel.html">Kernel</a>
+  
+    <li style="background: #ffc;"><a href="./KeyError.html">KeyError</a>
+  
+    <li ><a href="./LoadError.html">LoadError</a>
+  
+    <li style="background: #ffc;"><a href="./LocalJumpError.html">LocalJumpError</a>
+  
+    <li ><a href="./Marshal.html">Marshal</a>
+  
+    <li style="background: #ffc;"><a href="./MatchData.html">MatchData</a>
+  
+    <li ><a href="./Method.html">Method</a>
+  
+    <li style="background: #ffc;"><a href="./Module.html">Module</a>
+  
+    <li ><a href="./Mutex.html">Mutex</a>
+  
+    <li style="background: #ffc;"><a href="./NameError.html">NameError</a>
+  
+    <li style="background: #ffc;"><a href="./NilClass.html">NilClass</a>
+  
+    <li ><a href="./NoMemoryError.html">NoMemoryError</a>
+  
+    <li style="background: #ffc;"><a href="./NoMethodError.html">NoMethodError</a>
+  
+    <li style="background: #ffc;"><a href="./NotImplementedError.html">NotImplementedError</a>
+  
+    <li style="background: #ffc;"><a href="./Numeric.html">Numeric</a>
+  
+    <li style="background: #ffc;"><a href="./Object.html">Object</a>
+  
+    <li ><a href="./ObjectSpace.html">ObjectSpace</a>
+  
+    <li style="background: #ffc;"><a href="./Proc.html">Proc</a>
+  
+    <li ><a href="./Random.html">Random</a>
+  
+    <li style="background: #ffc;"><a href="./Range.html">Range</a>
+  
+    <li style="background: #ffc;"><a href="./RangeError.html">RangeError</a>
+  
+    <li ><a href="./Rational.html">Rational</a>
+  
+    <li style="background: #ffc;"><a href="./Regexp.html">Regexp</a>
+  
+    <li style="background: #ffc;"><a href="./RegexpError.html">RegexpError</a>
+  
+    <li ><a href="./Ripper.html">Ripper</a>
+  
+    <li style="background: #ffc;"><a href="./RuntimeError.html">RuntimeError</a>
+  
+    <li ><a href="./SOCKSSocket.html">SOCKSSocket</a>
+  
+    <li style="background: #ffc;"><a href="./ScriptError.html">ScriptError</a>
+  
+    <li ><a href="./SecurityError.html">SecurityError</a>
+  
+    <li ><a href="./Signal.html">Signal</a>
+  
+    <li ><a href="./SignalException.html">SignalException</a>
+  
+    <li ><a href="./SocketError.html">SocketError</a>
+  
+    <li style="background: #ffc;"><a href="./StandardError.html">StandardError</a>
+  
+    <li ><a href="./StopIteration.html">StopIteration</a>
+  
+    <li style="background: #ffc;"><a href="./String.html">String</a>
+  
+    <li style="background: #ffc;"><a href="./Struct.html">Struct</a>
+  
+    <li style="background: #ffc;"><a href="./Symbol.html">Symbol</a>
+  
+    <li style="background: #ffc;"><a href="./SyntaxError.html">SyntaxError</a>
+  
+    <li style="background: #ffc;"><a href="./SystemCallError.html">SystemCallError</a>
+  
+    <li ><a href="./SystemExit.html">SystemExit</a>
+  
+    <li ><a href="./SystemStackError.html">SystemStackError</a>
+  
+    <li ><a href="./TCPServer.html">TCPServer</a>
+  
+    <li style="background: #ffc;"><a href="./TCPSocket.html">TCPSocket</a>
+  
+    <li ><a href="./Thread.html">Thread</a>
+  
+    <li ><a href="./ThreadError.html">ThreadError</a>
+  
+    <li ><a href="./ThreadGroup.html">ThreadGroup</a>
+  
+    <li style="background: #ffc;"><a href="./Time.html">Time</a>
+  
+    <li style="background: #ffc;"><a href="./TrueClass.html">TrueClass</a>
+  
+    <li style="background: #ffc;"><a href="./TypeError.html">TypeError</a>
+  
+    <li ><a href="./UDPSocket.html">UDPSocket</a>
+  
+    <li ><a href="./UNIXServer.html">UNIXServer</a>
+  
+    <li style="background: #ffc;"><a href="./UNIXSocket.html">UNIXSocket</a>
+  
+    <li ><a href="./UnboundMethod.html">UnboundMethod</a>
+  
+    <li ><a href="./ZeroDivisionError.html">ZeroDivisionError</a>
+  
+    <li ><a href="./fatal.html">fatal</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class" style="background: #ffc;" >class Class</h1>
+
+  <div style="background: #ddd;">
+    
+            <span style="background: #cfc;" >new</span>
+    
+            <span  >allocate</span>
+    
+            <span style="background: #cfc;" >new</span>
+    
+            <span style="background: #cfc;" >superclass</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Classes in Ruby are first-class objects---each is an instance of class
+<code>Class</code>.</p>
+
+<p>When a new class is created (typically using <code>class Name ...
+end</code>), an object of type <code>Class</code> is created and assigned
+to a global constant (<code>Name</code> in this case). When
+<code>Name.new</code> is called to create a new object, the
+<code>new</code> method in <code>Class</code> is run by default. This can
+be demonstrated by overriding <code>new</code> in <code>Class</code>:</p>
+
+<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">Class</span>
+   <span class="ruby-keyword">alias</span> <span class="ruby-identifier">oldNew</span>  <span class="ruby-identifier">new</span>
+   <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>)
+     <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Creating a new &quot;</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>, <span class="ruby-string">&quot;\n&quot;</span>
+     <span class="ruby-identifier">oldNew</span>(*<span class="ruby-identifier">args</span>)
+   <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span>
+
+ <span class="ruby-keyword">class</span> <span class="ruby-constant">Name</span>
+ <span class="ruby-keyword">end</span>
+
+ <span class="ruby-identifier">n</span> = <span class="ruby-constant">Name</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p><em>produces:</em></p>
+
+<pre>Creating a new Name</pre>
+
+<p>Classes, modules, and objects are interrelated. In the diagram that
+follows, the vertical arrows represent inheritance, and the parentheses
+meta-classes. All metaclasses are instances of the class `Class'.</p>
+
+<pre>                         +---------+             +-...
+                         |         |             |
+         BasicObject-----|--&gt;(BasicObject)-------|-...
+             ^           |         ^             |
+             |           |         |             |
+          Object---------|-----&gt;(Object)---------|-...
+             ^           |         ^             |
+             |           |         |             |
+             +-------+   |         +--------+    |
+             |       |   |         |        |    |
+             |    Module-|---------|---&gt;(Module)-|-...
+             |       ^   |         |        ^    |
+             |       |   |         |        |    |
+             |     Class-|---------|----&gt;(Class)-|-...
+             |       ^   |         |        ^    |
+             |       +---+         |        +----+
+             |                     |
+obj---&gt;OtherClass----------&gt;(OtherClass)-----------...</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            new(super_class=Object)               &rarr; a_class
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            new(super_class=Object) { |mod| ... } &rarr; a_class
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Creates a new anonymous (unnamed) class with the given superclass (or
+<code>Object</code> if no parameter is given). You can give a class a name
+by assigning the class object to a constant.</p>
+
+<p>If a block is given, it is passed the class object, and the block is
+evaluated in the context of this class using <code>class_eval</code>.</p>
+
+<pre class="ruby"><span class="ruby-identifier">fred</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">meth1</span>
+    <span class="ruby-string">&quot;hello&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">meth2</span>
+    <span class="ruby-string">&quot;bye&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">a</span> = <span class="ruby-identifier">fred</span>.<span class="ruby-identifier">new</span>     <span class="ruby-comment">#=&gt; #&lt;#&lt;Class:0x100381890&gt;:0x100376b98&gt;</span>
+<span class="ruby-identifier">a</span>.<span class="ruby-identifier">meth1</span>          <span class="ruby-comment">#=&gt; &quot;hello&quot;</span>
+<span class="ruby-identifier">a</span>.<span class="ruby-identifier">meth2</span>          <span class="ruby-comment">#=&gt; &quot;bye&quot;</span>
+</pre>
+
+<p>Assign the class to a constant (name starting uppercase) if you want to
+treat it like a regular class.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+rb_class_initialize(int argc, VALUE *argv, VALUE klass)
+{
+    VALUE super;
+
+    if (RCLASS_SUPER(klass) != 0 || klass == rb_cBasicObject) {
+        rb_raise(rb_eTypeError, &quot;already initialized class&quot;);
+    }
+    if (argc == 0) {
+        super = rb_cObject;
+    }
+    else {
+        rb_scan_args(argc, argv, &quot;01&quot;, &amp;super);
+        rb_check_inheritable(super);
+    }
+    RCLASS_SUPER(klass) = super;
+    rb_make_metaclass(klass, RBASIC(super)-&gt;klass);
+    rb_class_inherited(super, klass);
+    rb_mod_initialize(klass);
+
+    return klass;
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-allocate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            allocate()   &rarr;   obj
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Allocates space for a new object of <em>class</em>'s class and does not
+call initialize on the new instance. The returned object must be an
+instance of <em>class</em>.</p>
+
+<pre class="ruby"><span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">args</span>)
+    <span class="ruby-ivar">@initialized</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialized?</span>
+    <span class="ruby-ivar">@initialized</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">allocate</span>.<span class="ruby-identifier">initialized?</span> <span class="ruby-comment">#=&gt; false</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="allocate-source">
+            <pre>VALUE
+rb_obj_alloc(VALUE klass)
+{
+    VALUE obj;
+
+    if (RCLASS_SUPER(klass) == 0 &amp;&amp; klass != rb_cBasicObject) {
+        rb_raise(rb_eTypeError, &quot;can't instantiate uninitialized class&quot;);
+    }
+    if (FL_TEST(klass, FL_SINGLETON)) {
+        rb_raise(rb_eTypeError, &quot;can't create instance of singleton class&quot;);
+    }
+    obj = rb_funcall(klass, ID_ALLOCATOR, 0, 0);
+    if (rb_obj_class(obj) != rb_class_real(klass)) {
+        rb_raise(rb_eTypeError, &quot;wrong instance allocation&quot;);
+    }
+    return obj;
+}</pre>
+          </div><!-- allocate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- allocate-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            new(args, ...)    &rarr;  obj
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Calls <code>allocate</code> to create a new object of <em>class</em>'s
+class, then invokes that object's <code>initialize</code> method, passing
+it <em>args</em>. This is the method that ends up getting called whenever
+an object is constructed using .new.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>VALUE
+rb_class_new_instance(int argc, VALUE *argv, VALUE klass)
+{
+    VALUE obj;
+
+    obj = rb_obj_alloc(klass);
+    rb_obj_call_init(obj, argc, argv);
+
+    return obj;
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-superclass" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            superclass &rarr; a_super_class or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the superclass of <em>class</em>, or <code>nil</code>.</p>
+
+<pre class="ruby"><span class="ruby-constant">File</span>.<span class="ruby-identifier">superclass</span>          <span class="ruby-comment">#=&gt; IO</span>
+<span class="ruby-constant">IO</span>.<span class="ruby-identifier">superclass</span>            <span class="ruby-comment">#=&gt; Object</span>
+<span class="ruby-constant">Object</span>.<span class="ruby-identifier">superclass</span>        <span class="ruby-comment">#=&gt; BasicObject</span>
+<span class="ruby-keyword">class</span> <span class="ruby-constant">Foo</span>; <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">class</span> <span class="ruby-constant">Bar</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Foo</span>; <span class="ruby-keyword">end</span>
+<span class="ruby-constant">Bar</span>.<span class="ruby-identifier">superclass</span>           <span class="ruby-comment">#=&gt; Foo</span>
+</pre>
+
+<p>returns nil when the given class hasn't a parent class:</p>
+
+<pre class="ruby"><span class="ruby-constant">BasicObject</span>.<span class="ruby-identifier">superclass</span>   <span class="ruby-comment">#=&gt; nil</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="superclass-source">
+            <pre>VALUE
+rb_class_superclass(VALUE klass)
+{
+    VALUE super = RCLASS_SUPER(klass);
+
+    if (!super) {
+        if (klass == rb_cBasicObject) return Qnil;
+        rb_raise(rb_eTypeError, &quot;uninitialized class&quot;);
+    }
+    while (TYPE(super) == T_ICLASS) {
+        super = RCLASS_SUPER(super);
+    }
+    if (!super) {
+        return Qnil;
+    }
+    return super;
+}</pre>
+          </div><!-- superclass-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- superclass-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

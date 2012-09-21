@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class SOCKSSocket - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,42 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>ext/socket/sockssocket.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="TCPSocket.html">TCPSocket</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-c-new">::new</a>
+    
+    <li  ><a href="#method-i-close">#close</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +355,136 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class"  >class SOCKSSocket</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >new</span>
+    
+            <span  >close</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>SOCKS is an Internet protocol that routes packets between a client and a
+server through a proxy server.  SOCKS5, if supported, additionally provides
+authentication so only authorized users may access a server.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            new(host, serv) &rarr; socket
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Opens a SOCKS connection to <code>host</code> via the SOCKS server
+<code>serv</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+socks_init(VALUE sock, VALUE host, VALUE serv)
+{
+    static int init = 0;
+
+    if (init == 0) {
+        SOCKSinit(&quot;ruby&quot;);
+        init = 1;
+    }
+
+    return rsock_init_inetsock(sock, host, serv, Qnil, Qnil, INET_SOCKS);
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-close" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">close</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Closes the SOCKS connection.</p>
+          
+
+          
+          <div class="method-source-code" id="close-source">
+            <pre>static VALUE
+socks_s_close(VALUE sock)
+{
+    rb_io_t *fptr;
+
+    if (rb_safe_level() &gt;= 4 &amp;&amp; !OBJ_TAINTED(sock)) {
+        rb_raise(rb_eSecurityError, &quot;Insecure: can't close socket&quot;);
+    }
+    GetOpenFile(sock, fptr);
+    shutdown(fptr-&gt;fd, 2);
+    return rb_io_close(sock);
+}</pre>
+          </div><!-- close-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- close-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

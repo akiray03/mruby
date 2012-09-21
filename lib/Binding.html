@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class Binding - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,40 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>proc.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-i-eval">#eval</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +353,125 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class"  >class Binding</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >eval</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Objects of class <code>Binding</code> encapsulate the execution context at
+some particular place in the code and retain this context for future use.
+The variables, methods, value of <code>self</code>, and possibly an
+iterator block that can be accessed in this context are all retained. <a
+href="Binding.html">Binding</a> objects can be created using
+<code>Kernel#binding</code>, and are made available to the callback of
+<code>Kernel#set_trace_func</code>.</p>
+
+<p>These binding objects can be passed as the second argument of the
+<code>Kernel#eval</code> method, establishing an environment for the
+evaluation.</p>
+
+<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">Demo</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">n</span>)
+    <span class="ruby-ivar">@secret</span> = <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_binding</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">binding</span>()
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">k1</span> = <span class="ruby-constant">Demo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">99</span>)
+<span class="ruby-identifier">b1</span> = <span class="ruby-identifier">k1</span>.<span class="ruby-identifier">get_binding</span>
+<span class="ruby-identifier">k2</span> = <span class="ruby-constant">Demo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">-3</span>)
+<span class="ruby-identifier">b2</span> = <span class="ruby-identifier">k2</span>.<span class="ruby-identifier">get_binding</span>
+
+<span class="ruby-identifier">eval</span>(<span class="ruby-string">&quot;@secret&quot;</span>, <span class="ruby-identifier">b1</span>)   <span class="ruby-comment">#=&gt; 99</span>
+<span class="ruby-identifier">eval</span>(<span class="ruby-string">&quot;@secret&quot;</span>, <span class="ruby-identifier">b2</span>)   <span class="ruby-comment">#=&gt; -3</span>
+<span class="ruby-identifier">eval</span>(<span class="ruby-string">&quot;@secret&quot;</span>)       <span class="ruby-comment">#=&gt; nil</span>
+</pre>
+
+<p><a href="Binding.html">Binding</a> objects have no class-specific methods.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-eval" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            eval(string [, filename [,lineno]])  &rarr; obj
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Evaluates the Ruby expression(s) in <em>string</em>, in the
+<em>binding</em>'s context.  If the optional <em>filename</em> and
+<em>lineno</em> parameters are present, they will be used when reporting
+syntax errors.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">get_binding</span>(<span class="ruby-identifier">param</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">binding</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">b</span> = <span class="ruby-identifier">get_binding</span>(<span class="ruby-string">&quot;hello&quot;</span>)
+<span class="ruby-identifier">b</span>.<span class="ruby-identifier">eval</span>(<span class="ruby-string">&quot;param&quot;</span>)   <span class="ruby-comment">#=&gt; &quot;hello&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="eval-source">
+            <pre>static VALUE
+bind_eval(int argc, VALUE *argv, VALUE bindval)
+{
+    VALUE args[4];
+
+    rb_scan_args(argc, argv, &quot;12&quot;, &amp;args[0], &amp;args[2], &amp;args[3]);
+    args[1] = bindval;
+    return rb_f_eval(argc+1, args, Qnil /* self will be searched in eval */);
+}</pre>
+          </div><!-- eval-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- eval-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

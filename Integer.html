@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+
+<title>class Integer - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>numeric.c
+    <li>rational.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Numeric.html">Numeric</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-i-ceil">#ceil</a>
+    
+    <li  ><a href="#method-i-chr">#chr</a>
+    
+    <li  ><a href="#method-i-denominator">#denominator</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-downto">#downto</a>
+    
+    <li  ><a href="#method-i-even-3F">#even?</a>
+    
+    <li  ><a href="#method-i-floor">#floor</a>
+    
+    <li  ><a href="#method-i-gcd">#gcd</a>
+    
+    <li  ><a href="#method-i-gcdlcm">#gcdlcm</a>
+    
+    <li  ><a href="#method-i-integer-3F">#integer?</a>
+    
+    <li  ><a href="#method-i-lcm">#lcm</a>
+    
+    <li  ><a href="#method-i-next">#next</a>
+    
+    <li  ><a href="#method-i-numerator">#numerator</a>
+    
+    <li  ><a href="#method-i-odd-3F">#odd?</a>
+    
+    <li  ><a href="#method-i-ord">#ord</a>
+    
+    <li  ><a href="#method-i-pred">#pred</a>
+    
+    <li  ><a href="#method-i-rationalize">#rationalize</a>
+    
+    <li  ><a href="#method-i-round">#round</a>
+    
+    <li  ><a href="#method-i-succ">#succ</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-times">#times</a>
+    
+    <li  ><a href="#method-i-to_i">#to_i</a>
+    
+    <li  ><a href="#method-i-to_int">#to_int</a>
+    
+    <li  ><a href="#method-i-to_r">#to_r</a>
+    
+    <li  ><a href="#method-i-truncate">#truncate</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-upto">#upto</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./ext/syslog/syslog_txt.html">syslog</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li style="background: #ffc;"><a href="./Digest.html">Digest</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/Base.html">Digest::Base</a>
+  
+    <li ><a href="./Digest/Class.html">Digest::Class</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/HMAC.html">Digest::HMAC</a>
+  
+    <li ><a href="./Digest/Instance.html">Digest::Instance</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/SHA2.html">Digest::SHA2</a>
+  
+    <li ><a href="./Encoding.html">Encoding</a>
+  
+    <li ><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a>
+  
+    <li ><a href="./Encoding/Converter.html">Encoding::Converter</a>
+  
+    <li ><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a>
+  
+    <li ><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a>
+  
+    <li ><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a>
+  
+    <li ><a href="./Process.html">Process</a>
+  
+    <li ><a href="./Process/GID.html">Process::GID</a>
+  
+    <li ><a href="./Process/Status.html">Process::Status</a>
+  
+    <li ><a href="./Process/Sys.html">Process::Sys</a>
+  
+    <li ><a href="./Process/UID.html">Process::UID</a>
+  
+    <li ><a href="./Socket.html">Socket</a>
+  
+    <li ><a href="./Socket/AncillaryData.html">Socket::AncillaryData</a>
+  
+    <li ><a href="./Socket/Option.html">Socket::Option</a>
+  
+    <li ><a href="./Socket/UDPSource.html">Socket::UDPSource</a>
+  
+    <li ><a href="./Enumerator.html">Enumerator</a>
+  
+    <li ><a href="./Enumerator/Generator.html">Enumerator::Generator</a>
+  
+    <li ><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a>
+  
+    <li style="background: #ffc;"><a href="./File.html">File</a>
+  
+    <li ><a href="./File/Constants.html">File::Constants</a>
+  
+    <li ><a href="./File/Stat.html">File::Stat</a>
+  
+    <li style="background: #ffc;"><a href="./IO.html">IO</a>
+  
+    <li ><a href="./IO/WaitReadable.html">IO::WaitReadable</a>
+  
+    <li ><a href="./IO/WaitWritable.html">IO::WaitWritable</a>
+  
+    <li ><a href="./RubyVM.html">RubyVM</a>
+  
+    <li ><a href="./RubyVM/Env.html">RubyVM::Env</a>
+  
+    <li ><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a>
+  
+    <li style="background: #ffc;"><a href="./GC.html">GC</a>
+  
+    <li ><a href="./GC/Profiler.html">GC::Profiler</a>
+  
+    <li style="background: #ffc;"><a href="./Math.html">Math</a>
+  
+    <li ><a href="./Math/DomainError.html">Math::DomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Syslog.html">Syslog</a>
+  
+    <li ><a href="./Syslog/Constants.html">Syslog::Constants</a>
+  
+    <li ><a href="./ARGF.html">ARGF</a>
+  
+    <li ><a href="./Addrinfo.html">Addrinfo</a>
+  
+    <li style="background: #ffc;"><a href="./ArgumentError.html">ArgumentError</a>
+  
+    <li style="background: #ffc;"><a href="./Array.html">Array</a>
+  
+    <li style="background: #ffc;"><a href="./BasicObject.html">BasicObject</a>
+  
+    <li ><a href="./BasicSocket.html">BasicSocket</a>
+  
+    <li ><a href="./Bignum.html">Bignum</a>
+  
+    <li ><a href="./Binding.html">Binding</a>
+  
+    <li style="background: #ffc;"><a href="./Class.html">Class</a>
+  
+    <li style="background: #ffc;"><a href="./Comparable.html">Comparable</a>
+  
+    <li ><a href="./Complex.html">Complex</a>
+  
+    <li ><a href="./Continuation.html">Continuation</a>
+  
+    <li ><a href="./Data.html">Data</a>
+  
+    <li ><a href="./Dir.html">Dir</a>
+  
+    <li style="background: #ffc;"><a href="./ENV.html">ENV</a>
+  
+    <li style="background: #ffc;"><a href="./EOFError.html">EOFError</a>
+  
+    <li style="background: #ffc;"><a href="./EncodingError.html">EncodingError</a>
+  
+    <li style="background: #ffc;"><a href="./Enumerable.html">Enumerable</a>
+  
+    <li style="background: #ffc;"><a href="./Errno.html">Errno</a>
+  
+    <li style="background: #ffc;"><a href="./Exception.html">Exception</a>
+  
+    <li style="background: #ffc;"><a href="./FalseClass.html">FalseClass</a>
+  
+    <li ><a href="./Fiber.html">Fiber</a>
+  
+    <li ><a href="./FiberError.html">FiberError</a>
+  
+    <li ><a href="./FileTest.html">FileTest</a>
+  
+    <li style="background: #ffc;"><a href="./Fixnum.html">Fixnum</a>
+  
+    <li style="background: #ffc;"><a href="./Float.html">Float</a>
+  
+    <li style="background: #ffc;"><a href="./FloatDomainError.html">FloatDomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Hash.html">Hash</a>
+  
+    <li style="background: #ffc;"><a href="./IOError.html">IOError</a>
+  
+    <li ><a href="./IPSocket.html">IPSocket</a>
+  
+    <li style="background: #ffc;"><a href="./IndexError.html">IndexError</a>
+  
+    <li style="background: #ffc;"><a href="./Integer.html">Integer</a>
+  
+    <li ><a href="./Interrupt.html">Interrupt</a>
+  
+    <li style="background: #ffc;"><a href="./Kernel.html">Kernel</a>
+  
+    <li style="background: #ffc;"><a href="./KeyError.html">KeyError</a>
+  
+    <li ><a href="./LoadError.html">LoadError</a>
+  
+    <li style="background: #ffc;"><a href="./LocalJumpError.html">LocalJumpError</a>
+  
+    <li ><a href="./Marshal.html">Marshal</a>
+  
+    <li style="background: #ffc;"><a href="./MatchData.html">MatchData</a>
+  
+    <li ><a href="./Method.html">Method</a>
+  
+    <li style="background: #ffc;"><a href="./Module.html">Module</a>
+  
+    <li ><a href="./Mutex.html">Mutex</a>
+  
+    <li style="background: #ffc;"><a href="./NameError.html">NameError</a>
+  
+    <li style="background: #ffc;"><a href="./NilClass.html">NilClass</a>
+  
+    <li ><a href="./NoMemoryError.html">NoMemoryError</a>
+  
+    <li style="background: #ffc;"><a href="./NoMethodError.html">NoMethodError</a>
+  
+    <li style="background: #ffc;"><a href="./NotImplementedError.html">NotImplementedError</a>
+  
+    <li style="background: #ffc;"><a href="./Numeric.html">Numeric</a>
+  
+    <li style="background: #ffc;"><a href="./Object.html">Object</a>
+  
+    <li ><a href="./ObjectSpace.html">ObjectSpace</a>
+  
+    <li style="background: #ffc;"><a href="./Proc.html">Proc</a>
+  
+    <li ><a href="./Random.html">Random</a>
+  
+    <li style="background: #ffc;"><a href="./Range.html">Range</a>
+  
+    <li style="background: #ffc;"><a href="./RangeError.html">RangeError</a>
+  
+    <li ><a href="./Rational.html">Rational</a>
+  
+    <li style="background: #ffc;"><a href="./Regexp.html">Regexp</a>
+  
+    <li style="background: #ffc;"><a href="./RegexpError.html">RegexpError</a>
+  
+    <li ><a href="./Ripper.html">Ripper</a>
+  
+    <li style="background: #ffc;"><a href="./RuntimeError.html">RuntimeError</a>
+  
+    <li ><a href="./SOCKSSocket.html">SOCKSSocket</a>
+  
+    <li style="background: #ffc;"><a href="./ScriptError.html">ScriptError</a>
+  
+    <li ><a href="./SecurityError.html">SecurityError</a>
+  
+    <li ><a href="./Signal.html">Signal</a>
+  
+    <li ><a href="./SignalException.html">SignalException</a>
+  
+    <li ><a href="./SocketError.html">SocketError</a>
+  
+    <li style="background: #ffc;"><a href="./StandardError.html">StandardError</a>
+  
+    <li ><a href="./StopIteration.html">StopIteration</a>
+  
+    <li style="background: #ffc;"><a href="./String.html">String</a>
+  
+    <li style="background: #ffc;"><a href="./Struct.html">Struct</a>
+  
+    <li style="background: #ffc;"><a href="./Symbol.html">Symbol</a>
+  
+    <li style="background: #ffc;"><a href="./SyntaxError.html">SyntaxError</a>
+  
+    <li style="background: #ffc;"><a href="./SystemCallError.html">SystemCallError</a>
+  
+    <li ><a href="./SystemExit.html">SystemExit</a>
+  
+    <li ><a href="./SystemStackError.html">SystemStackError</a>
+  
+    <li ><a href="./TCPServer.html">TCPServer</a>
+  
+    <li style="background: #ffc;"><a href="./TCPSocket.html">TCPSocket</a>
+  
+    <li ><a href="./Thread.html">Thread</a>
+  
+    <li ><a href="./ThreadError.html">ThreadError</a>
+  
+    <li ><a href="./ThreadGroup.html">ThreadGroup</a>
+  
+    <li style="background: #ffc;"><a href="./Time.html">Time</a>
+  
+    <li style="background: #ffc;"><a href="./TrueClass.html">TrueClass</a>
+  
+    <li style="background: #ffc;"><a href="./TypeError.html">TypeError</a>
+  
+    <li ><a href="./UDPSocket.html">UDPSocket</a>
+  
+    <li ><a href="./UNIXServer.html">UNIXServer</a>
+  
+    <li style="background: #ffc;"><a href="./UNIXSocket.html">UNIXSocket</a>
+  
+    <li ><a href="./UnboundMethod.html">UnboundMethod</a>
+  
+    <li ><a href="./ZeroDivisionError.html">ZeroDivisionError</a>
+  
+    <li ><a href="./fatal.html">fatal</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class" style="background: #ffc;" >class Integer</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >ceil</span>
+    
+            <span  >chr</span>
+    
+            <span  >denominator</span>
+    
+            <span style="background: #cfc;" >downto</span>
+    
+            <span  >even?</span>
+    
+            <span  >floor</span>
+    
+            <span  >gcd</span>
+    
+            <span  >gcdlcm</span>
+    
+            <span  >integer?</span>
+    
+            <span  >lcm</span>
+    
+            <span  >next</span>
+    
+            <span  >numerator</span>
+    
+            <span  >odd?</span>
+    
+            <span  >ord</span>
+    
+            <span  >pred</span>
+    
+            <span  >rationalize</span>
+    
+            <span  >round</span>
+    
+            <span  >succ</span>
+    
+            <span style="background: #cfc;" >times</span>
+    
+            <span  >to_i</span>
+    
+            <span  >to_int</span>
+    
+            <span  >to_r</span>
+    
+            <span  >truncate</span>
+    
+            <span style="background: #cfc;" >upto</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p><code>Integer</code> is the basis for the two concrete classes that hold
+whole numbers, <code>Bignum</code> and <code>Fixnum</code>.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-ceil" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor     &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil      &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>As <em>int</em> is already an <code>Integer</code>, all these methods
+simply return the receiver.</p>
+          
+
+          
+          <div class="method-source-code" id="ceil-source">
+            <pre>static VALUE
+int_to_i(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- ceil-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ceil-method -->
+
+    
+      <div id="method-i-chr" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            chr([encoding])  &rarr;  string
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a string containing the character represented by the receiver's
+value according to <code>encoding</code>.</p>
+
+<pre class="ruby"><span class="ruby-value">65</span>.<span class="ruby-identifier">chr</span>    <span class="ruby-comment">#=&gt; &quot;A&quot;</span>
+<span class="ruby-value">230</span>.<span class="ruby-identifier">chr</span>   <span class="ruby-comment">#=&gt; &quot;\346&quot;</span>
+<span class="ruby-value">255</span>.<span class="ruby-identifier">chr</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>)   <span class="ruby-comment">#=&gt; &quot;\303\277&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="chr-source">
+            <pre>static VALUE
+int_chr(int argc, VALUE *argv, VALUE num)
+{
+    char c;
+    unsigned int i;
+    rb_encoding *enc;
+
+    if (rb_num_to_uint(num, &amp;i) == 0) {
+    }
+    else if (FIXNUM_P(num)) {
+        rb_raise(rb_eRangeError, &quot;%ld out of char range&quot;, FIX2LONG(num));
+    }
+    else {
+        rb_raise(rb_eRangeError, &quot;bignum out of char range&quot;);
+    }
+
+    switch (argc) {
+      case 0:
+        if (0xff &lt; i) {
+            enc = rb_default_internal_encoding();
+            if (!enc) {
+                rb_raise(rb_eRangeError, &quot;%d out of char range&quot;, i);
+            }
+            goto decode;
+        }
+        c = (char)i;
+        if (i &lt; 0x80) {
+            return rb_usascii_str_new(&amp;c, 1);
+        }
+        else {
+            return rb_str_new(&amp;c, 1);
+        }
+      case 1:
+        break;
+      default:
+        rb_raise(rb_eArgError, &quot;wrong number of arguments (%d for 0..1)&quot;, argc);
+        break;
+    }
+    enc = rb_to_encoding(argv[0]);
+    if (!enc) enc = rb_ascii8bit_encoding();
+  decode:
+    return rb_enc_uint_chr(i, enc);
+}</pre>
+          </div><!-- chr-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- chr-method -->
+
+    
+      <div id="method-i-denominator" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            denominator  &rarr;  1
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns 1.</p>
+          
+
+          
+          <div class="method-source-code" id="denominator-source">
+            <pre>static VALUE
+integer_denominator(VALUE self)
+{
+    return INT2FIX(1);
+}</pre>
+          </div><!-- denominator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- denominator-method -->
+
+    
+      <div id="method-i-downto" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            downto(limit) {|i| block }  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            downto(limit)               &rarr;  an_enumerator
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Iterates <em>block</em>, passing decreasing values from <em>int</em> down
+to and including <em>limit</em>.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="ruby"><span class="ruby-value">5</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">print</span> <span class="ruby-identifier">n</span>, <span class="ruby-string">&quot;.. &quot;</span> }
+<span class="ruby-identifier">print</span> <span class="ruby-string">&quot;  Liftoff!\n&quot;</span>
+</pre>
+
+<p><em>produces:</em></p>
+
+<pre>5.. 4.. 3.. 2.. 1..   Liftoff!</pre>
+          
+
+          
+          <div class="method-source-code" id="downto-source">
+            <pre>static VALUE
+int_downto(VALUE from, VALUE to)
+{
+    RETURN_ENUMERATOR(from, 1, &amp;to);
+    if (FIXNUM_P(from) &amp;&amp; FIXNUM_P(to)) {
+        long i, end;
+
+        end = FIX2LONG(to);
+        for (i=FIX2LONG(from); i &gt;= end; i--) {
+            rb_yield(LONG2FIX(i));
+        }
+    }
+    else {
+        VALUE i = from, c;
+
+        while (!(c = rb_funcall(i, '&lt;', 1, to))) {
+            rb_yield(i);
+            i = rb_funcall(i, '-', 1, INT2FIX(1));
+        }
+        if (NIL_P(c)) rb_cmperr(i, to);
+    }
+    return from;
+}</pre>
+          </div><!-- downto-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- downto-method -->
+
+    
+      <div id="method-i-even-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            even?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <em>int</em> is an even number.</p>
+          
+
+          
+          <div class="method-source-code" id="even-3F-source">
+            <pre>static VALUE
+int_even_p(VALUE num)
+{
+    if (rb_funcall(num, '%', 1, INT2FIX(2)) == INT2FIX(0)) {
+        return Qtrue;
+    }
+    return Qfalse;
+}</pre>
+          </div><!-- even-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- even-3F-method -->
+
+    
+      <div id="method-i-floor" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor     &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil      &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>As <em>int</em> is already an <code>Integer</code>, all these methods
+simply return the receiver.</p>
+          
+
+          
+          <div class="method-source-code" id="floor-source">
+            <pre>static VALUE
+int_to_i(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- floor-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- floor-method -->
+
+    
+      <div id="method-i-gcd" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            gcd(int2)  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the greatest common divisor (always positive).  0.gcd(x) and
+x.gcd(0) return abs(x).</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-value">2</span>.<span class="ruby-identifier">gcd</span>(<span class="ruby-value">2</span>)                    <span class="ruby-comment">#=&gt; 2</span>
+<span class="ruby-value">3</span>.<span class="ruby-identifier">gcd</span>(<span class="ruby-value">-7</span>)                   <span class="ruby-comment">#=&gt; 1</span>
+((<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">31</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">gcd</span>((<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">61</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>)  <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="gcd-source">
+            <pre>VALUE
+rb_gcd(VALUE self, VALUE other)
+{
+    other = nurat_int_value(other);
+    return f_gcd(self, other);
+}</pre>
+          </div><!-- gcd-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gcd-method -->
+
+    
+      <div id="method-i-gcdlcm" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            gcdlcm(int2)  &rarr;  array
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns an array; [int.gcd(int2), int.lcm(int2)].</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-value">2</span>.<span class="ruby-identifier">gcdlcm</span>(<span class="ruby-value">2</span>)                    <span class="ruby-comment">#=&gt; [2, 2]</span>
+<span class="ruby-value">3</span>.<span class="ruby-identifier">gcdlcm</span>(<span class="ruby-value">-7</span>)                   <span class="ruby-comment">#=&gt; [1, 21]</span>
+((<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">31</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">gcdlcm</span>((<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">61</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>)  <span class="ruby-comment">#=&gt; [1, 4951760154835678088235319297]</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="gcdlcm-source">
+            <pre>VALUE
+rb_gcdlcm(VALUE self, VALUE other)
+{
+    other = nurat_int_value(other);
+    return rb_assoc_new(f_gcd(self, other), f_lcm(self, other));
+}</pre>
+          </div><!-- gcdlcm-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gcdlcm-method -->
+
+    
+      <div id="method-i-integer-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            integer?  &rarr;  true
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Always returns <code>true</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="integer-3F-source">
+            <pre>static VALUE
+int_int_p(VALUE num)
+{
+    return Qtrue;
+}</pre>
+          </div><!-- integer-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- integer-3F-method -->
+
+    
+      <div id="method-i-lcm" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            lcm(int2)  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the least common multiple (always positive).  0.lcm(x) and x.lcm(0)
+return zero.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-value">2</span>.<span class="ruby-identifier">lcm</span>(<span class="ruby-value">2</span>)                    <span class="ruby-comment">#=&gt; 2</span>
+<span class="ruby-value">3</span>.<span class="ruby-identifier">lcm</span>(<span class="ruby-value">-7</span>)                   <span class="ruby-comment">#=&gt; 21</span>
+((<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">31</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">lcm</span>((<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">61</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>)  <span class="ruby-comment">#=&gt; 4951760154835678088235319297</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="lcm-source">
+            <pre>VALUE
+rb_lcm(VALUE self, VALUE other)
+{
+    other = nurat_int_value(other);
+    return f_lcm(self, other);
+}</pre>
+          </div><!-- lcm-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lcm-method -->
+
+    
+      <div id="method-i-next" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            next  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            succ  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the <code>Integer</code> equal to <em>int</em> + 1.</p>
+
+<pre class="ruby"><span class="ruby-value">1</span>.<span class="ruby-identifier">next</span>      <span class="ruby-comment">#=&gt; 2</span>
+(<span class="ruby-value">-1</span>).<span class="ruby-identifier">next</span>   <span class="ruby-comment">#=&gt; 0</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="next-source">
+            <pre>static VALUE
+int_succ(VALUE num)
+{
+    if (FIXNUM_P(num)) {
+        long i = FIX2LONG(num) + 1;
+        return LONG2NUM(i);
+    }
+    return rb_funcall(num, '+', 1, INT2FIX(1));
+}</pre>
+          </div><!-- next-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- next-method -->
+
+    
+      <div id="method-i-numerator" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            numerator  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns self.</p>
+          
+
+          
+          <div class="method-source-code" id="numerator-source">
+            <pre>static VALUE
+integer_numerator(VALUE self)
+{
+    return self;
+}</pre>
+          </div><!-- numerator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- numerator-method -->
+
+    
+      <div id="method-i-odd-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            odd?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <em>int</em> is an odd number.</p>
+          
+
+          
+          <div class="method-source-code" id="odd-3F-source">
+            <pre>static VALUE
+int_odd_p(VALUE num)
+{
+    if (rb_funcall(num, '%', 1, INT2FIX(2)) != INT2FIX(0)) {
+        return Qtrue;
+    }
+    return Qfalse;
+}</pre>
+          </div><!-- odd-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- odd-3F-method -->
+
+    
+      <div id="method-i-ord" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ord  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the int itself.</p>
+
+<pre class="ruby"><span class="ruby-value">aa</span>.<span class="ruby-identifier">ord</span>    <span class="ruby-comment">#=&gt; 97</span>
+</pre>
+
+<p>This method is intended for compatibility to character constant in Ruby
+1.9. For example, ?a.ord returns 97 both in 1.8 and 1.9.</p>
+          
+
+          
+          <div class="method-source-code" id="ord-source">
+            <pre>static VALUE
+int_ord(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- ord-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ord-method -->
+
+    
+      <div id="method-i-pred" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            pred  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the <code>Integer</code> equal to <em>int</em> - 1.</p>
+
+<pre class="ruby"><span class="ruby-value">1</span>.<span class="ruby-identifier">pred</span>      <span class="ruby-comment">#=&gt; 0</span>
+(<span class="ruby-value">-1</span>).<span class="ruby-identifier">pred</span>   <span class="ruby-comment">#=&gt; -2</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="pred-source">
+            <pre>static VALUE
+int_pred(VALUE num)
+{
+    if (FIXNUM_P(num)) {
+        long i = FIX2LONG(num) - 1;
+        return LONG2NUM(i);
+    }
+    return rb_funcall(num, '-', 1, INT2FIX(1));
+}</pre>
+          </div><!-- pred-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- pred-method -->
+
+    
+      <div id="method-i-rationalize" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rationalize([eps])  &rarr;  rational
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value as a rational.  An optional argument eps is always
+ignored.</p>
+          
+
+          
+          <div class="method-source-code" id="rationalize-source">
+            <pre>static VALUE
+integer_rationalize(int argc, VALUE *argv, VALUE self)
+{
+    rb_scan_args(argc, argv, &quot;01&quot;, NULL);
+    return integer_to_r(self);
+}</pre>
+          </div><!-- rationalize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rationalize-method -->
+
+    
+      <div id="method-i-round" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            round([ndigits])  &rarr;  integer or float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Rounds <em>flt</em> to a given precision in decimal digits (default 0
+digits). Precision may be negative.  Returns a floating point number when
+<code>ndigits</code> is positive, <code>self</code> for zero, and round
+down for negative.</p>
+
+<pre class="ruby"><span class="ruby-value">1</span>.<span class="ruby-identifier">round</span>        <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-value">1</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">2</span>)     <span class="ruby-comment">#=&gt; 1.0</span>
+<span class="ruby-value">15</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">-1</span>)   <span class="ruby-comment">#=&gt; 20</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="round-source">
+            <pre>static VALUE
+int_round(int argc, VALUE* argv, VALUE num)
+{
+    VALUE n;
+    int ndigits;
+
+    if (argc == 0) return num;
+    rb_scan_args(argc, argv, &quot;1&quot;, &amp;n);
+    ndigits = NUM2INT(n);
+    if (ndigits &gt; 0) {
+        return rb_Float(num);
+    }
+    if (ndigits == 0) {
+        return num;
+    }
+    return int_round_0(num, ndigits);
+}</pre>
+          </div><!-- round-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- round-method -->
+
+    
+      <div id="method-i-succ" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            next  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            succ  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the <code>Integer</code> equal to <em>int</em> + 1.</p>
+
+<pre class="ruby"><span class="ruby-value">1</span>.<span class="ruby-identifier">next</span>      <span class="ruby-comment">#=&gt; 2</span>
+(<span class="ruby-value">-1</span>).<span class="ruby-identifier">next</span>   <span class="ruby-comment">#=&gt; 0</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="succ-source">
+            <pre>static VALUE
+int_succ(VALUE num)
+{
+    if (FIXNUM_P(num)) {
+        long i = FIX2LONG(num) + 1;
+        return LONG2NUM(i);
+    }
+    return rb_funcall(num, '+', 1, INT2FIX(1));
+}</pre>
+          </div><!-- succ-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- succ-method -->
+
+    
+      <div id="method-i-times" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            times {|i| block }  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            times               &rarr;  an_enumerator
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Iterates block <em>int</em> times, passing in values from zero to
+<em>int</em> - 1.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="ruby"><span class="ruby-value">5</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-identifier">i</span>, <span class="ruby-string">&quot; &quot;</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><em>produces:</em></p>
+
+<pre>0 1 2 3 4</pre>
+          
+
+          
+          <div class="method-source-code" id="times-source">
+            <pre>static VALUE
+int_dotimes(VALUE num)
+{
+    RETURN_ENUMERATOR(num, 0, 0);
+
+    if (FIXNUM_P(num)) {
+        long i, end;
+
+        end = FIX2LONG(num);
+        for (i=0; i&lt;end; i++) {
+            rb_yield(LONG2FIX(i));
+        }
+    }
+    else {
+        VALUE i = INT2FIX(0);
+
+        for (;;) {
+            if (!RTEST(rb_funcall(i, '&lt;', 1, num))) break;
+            rb_yield(i);
+            i = rb_funcall(i, '+', 1, INT2FIX(1));
+        }
+    }
+    return num;
+}</pre>
+          </div><!-- times-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- times-method -->
+
+    
+      <div id="method-i-to_i" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor     &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil      &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>As <em>int</em> is already an <code>Integer</code>, all these methods
+simply return the receiver.</p>
+          
+
+          
+          <div class="method-source-code" id="to_i-source">
+            <pre>static VALUE
+int_to_i(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- to_i-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_i-method -->
+
+    
+      <div id="method-i-to_int" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor     &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil      &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>As <em>int</em> is already an <code>Integer</code>, all these methods
+simply return the receiver.</p>
+          
+
+          
+          <div class="method-source-code" id="to_int-source">
+            <pre>static VALUE
+int_to_i(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- to_int-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_int-method -->
+
+    
+      <div id="method-i-to_r" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_r  &rarr;  rational
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value as a rational.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-value">1</span>.<span class="ruby-identifier">to_r</span>        <span class="ruby-comment">#=&gt; (1/1)</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">64</span>).<span class="ruby-identifier">to_r</span>  <span class="ruby-comment">#=&gt; (18446744073709551616/1)</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_r-source">
+            <pre>static VALUE
+integer_to_r(VALUE self)
+{
+    return rb_rational_new1(self);
+}</pre>
+          </div><!-- to_r-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_r-method -->
+
+    
+      <div id="method-i-truncate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor     &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil      &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>As <em>int</em> is already an <code>Integer</code>, all these methods
+simply return the receiver.</p>
+          
+
+          
+          <div class="method-source-code" id="truncate-source">
+            <pre>static VALUE
+int_to_i(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- truncate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- truncate-method -->
+
+    
+      <div id="method-i-upto" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            upto(limit) {|i| block }  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            upto(limit)               &rarr;  an_enumerator
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Iterates <em>block</em>, passing in integer values from <em>int</em> up to
+and including <em>limit</em>.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="ruby"><span class="ruby-value">5</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-value">10</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">print</span> <span class="ruby-identifier">i</span>, <span class="ruby-string">&quot; &quot;</span> }
+</pre>
+
+<p><em>produces:</em></p>
+
+<pre>5 6 7 8 9 10</pre>
+          
+
+          
+          <div class="method-source-code" id="upto-source">
+            <pre>static VALUE
+int_upto(VALUE from, VALUE to)
+{
+    RETURN_ENUMERATOR(from, 1, &amp;to);
+    if (FIXNUM_P(from) &amp;&amp; FIXNUM_P(to)) {
+        long i, end;
+
+        end = FIX2LONG(to);
+        for (i = FIX2LONG(from); i &lt;= end; i++) {
+            rb_yield(LONG2FIX(i));
+        }
+    }
+    else {
+        VALUE i = from, c;
+
+        while (!(c = rb_funcall(i, '&gt;', 1, to))) {
+            rb_yield(i);
+            i = rb_funcall(i, '+', 1, INT2FIX(1));
+        }
+        if (NIL_P(c)) rb_cmperr(i, to);
+    }
+    return from;
+}</pre>
+          </div><!-- upto-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- upto-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class SystemCallError - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,44 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>error.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="StandardError.html">StandardError</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-c-3D-3D-3D">::===</a>
+    
+    <li style="background: #cfc;" ><a href="#method-c-new">::new</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-errno">#errno</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +357,242 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class" style="background: #ffc;" >class SystemCallError</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >===</span>
+    
+            <span style="background: #cfc;" >new</span>
+    
+            <span style="background: #cfc;" >errno</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p><a href="SystemCallError.html">SystemCallError</a> is the base class for
+all low-level platform-dependent errors.</p>
+
+<p>The errors available on the current platform are subclasses of <a
+href="SystemCallError.html">SystemCallError</a> and are defined in the <a
+href="Errno.html">Errno</a> module.</p>
+
+<pre>File.open(&quot;does/not/exist&quot;)</pre>
+
+<p><em>raises the exception:</em></p>
+
+<pre>Errno::ENOENT: No such file or directory - does/not/exist</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-3D-3D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            system_call_error === other  &rarr; true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>true</code> if the receiver is a generic
+<code>SystemCallError</code>, or if the error numbers <code>self</code> and
+<em>other</em> are the same.</p>
+          
+
+          
+          <div class="method-source-code" id="3D-3D-3D-source">
+            <pre>static VALUE
+syserr_eqq(VALUE self, VALUE exc)
+{
+    VALUE num, e;
+    ID en;
+
+    CONST_ID(en, &quot;errno&quot;);
+
+    if (!rb_obj_is_kind_of(exc, rb_eSystemCallError)) {
+        if (!rb_respond_to(exc, en)) return Qfalse;
+    }
+    else if (self == rb_eSystemCallError) return Qtrue;
+
+    num = rb_attr_get(exc, rb_intern(&quot;errno&quot;));
+    if (NIL_P(num)) {
+        num = rb_funcall(exc, en, 0, 0);
+    }
+    e = rb_const_get(self, rb_intern(&quot;Errno&quot;));
+    if (FIXNUM_P(num) ? num == e : rb_equal(num, e))
+        return Qtrue;
+    return Qfalse;
+}</pre>
+          </div><!-- 3D-3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-3D-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            new(msg, errno)  &rarr; system_call_error_subclass
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <em>errno</em> corresponds to a known system error code, constructs the
+appropriate <code>Errno</code> class for that error, otherwise constructs a
+generic <code>SystemCallError</code> object. The error number is
+subsequently available via the <code>errno</code> method.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+syserr_initialize(int argc, VALUE *argv, VALUE self)
+{
+#if !defined(_WIN32)
+    char *strerror();
+#endif
+    const char *err;
+    VALUE mesg, error;
+    VALUE klass = rb_obj_class(self);
+
+    if (klass == rb_eSystemCallError) {
+        st_data_t data = (st_data_t)klass;
+        rb_scan_args(argc, argv, &quot;11&quot;, &amp;mesg, &amp;error);
+        if (argc == 1 &amp;&amp; FIXNUM_P(mesg)) {
+            error = mesg; mesg = Qnil;
+        }
+        if (!NIL_P(error) &amp;&amp; st_lookup(syserr_tbl, NUM2LONG(error), &amp;data)) {
+            klass = (VALUE)data;
+            /* change class */
+            if (TYPE(self) != T_OBJECT) { /* insurance to avoid type crash */
+                rb_raise(rb_eTypeError, &quot;invalid instance type&quot;);
+            }
+            RBASIC(self)-&gt;klass = klass;
+        }
+    }
+    else {
+        rb_scan_args(argc, argv, &quot;01&quot;, &amp;mesg);
+        error = rb_const_get(klass, rb_intern(&quot;Errno&quot;));
+    }
+    if (!NIL_P(error)) err = strerror(NUM2INT(error));
+    else err = &quot;unknown error&quot;;
+    if (!NIL_P(mesg)) {
+        rb_encoding *le = rb_locale_encoding();
+        VALUE str = StringValue(mesg);
+        rb_encoding *me = rb_enc_get(mesg);
+
+        mesg = rb_sprintf(&quot;%s - %.*s&quot;, err,
+                          (int)RSTRING_LEN(str), RSTRING_PTR(str));
+        if (le != me &amp;&amp; rb_enc_asciicompat(me)) {
+            le = me;
+        }/* else assume err is non ASCII string. */
+        OBJ_INFECT(mesg, str);
+        rb_enc_associate(mesg, le);
+    }
+    else {
+        mesg = rb_str_new2(err);
+        rb_enc_associate(mesg, rb_locale_encoding());
+    }
+    rb_call_super(1, &amp;mesg);
+    rb_iv_set(self, &quot;errno&quot;, error);
+    return self;
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-errno" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            errno   &rarr; fixnum
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return this SystemCallError's error number.</p>
+          
+
+          
+          <div class="method-source-code" id="errno-source">
+            <pre>static VALUE
+syserr_errno(VALUE self)
+{
+    return rb_attr_get(self, rb_intern(&quot;errno&quot;));
+}</pre>
+          </div><!-- errno-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- errno-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

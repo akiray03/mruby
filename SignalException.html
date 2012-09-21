@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class SignalException - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,43 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>error.c
+    <li>signal.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Exception.html">Exception</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-c-new">::new</a>
+    
+    <li  ><a href="#method-i-signo">#signo</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +356,187 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class"  >class SignalException</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >new</span>
+    
+            <span  >signo</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Raised when a signal is received.</p>
+
+<pre class="ruby"><span class="ruby-keyword">begin</span>
+  <span class="ruby-constant">Process</span>.<span class="ruby-identifier">kill</span>(<span class="ruby-string">'HUP'</span>,<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">SignalException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;received Exception #{e}&quot;</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><em>produces:</em></p>
+
+<pre>received Exception SIGHUP</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            new(sig_name)              &rarr;  signal_exception
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            new(sig_number [, name])   &rarr;  signal_exception
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Construct a new <a href="SignalException.html">SignalException</a> object. 
+<code>sig_name</code> should be a known signal name.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+esignal_init(int argc, VALUE *argv, VALUE self)
+{
+    int argnum = 1;
+    VALUE sig = Qnil;
+    int signo;
+    const char *signm;
+
+    if (argc &gt; 0) {
+        sig = rb_check_to_integer(argv[0], &quot;to_int&quot;);
+        if (!NIL_P(sig)) argnum = 2;
+        else sig = argv[0];
+    }
+    if (argc &lt; 1 || argnum &lt; argc) {
+        rb_raise(rb_eArgError, &quot;wrong number of arguments (%d for %d)&quot;,
+                 argc, argnum);
+    }
+    if (argnum == 2) {
+        signo = NUM2INT(sig);
+        if (signo &lt; 0 || signo &gt; NSIG) {
+            rb_raise(rb_eArgError, &quot;invalid signal number (%d)&quot;, signo);
+        }
+        if (argc &gt; 1) {
+            sig = argv[1];
+        }
+        else {
+            signm = signo2signm(signo);
+            if (signm) {
+                sig = rb_sprintf(&quot;SIG%s&quot;, signm);
+            }
+            else {
+                sig = rb_sprintf(&quot;SIG%u&quot;, signo);
+            }
+        }
+    }
+    else {
+        signm = SYMBOL_P(sig) ? rb_id2name(SYM2ID(sig)) : StringValuePtr(sig);
+        if (strncmp(signm, &quot;SIG&quot;, 3) == 0) signm += 3;
+        signo = signm2signo(signm);
+        if (!signo) {
+            rb_raise(rb_eArgError, &quot;unsupported name `SIG%s'&quot;, signm);
+        }
+        sig = rb_sprintf(&quot;SIG%s&quot;, signm);
+    }
+    rb_call_super(1, &amp;sig);
+    rb_iv_set(self, &quot;signo&quot;, INT2NUM(signo));
+
+    return self;
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-signo" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            signo   &rarr;  num
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a signal number.</p>
+          
+
+          
+          <div class="method-source-code" id="signo-source">
+            <pre>static VALUE
+esignal_signo(VALUE self)
+{
+    return rb_iv_get(self, &quot;signo&quot;);
+}</pre>
+          </div><!-- signo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- signo-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

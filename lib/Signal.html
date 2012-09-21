@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>module Signal - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="module">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,36 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>signal.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-c-list">::list</a>
+    
+    <li  ><a href="#method-c-trap">::trap</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +349,224 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="module"  >module Signal</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >list</span>
+    
+            <span  >trap</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Many operating systems allow signals to be sent to running processes. Some
+signals have a defined effect on the process, while others may be trapped
+at the code level and acted upon. For example, your process may trap the
+USR1 signal and use it to toggle debugging, and may use TERM to initiate a
+controlled shutdown.</p>
+
+<pre>pid = fork do
+  Signal.trap(&quot;USR1&quot;) do
+    $debug = !$debug
+    puts &quot;Debug now: #$debug&quot;
+  end
+  Signal.trap(&quot;TERM&quot;) do
+    puts &quot;Terminating...&quot;
+    shutdown()
+  end
+  # . . . do some work . . .
+end
+
+Process.detach(pid)
+
+# Controlling program:
+Process.kill(&quot;USR1&quot;, pid)
+# ...
+Process.kill(&quot;USR1&quot;, pid)
+# ...
+Process.kill(&quot;TERM&quot;, pid)</pre>
+
+<p>produces:</p>
+
+<pre> Debug now: true
+ Debug now: false
+Terminating...</pre>
+
+<p>The list of available signal names and their interpretation is system
+dependent. <a href="Signal.html">Signal</a> delivery semantics may also
+vary between systems; in particular signal delivery may not always be
+reliable.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-list" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            list &rarr; a_hash
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a list of signal names mapped to the corresponding underlying
+signal numbers.</p>
+
+<pre class="ruby"><span class="ruby-constant">Signal</span>.<span class="ruby-identifier">list</span>   <span class="ruby-comment">#=&gt; {&quot;EXIT&quot;=&gt;0, &quot;HUP&quot;=&gt;1, &quot;INT&quot;=&gt;2, &quot;QUIT&quot;=&gt;3, &quot;ILL&quot;=&gt;4, &quot;TRAP&quot;=&gt;5, &quot;IOT&quot;=&gt;6, &quot;ABRT&quot;=&gt;6, &quot;FPE&quot;=&gt;8, &quot;KILL&quot;=&gt;9, &quot;BUS&quot;=&gt;7, &quot;SEGV&quot;=&gt;11, &quot;SYS&quot;=&gt;31, &quot;PIPE&quot;=&gt;13, &quot;ALRM&quot;=&gt;14, &quot;TERM&quot;=&gt;15, &quot;URG&quot;=&gt;23, &quot;STOP&quot;=&gt;19, &quot;TSTP&quot;=&gt;20, &quot;CONT&quot;=&gt;18, &quot;CHLD&quot;=&gt;17, &quot;CLD&quot;=&gt;17, &quot;TTIN&quot;=&gt;21, &quot;TTOU&quot;=&gt;22, &quot;IO&quot;=&gt;29, &quot;XCPU&quot;=&gt;24, &quot;XFSZ&quot;=&gt;25, &quot;VTALRM&quot;=&gt;26, &quot;PROF&quot;=&gt;27, &quot;WINCH&quot;=&gt;28, &quot;USR1&quot;=&gt;10, &quot;USR2&quot;=&gt;12, &quot;PWR&quot;=&gt;30, &quot;POLL&quot;=&gt;29}</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="list-source">
+            <pre>static VALUE
+sig_list(void)
+{
+    VALUE h = rb_hash_new();
+    const struct signals *sigs;
+
+    for (sigs = siglist; sigs-&gt;signm; sigs++) {
+        rb_hash_aset(h, rb_str_new2(sigs-&gt;signm), INT2FIX(sigs-&gt;signo));
+    }
+    return h;
+}</pre>
+          </div><!-- list-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- list-method -->
+
+    
+      <div id="method-c-trap" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            trap( signal, command ) &rarr; obj
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            trap( signal ) {| | block } &rarr; obj
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Specifies the handling of signals. The first parameter is a signal name (a
+string such as "SIGALRM", "SIGUSR1", and so on) or a signal number. The
+characters "SIG" may be omitted from the signal name. The command or block
+specifies code to be run when the signal is raised. If the command is the
+string "IGNORE" or "SIG_IGN", the signal will be ignored. If the command is
+"DEFAULT" or "SIG_DFL", the Ruby's default handler will be invoked. If the
+command is "EXIT", the script will be terminated by the signal. If the
+command is "SYSTEM_DEFAULT", the operating system's default handler will be
+invoked. Otherwise, the given command or block will be run. The special
+signal name "EXIT" or signal number zero will be invoked just prior to
+program termination. trap returns the previous handler for the given
+signal.</p>
+
+<pre>Signal.trap(0, proc { puts &quot;Terminating: #{$$}&quot; })
+Signal.trap(&quot;CLD&quot;)  { puts &quot;Child died&quot; }
+fork &amp;&amp; Process.wait</pre>
+
+<p>produces:</p>
+
+<pre>Terminating: 27461
+Child died
+Terminating: 27460</pre>
+          
+
+          
+          <div class="method-source-code" id="trap-source">
+            <pre>static VALUE
+sig_trap(int argc, VALUE *argv)
+{
+    struct trap_arg arg;
+
+    rb_secure(2);
+    if (argc &lt; 1 || argc &gt; 2) {
+        rb_raise(rb_eArgError, &quot;wrong number of arguments (%d for 1..2)&quot;, argc);
+    }
+
+    arg.sig = trap_signm(argv[0]);
+    if (argc == 1) {
+        arg.cmd = rb_block_proc();
+        arg.func = sighandler;
+    }
+    else {
+        arg.cmd = argv[1];
+        arg.func = trap_handler(&amp;arg.cmd, arg.sig);
+    }
+
+    if (OBJ_TAINTED(arg.cmd)) {
+        rb_raise(rb_eSecurityError, &quot;Insecure: tainted signal trap&quot;);
+    }
+#if USE_TRAP_MASK
+    {
+      sigset_t fullmask;
+
+      /* disable interrupt */
+      sigfillset(&amp;fullmask);
+      pthread_sigmask(SIG_BLOCK, &amp;fullmask, &amp;arg.mask);
+
+      return rb_ensure(trap, (VALUE)&amp;arg, trap_ensure, (VALUE)&amp;arg);
+    }
+#else
+    return trap(&amp;arg);
+#endif
+}</pre>
+          </div><!-- trap-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- trap-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

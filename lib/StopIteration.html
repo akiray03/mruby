@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class StopIteration - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,40 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>enumerator.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="IndexError.html">IndexError</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-i-result">#result</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +353,115 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class"  >class StopIteration</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >result</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Raised to stop the iteration, in particular by <a
+href="Enumerator.html#method-i-next">Enumerator#next</a>. It is rescued by
+<a href="Kernel.html#method-i-loop">Kernel#loop</a>.</p>
+
+<pre>loop do
+  puts &quot;Hello&quot;
+  raise StopIteration
+  puts &quot;World&quot;
+end
+puts &quot;Done!&quot;</pre>
+
+<p><em>produces:</em></p>
+
+<pre>Hello
+Done!</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-result" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            result       &rarr; value
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the return value of the iterator.</p>
+
+<pre class="ruby"><span class="ruby-identifier">o</span> = <span class="ruby-constant">Object</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">each</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-value">2</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-value">3</span>
+  <span class="ruby-value">100</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">e</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">to_enum</span>
+
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">next</span>                   <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">next</span>                   <span class="ruby-comment">#=&gt; 2</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">next</span>                   <span class="ruby-comment">#=&gt; 3</span>
+
+<span class="ruby-keyword">begin</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">next</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">StopIteration</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">ex</span>.<span class="ruby-identifier">result</span>              <span class="ruby-comment">#=&gt; 100</span>
+<span class="ruby-keyword">end</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="result-source">
+            <pre>static VALUE
+stop_result(VALUE self)
+{
+    return rb_attr_get(self, rb_intern(&quot;result&quot;));
+}</pre>
+          </div><!-- result-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- result-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

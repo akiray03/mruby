@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class LocalJumpError - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,42 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>proc.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="StandardError.html">StandardError</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-i-exit_value">#exit_value</a>
+    
+    <li  ><a href="#method-i-reason">#reason</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +355,142 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class" style="background: #ffc;" >class LocalJumpError</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >exit_value</span>
+    
+            <span  >reason</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Raised when Ruby can't yield as requested.</p>
+
+<p>A typical scenario is attempting to yield when no block is given:</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">call_block</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-value">42</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">call_block</span>
+</pre>
+
+<p><em>raises the exception:</em></p>
+
+<pre>LocalJumpError: no block given (yield)</pre>
+
+<p>A more subtle example:</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">get_me_a_return</span>
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> { <span class="ruby-keyword">return</span> <span class="ruby-value">42</span> }
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">get_me_a_return</span>.<span class="ruby-identifier">call</span>
+</pre>
+
+<p><em>raises the exception:</em></p>
+
+<pre>LocalJumpError: unexpected return</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-exit_value" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">exit_value</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>call_seq:</p>
+
+<pre>local_jump_error.exit_value  -&gt; obj</pre>
+
+<p>Returns the exit value associated with this <code>LocalJumpError</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="exit_value-source">
+            <pre>static VALUE
+localjump_xvalue(VALUE exc)
+{
+    return rb_iv_get(exc, &quot;@exit_value&quot;);
+}</pre>
+          </div><!-- exit_value-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- exit_value-method -->
+
+    
+      <div id="method-i-reason" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            reason   &rarr; symbol
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The reason this block was terminated: :break, :redo, :retry, :next,
+:return, or :noreason.</p>
+          
+
+          
+          <div class="method-source-code" id="reason-source">
+            <pre>static VALUE
+localjump_reason(VALUE exc)
+{
+    return rb_iv_get(exc, &quot;@reason&quot;);
+}</pre>
+          </div><!-- reason-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- reason-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">

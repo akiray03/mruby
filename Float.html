@@ -1,0 +1,2953 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+
+<title>class Float - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>complex.c
+    <li>numeric.c
+    <li>rational.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Numeric.html">Numeric</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li style="background: #cfc;" ><a href="#method-i-25">#%</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-2A">#*</a>
+    
+    <li  ><a href="#method-i-2A-2A">#**</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-2B">#+</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-2D">#-</a>
+    
+    <li  ><a href="#method-i-2D-40">#-@</a>
+    
+    <li  ><a href="#method-i-2F">#/</a>
+    
+    <li  ><a href="#method-i-3C">#&lt;</a>
+    
+    <li  ><a href="#method-i-3C-3D">#&lt;=</a>
+    
+    <li  ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-3D-3D">#==</a>
+    
+    <li  ><a href="#method-i-3D-3D-3D">#===</a>
+    
+    <li  ><a href="#method-i-3E">#&gt;</a>
+    
+    <li  ><a href="#method-i-3E-3D">#&gt;=</a>
+    
+    <li  ><a href="#method-i-abs">#abs</a>
+    
+    <li  ><a href="#method-i-angle">#angle</a>
+    
+    <li  ><a href="#method-i-arg">#arg</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-ceil">#ceil</a>
+    
+    <li  ><a href="#method-i-coerce">#coerce</a>
+    
+    <li  ><a href="#method-i-denominator">#denominator</a>
+    
+    <li  ><a href="#method-i-divmod">#divmod</a>
+    
+    <li  ><a href="#method-i-eql-3F">#eql?</a>
+    
+    <li  ><a href="#method-i-fdiv">#fdiv</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-finite-3F">#finite?</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-floor">#floor</a>
+    
+    <li  ><a href="#method-i-hash">#hash</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-infinite-3F">#infinite?</a>
+    
+    <li  ><a href="#method-i-magnitude">#magnitude</a>
+    
+    <li  ><a href="#method-i-modulo">#modulo</a>
+    
+    <li  ><a href="#method-i-nan-3F">#nan?</a>
+    
+    <li  ><a href="#method-i-numerator">#numerator</a>
+    
+    <li  ><a href="#method-i-phase">#phase</a>
+    
+    <li  ><a href="#method-i-quo">#quo</a>
+    
+    <li  ><a href="#method-i-rationalize">#rationalize</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-round">#round</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-to_f">#to_f</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-to_i">#to_i</a>
+    
+    <li  ><a href="#method-i-to_int">#to_int</a>
+    
+    <li  ><a href="#method-i-to_r">#to_r</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-to_s">#to_s</a>
+    
+    <li style="background: #cfc;" ><a href="#method-i-truncate">#truncate</a>
+    
+    <li  ><a href="#method-i-zero-3F">#zero?</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./ext/syslog/syslog_txt.html">syslog</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li style="background: #ffc;"><a href="./Digest.html">Digest</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/Base.html">Digest::Base</a>
+  
+    <li ><a href="./Digest/Class.html">Digest::Class</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/HMAC.html">Digest::HMAC</a>
+  
+    <li ><a href="./Digest/Instance.html">Digest::Instance</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/SHA2.html">Digest::SHA2</a>
+  
+    <li ><a href="./Encoding.html">Encoding</a>
+  
+    <li ><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a>
+  
+    <li ><a href="./Encoding/Converter.html">Encoding::Converter</a>
+  
+    <li ><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a>
+  
+    <li ><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a>
+  
+    <li ><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a>
+  
+    <li ><a href="./Process.html">Process</a>
+  
+    <li ><a href="./Process/GID.html">Process::GID</a>
+  
+    <li ><a href="./Process/Status.html">Process::Status</a>
+  
+    <li ><a href="./Process/Sys.html">Process::Sys</a>
+  
+    <li ><a href="./Process/UID.html">Process::UID</a>
+  
+    <li ><a href="./Socket.html">Socket</a>
+  
+    <li ><a href="./Socket/AncillaryData.html">Socket::AncillaryData</a>
+  
+    <li ><a href="./Socket/Option.html">Socket::Option</a>
+  
+    <li ><a href="./Socket/UDPSource.html">Socket::UDPSource</a>
+  
+    <li ><a href="./Enumerator.html">Enumerator</a>
+  
+    <li ><a href="./Enumerator/Generator.html">Enumerator::Generator</a>
+  
+    <li ><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a>
+  
+    <li style="background: #ffc;"><a href="./File.html">File</a>
+  
+    <li ><a href="./File/Constants.html">File::Constants</a>
+  
+    <li ><a href="./File/Stat.html">File::Stat</a>
+  
+    <li style="background: #ffc;"><a href="./IO.html">IO</a>
+  
+    <li ><a href="./IO/WaitReadable.html">IO::WaitReadable</a>
+  
+    <li ><a href="./IO/WaitWritable.html">IO::WaitWritable</a>
+  
+    <li ><a href="./RubyVM.html">RubyVM</a>
+  
+    <li ><a href="./RubyVM/Env.html">RubyVM::Env</a>
+  
+    <li ><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a>
+  
+    <li style="background: #ffc;"><a href="./GC.html">GC</a>
+  
+    <li ><a href="./GC/Profiler.html">GC::Profiler</a>
+  
+    <li style="background: #ffc;"><a href="./Math.html">Math</a>
+  
+    <li ><a href="./Math/DomainError.html">Math::DomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Syslog.html">Syslog</a>
+  
+    <li ><a href="./Syslog/Constants.html">Syslog::Constants</a>
+  
+    <li ><a href="./ARGF.html">ARGF</a>
+  
+    <li ><a href="./Addrinfo.html">Addrinfo</a>
+  
+    <li style="background: #ffc;"><a href="./ArgumentError.html">ArgumentError</a>
+  
+    <li style="background: #ffc;"><a href="./Array.html">Array</a>
+  
+    <li style="background: #ffc;"><a href="./BasicObject.html">BasicObject</a>
+  
+    <li ><a href="./BasicSocket.html">BasicSocket</a>
+  
+    <li ><a href="./Bignum.html">Bignum</a>
+  
+    <li ><a href="./Binding.html">Binding</a>
+  
+    <li style="background: #ffc;"><a href="./Class.html">Class</a>
+  
+    <li style="background: #ffc;"><a href="./Comparable.html">Comparable</a>
+  
+    <li ><a href="./Complex.html">Complex</a>
+  
+    <li ><a href="./Continuation.html">Continuation</a>
+  
+    <li ><a href="./Data.html">Data</a>
+  
+    <li ><a href="./Dir.html">Dir</a>
+  
+    <li style="background: #ffc;"><a href="./ENV.html">ENV</a>
+  
+    <li style="background: #ffc;"><a href="./EOFError.html">EOFError</a>
+  
+    <li style="background: #ffc;"><a href="./EncodingError.html">EncodingError</a>
+  
+    <li style="background: #ffc;"><a href="./Enumerable.html">Enumerable</a>
+  
+    <li style="background: #ffc;"><a href="./Errno.html">Errno</a>
+  
+    <li style="background: #ffc;"><a href="./Exception.html">Exception</a>
+  
+    <li style="background: #ffc;"><a href="./FalseClass.html">FalseClass</a>
+  
+    <li ><a href="./Fiber.html">Fiber</a>
+  
+    <li ><a href="./FiberError.html">FiberError</a>
+  
+    <li ><a href="./FileTest.html">FileTest</a>
+  
+    <li style="background: #ffc;"><a href="./Fixnum.html">Fixnum</a>
+  
+    <li style="background: #ffc;"><a href="./Float.html">Float</a>
+  
+    <li style="background: #ffc;"><a href="./FloatDomainError.html">FloatDomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Hash.html">Hash</a>
+  
+    <li style="background: #ffc;"><a href="./IOError.html">IOError</a>
+  
+    <li ><a href="./IPSocket.html">IPSocket</a>
+  
+    <li style="background: #ffc;"><a href="./IndexError.html">IndexError</a>
+  
+    <li style="background: #ffc;"><a href="./Integer.html">Integer</a>
+  
+    <li ><a href="./Interrupt.html">Interrupt</a>
+  
+    <li style="background: #ffc;"><a href="./Kernel.html">Kernel</a>
+  
+    <li style="background: #ffc;"><a href="./KeyError.html">KeyError</a>
+  
+    <li ><a href="./LoadError.html">LoadError</a>
+  
+    <li style="background: #ffc;"><a href="./LocalJumpError.html">LocalJumpError</a>
+  
+    <li ><a href="./Marshal.html">Marshal</a>
+  
+    <li style="background: #ffc;"><a href="./MatchData.html">MatchData</a>
+  
+    <li ><a href="./Method.html">Method</a>
+  
+    <li style="background: #ffc;"><a href="./Module.html">Module</a>
+  
+    <li ><a href="./Mutex.html">Mutex</a>
+  
+    <li style="background: #ffc;"><a href="./NameError.html">NameError</a>
+  
+    <li style="background: #ffc;"><a href="./NilClass.html">NilClass</a>
+  
+    <li ><a href="./NoMemoryError.html">NoMemoryError</a>
+  
+    <li style="background: #ffc;"><a href="./NoMethodError.html">NoMethodError</a>
+  
+    <li style="background: #ffc;"><a href="./NotImplementedError.html">NotImplementedError</a>
+  
+    <li style="background: #ffc;"><a href="./Numeric.html">Numeric</a>
+  
+    <li style="background: #ffc;"><a href="./Object.html">Object</a>
+  
+    <li ><a href="./ObjectSpace.html">ObjectSpace</a>
+  
+    <li style="background: #ffc;"><a href="./Proc.html">Proc</a>
+  
+    <li ><a href="./Random.html">Random</a>
+  
+    <li style="background: #ffc;"><a href="./Range.html">Range</a>
+  
+    <li style="background: #ffc;"><a href="./RangeError.html">RangeError</a>
+  
+    <li ><a href="./Rational.html">Rational</a>
+  
+    <li style="background: #ffc;"><a href="./Regexp.html">Regexp</a>
+  
+    <li style="background: #ffc;"><a href="./RegexpError.html">RegexpError</a>
+  
+    <li ><a href="./Ripper.html">Ripper</a>
+  
+    <li style="background: #ffc;"><a href="./RuntimeError.html">RuntimeError</a>
+  
+    <li ><a href="./SOCKSSocket.html">SOCKSSocket</a>
+  
+    <li style="background: #ffc;"><a href="./ScriptError.html">ScriptError</a>
+  
+    <li ><a href="./SecurityError.html">SecurityError</a>
+  
+    <li ><a href="./Signal.html">Signal</a>
+  
+    <li ><a href="./SignalException.html">SignalException</a>
+  
+    <li ><a href="./SocketError.html">SocketError</a>
+  
+    <li style="background: #ffc;"><a href="./StandardError.html">StandardError</a>
+  
+    <li ><a href="./StopIteration.html">StopIteration</a>
+  
+    <li style="background: #ffc;"><a href="./String.html">String</a>
+  
+    <li style="background: #ffc;"><a href="./Struct.html">Struct</a>
+  
+    <li style="background: #ffc;"><a href="./Symbol.html">Symbol</a>
+  
+    <li style="background: #ffc;"><a href="./SyntaxError.html">SyntaxError</a>
+  
+    <li style="background: #ffc;"><a href="./SystemCallError.html">SystemCallError</a>
+  
+    <li ><a href="./SystemExit.html">SystemExit</a>
+  
+    <li ><a href="./SystemStackError.html">SystemStackError</a>
+  
+    <li ><a href="./TCPServer.html">TCPServer</a>
+  
+    <li style="background: #ffc;"><a href="./TCPSocket.html">TCPSocket</a>
+  
+    <li ><a href="./Thread.html">Thread</a>
+  
+    <li ><a href="./ThreadError.html">ThreadError</a>
+  
+    <li ><a href="./ThreadGroup.html">ThreadGroup</a>
+  
+    <li style="background: #ffc;"><a href="./Time.html">Time</a>
+  
+    <li style="background: #ffc;"><a href="./TrueClass.html">TrueClass</a>
+  
+    <li style="background: #ffc;"><a href="./TypeError.html">TypeError</a>
+  
+    <li ><a href="./UDPSocket.html">UDPSocket</a>
+  
+    <li ><a href="./UNIXServer.html">UNIXServer</a>
+  
+    <li style="background: #ffc;"><a href="./UNIXSocket.html">UNIXSocket</a>
+  
+    <li ><a href="./UnboundMethod.html">UnboundMethod</a>
+  
+    <li ><a href="./ZeroDivisionError.html">ZeroDivisionError</a>
+  
+    <li ><a href="./fatal.html">fatal</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class" style="background: #ffc;" >class Float</h1>
+
+  <div style="background: #ddd;">
+    
+            <span style="background: #cfc;" >%</span>
+    
+            <span style="background: #cfc;" >*</span>
+    
+            <span  >**</span>
+    
+            <span style="background: #cfc;" >+</span>
+    
+            <span style="background: #cfc;" >-</span>
+    
+            <span  >-@</span>
+    
+            <span  >/</span>
+    
+            <span  >&lt;</span>
+    
+            <span  >&lt;=</span>
+    
+            <span  >&lt;=&gt;</span>
+    
+            <span style="background: #cfc;" >==</span>
+    
+            <span  >===</span>
+    
+            <span  >&gt;</span>
+    
+            <span  >&gt;=</span>
+    
+            <span  >abs</span>
+    
+            <span  >angle</span>
+    
+            <span  >arg</span>
+    
+            <span style="background: #cfc;" >ceil</span>
+    
+            <span  >coerce</span>
+    
+            <span  >denominator</span>
+    
+            <span  >divmod</span>
+    
+            <span  >eql?</span>
+    
+            <span  >fdiv</span>
+    
+            <span style="background: #cfc;" >finite?</span>
+    
+            <span style="background: #cfc;" >floor</span>
+    
+            <span  >hash</span>
+    
+            <span style="background: #cfc;" >infinite?</span>
+    
+            <span  >magnitude</span>
+    
+            <span  >modulo</span>
+    
+            <span  >nan?</span>
+    
+            <span  >numerator</span>
+    
+            <span  >phase</span>
+    
+            <span  >quo</span>
+    
+            <span  >rationalize</span>
+    
+            <span style="background: #cfc;" >round</span>
+    
+            <span style="background: #cfc;" >to_f</span>
+    
+            <span style="background: #cfc;" >to_i</span>
+    
+            <span  >to_int</span>
+    
+            <span  >to_r</span>
+    
+            <span style="background: #cfc;" >to_s</span>
+    
+            <span style="background: #cfc;" >truncate</span>
+    
+            <span  >zero?</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p><code>Float</code> objects represent inexact real numbers using the native
+architecture's double-precision floating point representation.</p>
+
+<p>Floating point has a different arithmetic and is a inexact number. So you
+should know its esoteric system. see following:</p>
+<ul><li>
+<p><a
+href="http://docs.sun.com/source/806-3568/ncg_goldberg.html">docs.sun.com/source/806-3568/ncg_goldberg.html</a></p>
+</li><li>
+<p><a
+href="http://wiki.github.com/rdp/ruby_tutorials_core/ruby-talk-faq#floats_imprecise">wiki.github.com/rdp/ruby_tutorials_core/ruby-talk-faq#floats_imprecise</a></p>
+</li><li>
+<p><a
+href="http://en.wikipedia.org/wiki/Floating_point#Accuracy_problems">en.wikipedia.org/wiki/Floating_point#Accuracy_problems</a></p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="DIG">DIG
+        
+        <dd class="description">
+        
+      
+        <dt id="EPSILON">EPSILON
+        
+        <dd class="description">
+        
+      
+        <dt id="INFINITY">INFINITY
+        
+        <dd class="description">
+        
+      
+        <dt id="MANT_DIG">MANT_DIG
+        
+        <dd class="description">
+        
+      
+        <dt id="MAX">MAX
+        
+        <dd class="description">
+        
+      
+        <dt id="MAX_10_EXP">MAX_10_EXP
+        
+        <dd class="description">
+        
+      
+        <dt id="MAX_EXP">MAX_EXP
+        
+        <dd class="description">
+        
+      
+        <dt id="MIN">MIN
+        
+        <dd class="description">
+        
+      
+        <dt id="MIN_10_EXP">MIN_10_EXP
+        
+        <dd class="description">
+        
+      
+        <dt id="MIN_EXP">MIN_EXP
+        
+        <dd class="description">
+        
+      
+        <dt id="NAN">NAN
+        
+        <dd class="description">
+        
+      
+        <dt id="RADIX">RADIX
+        
+        <dd class="description">
+        
+      
+        <dt id="ROUNDS">ROUNDS
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            flt % other        &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            modulo(other)  &rarr;  float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return the modulo after division of <code>flt</code> by <code>other</code>.</p>
+
+<pre class="ruby"><span class="ruby-value">6543.21</span>.<span class="ruby-identifier">modulo</span>(<span class="ruby-value">137</span>)      <span class="ruby-comment">#=&gt; 104.21</span>
+<span class="ruby-value">6543.21</span>.<span class="ruby-identifier">modulo</span>(<span class="ruby-value">137.24</span>)   <span class="ruby-comment">#=&gt; 92.9299999999996</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="25-source">
+            <pre>static VALUE
+flo_mod(VALUE x, VALUE y)
+{
+    double fy;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        fy = (double)FIX2LONG(y);
+        break;
+      case T_BIGNUM:
+        fy = rb_big2dbl(y);
+        break;
+      case T_FLOAT:
+        fy = RFLOAT_VALUE(y);
+        break;
+      default:
+        return rb_num_coerce_bin(x, y, '%');
+    }
+    return DBL2NUM(ruby_float_mod(RFLOAT_VALUE(x), fy));
+}</pre>
+          </div><!-- 25-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 25-method -->
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            float * other  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new float which is the product of <code>float</code> and
+<code>other</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre>static VALUE
+flo_mul(VALUE x, VALUE y)
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        return DBL2NUM(RFLOAT_VALUE(x) * (double)FIX2LONG(y));
+      case T_BIGNUM:
+        return DBL2NUM(RFLOAT_VALUE(x) * rb_big2dbl(y));
+      case T_FLOAT:
+        return DBL2NUM(RFLOAT_VALUE(x) * RFLOAT_VALUE(y));
+      default:
+        return rb_num_coerce_bin(x, y, '*');
+    }
+}</pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2A-2A" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt ** other  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Raises <code>float</code> the <code>other</code> power.</p>
+
+<pre class="ruby"><span class="ruby-value">2.0</span><span class="ruby-operator">**</span><span class="ruby-value">3</span>      <span class="ruby-comment">#=&gt; 8.0</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="2A-2A-source">
+            <pre>static VALUE
+flo_pow(VALUE x, VALUE y)
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        return DBL2NUM(pow(RFLOAT_VALUE(x), (double)FIX2LONG(y)));
+      case T_BIGNUM:
+        return DBL2NUM(pow(RFLOAT_VALUE(x), rb_big2dbl(y)));
+      case T_FLOAT:
+        {
+            double dx = RFLOAT_VALUE(x);
+            double dy = RFLOAT_VALUE(y);
+            if (dx &lt; 0 &amp;&amp; dy != round(dy))
+                return rb_funcall(rb_complex_raw1(x), rb_intern(&quot;**&quot;), 1, y);
+            return DBL2NUM(pow(dx, dy));
+        }
+      default:
+        return rb_num_coerce_bin(x, y, rb_intern(&quot;**&quot;));
+    }
+}</pre>
+          </div><!-- 2A-2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            float + other  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new float which is the sum of <code>float</code> and
+<code>other</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre>static VALUE
+flo_plus(VALUE x, VALUE y)
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        return DBL2NUM(RFLOAT_VALUE(x) + (double)FIX2LONG(y));
+      case T_BIGNUM:
+        return DBL2NUM(RFLOAT_VALUE(x) + rb_big2dbl(y));
+      case T_FLOAT:
+        return DBL2NUM(RFLOAT_VALUE(x) + RFLOAT_VALUE(y));
+      default:
+        return rb_num_coerce_bin(x, y, '+');
+    }
+}</pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            float - other  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new float which is the difference of <code>float</code> and
+<code>other</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre>static VALUE
+flo_minus(VALUE x, VALUE y)
+{
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        return DBL2NUM(RFLOAT_VALUE(x) - (double)FIX2LONG(y));
+      case T_BIGNUM:
+        return DBL2NUM(RFLOAT_VALUE(x) - rb_big2dbl(y));
+      case T_FLOAT:
+        return DBL2NUM(RFLOAT_VALUE(x) - RFLOAT_VALUE(y));
+      default:
+        return rb_num_coerce_bin(x, y, '-');
+    }
+}</pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2D-40" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            -float  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns float, negated.</p>
+          
+
+          
+          <div class="method-source-code" id="2D-40-source">
+            <pre>static VALUE
+flo_uminus(VALUE flt)
+{
+    return DBL2NUM(-RFLOAT_VALUE(flt));
+}</pre>
+          </div><!-- 2D-40-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-40-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            float / other  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new float which is the result of dividing <code>float</code> by
+<code>other</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre>static VALUE
+flo_div(VALUE x, VALUE y)
+{
+    long f_y;
+    double d;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        f_y = FIX2LONG(y);
+        return DBL2NUM(RFLOAT_VALUE(x) / (double)f_y);
+      case T_BIGNUM:
+        d = rb_big2dbl(y);
+        return DBL2NUM(RFLOAT_VALUE(x) / d);
+      case T_FLOAT:
+        return DBL2NUM(RFLOAT_VALUE(x) / RFLOAT_VALUE(y));
+      default:
+        return rb_num_coerce_bin(x, y, '/');
+    }
+}</pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt &lt; real  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p><code>true</code> if <code>flt</code> is less than <code>real</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="3C-source">
+            <pre>static VALUE
+flo_lt(VALUE x, VALUE y)
+{
+    double a, b;
+
+    a = RFLOAT_VALUE(x);
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+
+      case T_BIGNUM:
+        b = rb_big2dbl(y);
+        break;
+
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(b)) return Qfalse;
+#endif
+        break;
+
+      default:
+        return rb_num_coerce_relop(x, y, '&lt;');
+    }
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+    if (isnan(a)) return Qfalse;
+#endif
+    return (a &lt; b)?Qtrue:Qfalse;
+}</pre>
+          </div><!-- 3C-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-method -->
+
+    
+      <div id="method-i-3C-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt &lt;= real  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p><code>true</code> if <code>flt</code> is less than or equal to
+<code>real</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="3C-3D-source">
+            <pre>static VALUE
+flo_le(VALUE x, VALUE y)
+{
+    double a, b;
+
+    a = RFLOAT_VALUE(x);
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+
+      case T_BIGNUM:
+        b = rb_big2dbl(y);
+        break;
+
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(b)) return Qfalse;
+#endif
+        break;
+
+      default:
+        return rb_num_coerce_relop(x, y, rb_intern(&quot;&lt;=&quot;));
+    }
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+    if (isnan(a)) return Qfalse;
+#endif
+    return (a &lt;= b)?Qtrue:Qfalse;
+}</pre>
+          </div><!-- 3C-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt &lt;=&gt; real  &rarr;  -1, 0, +1 or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns -1, 0, +1 or nil depending on whether <em>flt</em> is less than,
+equal to, or greater than <em>real</em>. This is the basis for the tests in
+<code>Comparable</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre>static VALUE
+flo_cmp(VALUE x, VALUE y)
+{
+    double a, b;
+    VALUE i;
+
+    a = RFLOAT_VALUE(x);
+    if (isnan(a)) return Qnil;
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+
+      case T_BIGNUM:
+        if (isinf(a)) {
+            if (a &gt; 0.0) return INT2FIX(1);
+            else return INT2FIX(-1);
+        }
+        b = rb_big2dbl(y);
+        break;
+
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+        break;
+
+      default:
+        if (isinf(a) &amp;&amp; (i = rb_check_funcall(y, rb_intern(&quot;infinite?&quot;), 0, 0)) != Qundef) {
+            if (RTEST(i)) {
+                int j = rb_cmpint(i, x, y);
+                j = (a &gt; 0.0) ? (j &gt; 0 ? 0 : +1) : (j &lt; 0 ? 0 : -1);
+                return INT2FIX(j);
+            }
+            if (a &gt; 0.0) return INT2FIX(1);
+            return INT2FIX(-1);
+        }
+        return rb_num_coerce_cmp(x, y, rb_intern(&quot;&lt;=&gt;&quot;));
+    }
+    return rb_dbl_cmp(a, b);
+}</pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            flt == obj  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> only if <em>obj</em> has the same value as
+<em>flt</em>. Contrast this with <code>Float#eql?</code>, which requires
+<em>obj</em> to be a <code>Float</code>.</p>
+
+<pre class="ruby"><span class="ruby-value">1.0</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>   <span class="ruby-comment">#=&gt; true</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre>static VALUE
+flo_eq(VALUE x, VALUE y)
+{
+    volatile double a, b;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+      case T_BIGNUM:
+        b = rb_big2dbl(y);
+        break;
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(b)) return Qfalse;
+#endif
+        break;
+      default:
+        return num_equal(x, y);
+    }
+    a = RFLOAT_VALUE(x);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+    if (isnan(a)) return Qfalse;
+#endif
+    return (a == b)?Qtrue:Qfalse;
+}</pre>
+          </div><!-- 3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-method -->
+
+    
+      <div id="method-i-3D-3D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt == obj  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> only if <em>obj</em> has the same value as
+<em>flt</em>. Contrast this with <code>Float#eql?</code>, which requires
+<em>obj</em> to be a <code>Float</code>.</p>
+
+<pre class="ruby"><span class="ruby-value">1.0</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>   <span class="ruby-comment">#=&gt; true</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="3D-3D-3D-source">
+            <pre>static VALUE
+flo_eq(VALUE x, VALUE y)
+{
+    volatile double a, b;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+      case T_BIGNUM:
+        b = rb_big2dbl(y);
+        break;
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(b)) return Qfalse;
+#endif
+        break;
+      default:
+        return num_equal(x, y);
+    }
+    a = RFLOAT_VALUE(x);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+    if (isnan(a)) return Qfalse;
+#endif
+    return (a == b)?Qtrue:Qfalse;
+}</pre>
+          </div><!-- 3D-3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-3D-method -->
+
+    
+      <div id="method-i-3E" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt &gt; real  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p><code>true</code> if <code>flt</code> is greater than <code>real</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="3E-source">
+            <pre>static VALUE
+flo_gt(VALUE x, VALUE y)
+{
+    double a, b;
+
+    a = RFLOAT_VALUE(x);
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+
+      case T_BIGNUM:
+        b = rb_big2dbl(y);
+        break;
+
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(b)) return Qfalse;
+#endif
+        break;
+
+      default:
+        return rb_num_coerce_relop(x, y, '&gt;');
+    }
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+    if (isnan(a)) return Qfalse;
+#endif
+    return (a &gt; b)?Qtrue:Qfalse;
+}</pre>
+          </div><!-- 3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3E-method -->
+
+    
+      <div id="method-i-3E-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt &gt;= real  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p><code>true</code> if <code>flt</code> is greater than or equal to
+<code>real</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="3E-3D-source">
+            <pre>static VALUE
+flo_ge(VALUE x, VALUE y)
+{
+    double a, b;
+
+    a = RFLOAT_VALUE(x);
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        b = (double)FIX2LONG(y);
+        break;
+
+      case T_BIGNUM:
+        b = rb_big2dbl(y);
+        break;
+
+      case T_FLOAT:
+        b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(b)) return Qfalse;
+#endif
+        break;
+
+      default:
+        return rb_num_coerce_relop(x, y, rb_intern(&quot;&gt;=&quot;));
+    }
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+    if (isnan(a)) return Qfalse;
+#endif
+    return (a &gt;= b)?Qtrue:Qfalse;
+}</pre>
+          </div><!-- 3E-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3E-3D-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            abs        &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            magnitude  &rarr;  float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the absolute value of <em>flt</em>.</p>
+
+<pre class="ruby">(<span class="ruby-value">-34.56</span>).<span class="ruby-identifier">abs</span>   <span class="ruby-comment">#=&gt; 34.56</span>
+<span class="ruby-value">-34.56</span>.<span class="ruby-identifier">abs</span>     <span class="ruby-comment">#=&gt; 34.56</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre>static VALUE
+flo_abs(VALUE flt)
+{
+    double val = fabs(RFLOAT_VALUE(flt));
+    return DBL2NUM(val);
+}</pre>
+          </div><!-- abs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-angle" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            arg    &rarr;  0 or float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            angle  &rarr;  0 or float
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            phase  &rarr;  0 or float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns 0 if the value is positive, pi otherwise.</p>
+          
+
+          
+          <div class="method-source-code" id="angle-source">
+            <pre>static VALUE
+float_arg(VALUE self)
+{
+    if (isnan(RFLOAT_VALUE(self)))
+        return self;
+    if (f_tpositive_p(self))
+        return INT2FIX(0);
+    return rb_const_get(rb_mMath, id_PI);
+}</pre>
+          </div><!-- angle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- angle-method -->
+
+    
+      <div id="method-i-arg" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            arg    &rarr;  0 or float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            angle  &rarr;  0 or float
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            phase  &rarr;  0 or float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns 0 if the value is positive, pi otherwise.</p>
+          
+
+          
+          <div class="method-source-code" id="arg-source">
+            <pre>static VALUE
+float_arg(VALUE self)
+{
+    if (isnan(RFLOAT_VALUE(self)))
+        return self;
+    if (f_tpositive_p(self))
+        return INT2FIX(0);
+    return rb_const_get(rb_mMath, id_PI);
+}</pre>
+          </div><!-- arg-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- arg-method -->
+
+    
+      <div id="method-i-ceil" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            ceil  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the smallest <code>Integer</code> greater than or equal to
+<em>flt</em>.</p>
+
+<pre class="ruby"><span class="ruby-value">1.2</span>.<span class="ruby-identifier">ceil</span>      <span class="ruby-comment">#=&gt; 2</span>
+<span class="ruby-value">2.0</span>.<span class="ruby-identifier">ceil</span>      <span class="ruby-comment">#=&gt; 2</span>
+(<span class="ruby-value">-1.2</span>).<span class="ruby-identifier">ceil</span>   <span class="ruby-comment">#=&gt; -1</span>
+(<span class="ruby-value">-2.0</span>).<span class="ruby-identifier">ceil</span>   <span class="ruby-comment">#=&gt; -2</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="ceil-source">
+            <pre>static VALUE
+flo_ceil(VALUE num)
+{
+    double f = ceil(RFLOAT_VALUE(num));
+    long val;
+
+    if (!FIXABLE(f)) {
+        return rb_dbl2big(f);
+    }
+    val = (long)f;
+    return LONG2FIX(val);
+}</pre>
+          </div><!-- ceil-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ceil-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            coerce(numeric)  &rarr;  array
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns an array with both <em>a<a href="Numeric.html">Numeric</a></em> and
+<em>flt</em> represented as <code>Float</code> objects. This is achieved by
+converting <em>a<a href="Numeric.html">Numeric</a></em> to a
+<code>Float</code>.</p>
+
+<pre class="ruby"><span class="ruby-value">1.2</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-value">3</span>)       <span class="ruby-comment">#=&gt; [3.0, 1.2]</span>
+<span class="ruby-value">2.5</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-value">1.1</span>)     <span class="ruby-comment">#=&gt; [1.1, 2.5]</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre>static VALUE
+flo_coerce(VALUE x, VALUE y)
+{
+    return rb_assoc_new(rb_Float(y), x);
+}</pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-denominator" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            denominator  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the denominator (always positive).  The result is machine
+dependent.</p>
+
+<p>See numerator.</p>
+          
+
+          
+          <div class="method-source-code" id="denominator-source">
+            <pre>static VALUE
+float_denominator(VALUE self)
+{
+    double d = RFLOAT_VALUE(self);
+    if (isinf(d) || isnan(d))
+        return INT2FIX(1);
+    return rb_call_super(0, 0);
+}</pre>
+          </div><!-- denominator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- denominator-method -->
+
+    
+      <div id="method-i-divmod" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            divmod(numeric)  &rarr;  array
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>See <code>Numeric#divmod</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="divmod-source">
+            <pre>static VALUE
+flo_divmod(VALUE x, VALUE y)
+{
+    double fy, div, mod;
+    volatile VALUE a, b;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        fy = (double)FIX2LONG(y);
+        break;
+      case T_BIGNUM:
+        fy = rb_big2dbl(y);
+        break;
+      case T_FLOAT:
+        fy = RFLOAT_VALUE(y);
+        break;
+      default:
+        return rb_num_coerce_bin(x, y, rb_intern(&quot;divmod&quot;));
+    }
+    flodivmod(RFLOAT_VALUE(x), fy, &amp;div, &amp;mod);
+    a = dbl2ival(div);
+    b = DBL2NUM(mod);
+    return rb_assoc_new(a, b);
+}</pre>
+          </div><!-- divmod-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- divmod-method -->
+
+    
+      <div id="method-i-eql-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            eql?(obj)  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> only if <em>obj</em> is a <code>Float</code> with
+the same value as <em>flt</em>. Contrast this with <code>Float#==</code>,
+which performs type conversions.</p>
+
+<pre class="ruby"><span class="ruby-value">1.0</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value">1</span>)   <span class="ruby-comment">#=&gt; false</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="eql-3F-source">
+            <pre>static VALUE
+flo_eql(VALUE x, VALUE y)
+{
+    if (TYPE(y) == T_FLOAT) {
+        double a = RFLOAT_VALUE(x);
+        double b = RFLOAT_VALUE(y);
+#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt; 1300
+        if (isnan(a) || isnan(b)) return Qfalse;
+#endif
+        if (a == b)
+            return Qtrue;
+    }
+    return Qfalse;
+}</pre>
+          </div><!-- eql-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- eql-3F-method -->
+
+    
+      <div id="method-i-fdiv" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            quo(numeric)  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns float / numeric.</p>
+          
+
+          
+          <div class="method-source-code" id="fdiv-source">
+            <pre>static VALUE
+flo_quo(VALUE x, VALUE y)
+{
+    return rb_funcall(x, '/', 1, y);
+}</pre>
+          </div><!-- fdiv-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fdiv-method -->
+
+    
+      <div id="method-i-finite-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            finite?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <em>flt</em> is a valid IEEE floating point
+number (it is not infinite, and <code>nan?</code> is <code>false</code>).</p>
+          
+
+          
+          <div class="method-source-code" id="finite-3F-source">
+            <pre>static VALUE
+flo_is_finite_p(VALUE num)
+{
+    double value = RFLOAT_VALUE(num);
+
+#if HAVE_FINITE
+    if (!finite(value))
+        return Qfalse;
+#else
+    if (isinf(value) || isnan(value))
+        return Qfalse;
+#endif
+
+    return Qtrue;
+}</pre>
+          </div><!-- finite-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- finite-3F-method -->
+
+    
+      <div id="method-i-floor" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            floor  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the largest integer less than or equal to <em>flt</em>.</p>
+
+<pre class="ruby"><span class="ruby-value">1.2</span>.<span class="ruby-identifier">floor</span>      <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-value">2.0</span>.<span class="ruby-identifier">floor</span>      <span class="ruby-comment">#=&gt; 2</span>
+(<span class="ruby-value">-1.2</span>).<span class="ruby-identifier">floor</span>   <span class="ruby-comment">#=&gt; -2</span>
+(<span class="ruby-value">-2.0</span>).<span class="ruby-identifier">floor</span>   <span class="ruby-comment">#=&gt; -2</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="floor-source">
+            <pre>static VALUE
+flo_floor(VALUE num)
+{
+    double f = floor(RFLOAT_VALUE(num));
+    long val;
+
+    if (!FIXABLE(f)) {
+        return rb_dbl2big(f);
+    }
+    val = (long)f;
+    return LONG2FIX(val);
+}</pre>
+          </div><!-- floor-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- floor-method -->
+
+    
+      <div id="method-i-hash" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            hash  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a hash code for this float.</p>
+          
+
+          
+          <div class="method-source-code" id="hash-source">
+            <pre>static VALUE
+flo_hash(VALUE num)
+{
+    double d;
+    st_index_t hash;
+
+    d = RFLOAT_VALUE(num);
+    /* normalize -0.0 to 0.0 */
+    if (d == 0.0) d = 0.0;
+    hash = rb_memhash(&amp;d, sizeof(d));
+    return LONG2FIX(hash);
+}</pre>
+          </div><!-- hash-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- hash-method -->
+
+    
+      <div id="method-i-infinite-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            infinite?  &rarr;  nil, -1, +1
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>nil</code>, -1, or +1 depending on whether <em>flt</em> is
+finite, -infinity, or +infinity.</p>
+
+<pre class="ruby">(<span class="ruby-value">0.0</span>).<span class="ruby-identifier">infinite?</span>        <span class="ruby-comment">#=&gt; nil</span>
+(<span class="ruby-value">-1.0</span><span class="ruby-operator">/</span><span class="ruby-value">0.0</span>).<span class="ruby-identifier">infinite?</span>   <span class="ruby-comment">#=&gt; -1</span>
+(<span class="ruby-value">+1.0</span><span class="ruby-operator">/</span><span class="ruby-value">0.0</span>).<span class="ruby-identifier">infinite?</span>   <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="infinite-3F-source">
+            <pre>static VALUE
+flo_is_infinite_p(VALUE num)
+{
+    double value = RFLOAT_VALUE(num);
+
+    if (isinf(value)) {
+        return INT2FIX( value &lt; 0 ? -1 : 1 );
+    }
+
+    return Qnil;
+}</pre>
+          </div><!-- infinite-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- infinite-3F-method -->
+
+    
+      <div id="method-i-magnitude" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            abs        &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            magnitude  &rarr;  float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the absolute value of <em>flt</em>.</p>
+
+<pre class="ruby">(<span class="ruby-value">-34.56</span>).<span class="ruby-identifier">abs</span>   <span class="ruby-comment">#=&gt; 34.56</span>
+<span class="ruby-value">-34.56</span>.<span class="ruby-identifier">abs</span>     <span class="ruby-comment">#=&gt; 34.56</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="magnitude-source">
+            <pre>static VALUE
+flo_abs(VALUE flt)
+{
+    double val = fabs(RFLOAT_VALUE(flt));
+    return DBL2NUM(val);
+}</pre>
+          </div><!-- magnitude-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- magnitude-method -->
+
+    
+      <div id="method-i-modulo" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            flt % other        &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            modulo(other)  &rarr;  float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return the modulo after division of <code>flt</code> by <code>other</code>.</p>
+
+<pre class="ruby"><span class="ruby-value">6543.21</span>.<span class="ruby-identifier">modulo</span>(<span class="ruby-value">137</span>)      <span class="ruby-comment">#=&gt; 104.21</span>
+<span class="ruby-value">6543.21</span>.<span class="ruby-identifier">modulo</span>(<span class="ruby-value">137.24</span>)   <span class="ruby-comment">#=&gt; 92.9299999999996</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="modulo-source">
+            <pre>static VALUE
+flo_mod(VALUE x, VALUE y)
+{
+    double fy;
+
+    switch (TYPE(y)) {
+      case T_FIXNUM:
+        fy = (double)FIX2LONG(y);
+        break;
+      case T_BIGNUM:
+        fy = rb_big2dbl(y);
+        break;
+      case T_FLOAT:
+        fy = RFLOAT_VALUE(y);
+        break;
+      default:
+        return rb_num_coerce_bin(x, y, '%');
+    }
+    return DBL2NUM(ruby_float_mod(RFLOAT_VALUE(x), fy));
+}</pre>
+          </div><!-- modulo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- modulo-method -->
+
+    
+      <div id="method-i-nan-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            nan?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <em>flt</em> is an invalid IEEE floating point
+number.</p>
+
+<pre class="ruby"><span class="ruby-identifier">a</span> = <span class="ruby-value">-1.0</span>      <span class="ruby-comment">#=&gt; -1.0</span>
+<span class="ruby-identifier">a</span>.<span class="ruby-identifier">nan?</span>        <span class="ruby-comment">#=&gt; false</span>
+<span class="ruby-identifier">a</span> = <span class="ruby-value">0.0</span><span class="ruby-operator">/</span><span class="ruby-value">0.0</span>   <span class="ruby-comment">#=&gt; NaN</span>
+<span class="ruby-identifier">a</span>.<span class="ruby-identifier">nan?</span>        <span class="ruby-comment">#=&gt; true</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="nan-3F-source">
+            <pre>static VALUE
+flo_is_nan_p(VALUE num)
+{
+    double value = RFLOAT_VALUE(num);
+
+    return isnan(value) ? Qtrue : Qfalse;
+}</pre>
+          </div><!-- nan-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- nan-3F-method -->
+
+    
+      <div id="method-i-numerator" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            numerator  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the numerator.  The result is machine dependent.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">n</span> = <span class="ruby-value">0.3</span>.<span class="ruby-identifier">numerator</span>    <span class="ruby-comment">#=&gt; 5404319552844595</span>
+<span class="ruby-identifier">d</span> = <span class="ruby-value">0.3</span>.<span class="ruby-identifier">denominator</span>  <span class="ruby-comment">#=&gt; 18014398509481984</span>
+<span class="ruby-identifier">n</span>.<span class="ruby-identifier">fdiv</span>(<span class="ruby-identifier">d</span>)            <span class="ruby-comment">#=&gt; 0.3</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="numerator-source">
+            <pre>static VALUE
+float_numerator(VALUE self)
+{
+    double d = RFLOAT_VALUE(self);
+    if (isinf(d) || isnan(d))
+        return self;
+    return rb_call_super(0, 0);
+}</pre>
+          </div><!-- numerator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- numerator-method -->
+
+    
+      <div id="method-i-phase" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            arg    &rarr;  0 or float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            angle  &rarr;  0 or float
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            phase  &rarr;  0 or float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns 0 if the value is positive, pi otherwise.</p>
+          
+
+          
+          <div class="method-source-code" id="phase-source">
+            <pre>static VALUE
+float_arg(VALUE self)
+{
+    if (isnan(RFLOAT_VALUE(self)))
+        return self;
+    if (f_tpositive_p(self))
+        return INT2FIX(0);
+    return rb_const_get(rb_mMath, id_PI);
+}</pre>
+          </div><!-- phase-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- phase-method -->
+
+    
+      <div id="method-i-quo" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            quo(numeric)  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns float / numeric.</p>
+          
+
+          
+          <div class="method-source-code" id="quo-source">
+            <pre>static VALUE
+flo_quo(VALUE x, VALUE y)
+{
+    return rb_funcall(x, '/', 1, y);
+}</pre>
+          </div><!-- quo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- quo-method -->
+
+    
+      <div id="method-i-rationalize" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rationalize([eps])  &rarr;  rational
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a simpler approximation of the value (flt-|eps| &lt;= result &lt;=
+flt+|eps|).  if eps is not given, it will be chosen automatically.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-value">0.3</span>.<span class="ruby-identifier">rationalize</span>          <span class="ruby-comment">#=&gt; (3/10)</span>
+<span class="ruby-value">1.333</span>.<span class="ruby-identifier">rationalize</span>        <span class="ruby-comment">#=&gt; (1333/1000)</span>
+<span class="ruby-value">1.333</span>.<span class="ruby-identifier">rationalize</span>(<span class="ruby-value">0.01</span>)  <span class="ruby-comment">#=&gt; (4/3)</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="rationalize-source">
+            <pre>static VALUE
+float_rationalize(int argc, VALUE *argv, VALUE self)
+{
+    VALUE e, a, b, p, q;
+
+    if (f_negative_p(self))
+        return f_negate(float_rationalize(argc, argv, f_abs(self)));
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;e);
+
+    if (argc != 0) {
+        e = f_abs(e);
+        a = f_sub(self, e);
+        b = f_add(self, e);
+    }
+    else {
+        VALUE f, n;
+
+        float_decode_internal(self, &amp;f, &amp;n);
+        if (f_zero_p(f) || f_positive_p(n))
+            return rb_rational_new1(f_lshift(f, n));
+
+#if FLT_RADIX == 2
+        a = rb_rational_new2(f_sub(f_mul(TWO, f), ONE),
+                             f_lshift(ONE, f_sub(ONE, n)));
+        b = rb_rational_new2(f_add(f_mul(TWO, f), ONE),
+                             f_lshift(ONE, f_sub(ONE, n)));
+#else
+        a = rb_rational_new2(f_sub(f_mul(INT2FIX(FLT_RADIX), f),
+                                   INT2FIX(FLT_RADIX - 1)),
+                             f_expt(INT2FIX(FLT_RADIX), f_sub(ONE, n)));
+        b = rb_rational_new2(f_add(f_mul(INT2FIX(FLT_RADIX), f),
+                                   INT2FIX(FLT_RADIX - 1)),
+                             f_expt(INT2FIX(FLT_RADIX), f_sub(ONE, n)));
+#endif
+    }
+
+    if (f_eqeq_p(a, b))
+        return f_to_r(self);
+
+    nurat_rationalize_internal(a, b, &amp;p, &amp;q);
+    return rb_rational_new2(p, q);
+}</pre>
+          </div><!-- rationalize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rationalize-method -->
+
+    
+      <div id="method-i-round" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            round([ndigits])  &rarr;  integer or float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Rounds <em>flt</em> to a given precision in decimal digits (default 0
+digits). Precision may be negative.  Returns a floating point number when
+ndigits is more than zero.</p>
+
+<pre class="ruby"><span class="ruby-value">1.4</span>.<span class="ruby-identifier">round</span>      <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-value">1.5</span>.<span class="ruby-identifier">round</span>      <span class="ruby-comment">#=&gt; 2</span>
+<span class="ruby-value">1.6</span>.<span class="ruby-identifier">round</span>      <span class="ruby-comment">#=&gt; 2</span>
+(<span class="ruby-value">-1.5</span>).<span class="ruby-identifier">round</span>   <span class="ruby-comment">#=&gt; -2</span>
+
+<span class="ruby-value">1.234567</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; 1.23</span>
+<span class="ruby-value">1.234567</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">3</span>)  <span class="ruby-comment">#=&gt; 1.235</span>
+<span class="ruby-value">1.234567</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">4</span>)  <span class="ruby-comment">#=&gt; 1.2346</span>
+<span class="ruby-value">1.234567</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">5</span>)  <span class="ruby-comment">#=&gt; 1.23457</span>
+
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">-5</span>) <span class="ruby-comment">#=&gt; 0</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">-4</span>) <span class="ruby-comment">#=&gt; 30000</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">-3</span>) <span class="ruby-comment">#=&gt; 35000</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">-2</span>) <span class="ruby-comment">#=&gt; 34600</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">-1</span>) <span class="ruby-comment">#=&gt; 34570</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">0</span>)  <span class="ruby-comment">#=&gt; 34568</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">1</span>)  <span class="ruby-comment">#=&gt; 34567.9</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; 34567.89</span>
+<span class="ruby-value">34567.89</span>.<span class="ruby-identifier">round</span>(<span class="ruby-value">3</span>)  <span class="ruby-comment">#=&gt; 34567.89</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="round-source">
+            <pre>static VALUE
+flo_round(int argc, VALUE *argv, VALUE num)
+{
+    VALUE nd;
+    double number, f;
+    int ndigits = 0;
+    int binexp;
+    enum {float_dig = DBL_DIG+2};
+
+    if (argc &gt; 0 &amp;&amp; rb_scan_args(argc, argv, &quot;01&quot;, &amp;nd) == 1) {
+        ndigits = NUM2INT(nd);
+    }
+    if (ndigits &lt; 0) {
+        return int_round_0(flo_truncate(num), ndigits);
+    }
+    number  = RFLOAT_VALUE(num);
+    if (ndigits == 0) {
+        return dbl2ival(number);
+    }
+    frexp(number, &amp;binexp);
+
+/* Let `exp` be such that `number` is written as:&quot;0.#{digits}e#{exp}&quot;,
+   i.e. such that  10 ** (exp - 1) &lt;= |number| &lt; 10 ** exp
+   Recall that up to float_dig digits can be needed to represent a double,
+   so if ndigits + exp &gt;= float_dig, the intermediate value (number * 10 ** ndigits)
+   will be an integer and thus the result is the original number.
+   If ndigits + exp &lt;= 0, the result is 0 or &quot;1e#{exp}&quot;, so
+   if ndigits + exp &lt; 0, the result is 0.
+   We have:
+        2 ** (binexp-1) &lt;= |number| &lt; 2 ** binexp
+        10 ** ((binexp-1)/log_2(10)) &lt;= |number| &lt; 10 ** (binexp/log_2(10))
+        If binexp &gt;= 0, and since log_2(10) = 3.322259:
+           10 ** (binexp/4 - 1) &lt; |number| &lt; 10 ** (binexp/3)
+           floor(binexp/4) &lt;= exp &lt;= ceil(binexp/3)
+        If binexp &lt;= 0, swap the /4 and the /3
+        So if ndigits + floor(binexp/(4 or 3)) &gt;= float_dig, the result is number
+        If ndigits + ceil(binexp/(3 or 4)) &lt; 0 the result is 0
+*/
+    if (isinf(number) || isnan(number) ||
+        (ndigits &gt;= float_dig - (binexp &gt; 0 ? binexp / 4 : binexp / 3 - 1))) {
+        return num;
+    }
+    if (ndigits &lt; - (binexp &gt; 0 ? binexp / 3 + 1 : binexp / 4)) {
+        return DBL2NUM(0);
+    }
+    f = pow(10, ndigits);
+    return DBL2NUM(round(number * f) / f);
+}</pre>
+          </div><!-- round-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- round-method -->
+
+    
+      <div id="method-i-to_f" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            to_f  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>As <code>flt</code> is already a float, returns <code>self</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="to_f-source">
+            <pre>static VALUE
+flo_to_f(VALUE num)
+{
+    return num;
+}</pre>
+          </div><!-- to_f-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_f-method -->
+
+    
+      <div id="method-i-to_i" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <em>flt</em> truncated to an <code>Integer</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="to_i-source">
+            <pre>static VALUE
+flo_truncate(VALUE num)
+{
+    double f = RFLOAT_VALUE(num);
+    long val;
+
+    if (f &gt; 0.0) f = floor(f);
+    if (f &lt; 0.0) f = ceil(f);
+
+    if (!FIXABLE(f)) {
+        return rb_dbl2big(f);
+    }
+    val = (long)f;
+    return LONG2FIX(val);
+}</pre>
+          </div><!-- to_i-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_i-method -->
+
+    
+      <div id="method-i-to_int" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <em>flt</em> truncated to an <code>Integer</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="to_int-source">
+            <pre>static VALUE
+flo_truncate(VALUE num)
+{
+    double f = RFLOAT_VALUE(num);
+    long val;
+
+    if (f &gt; 0.0) f = floor(f);
+    if (f &lt; 0.0) f = ceil(f);
+
+    if (!FIXABLE(f)) {
+        return rb_dbl2big(f);
+    }
+    val = (long)f;
+    return LONG2FIX(val);
+}</pre>
+          </div><!-- to_int-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_int-method -->
+
+    
+      <div id="method-i-to_r" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_r  &rarr;  rational
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value as a rational.</p>
+
+<p>NOTE: 0.3.to_r isn't the same as '0.3'.to_r.  The latter is equivalent to
+'3/10'.<a href="Float.html#method-i-to_r">#to_r</a>, but the former isn't
+so.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-value">2.0</span>.<span class="ruby-identifier">to_r</span>    <span class="ruby-comment">#=&gt; (2/1)</span>
+<span class="ruby-value">2.5</span>.<span class="ruby-identifier">to_r</span>    <span class="ruby-comment">#=&gt; (5/2)</span>
+<span class="ruby-value">-0.75</span>.<span class="ruby-identifier">to_r</span>  <span class="ruby-comment">#=&gt; (-3/4)</span>
+<span class="ruby-value">0.0</span>.<span class="ruby-identifier">to_r</span>    <span class="ruby-comment">#=&gt; (0/1)</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_r-source">
+            <pre>static VALUE
+float_to_r(VALUE self)
+{
+    VALUE f, n;
+
+    float_decode_internal(self, &amp;f, &amp;n);
+#if FLT_RADIX == 2
+    {
+        long ln = FIX2LONG(n);
+
+        if (ln == 0)
+            return f_to_r(f);
+        if (ln &gt; 0)
+            return f_to_r(f_lshift(f, n));
+        ln = -ln;
+        return rb_rational_new2(f, f_lshift(ONE, INT2FIX(ln)));
+    }
+#else
+    return f_to_r(f_mul(f, f_expt(INT2FIX(FLT_RADIX), n)));
+#endif
+}</pre>
+          </div><!-- to_r-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_r-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            to_s  &rarr;  string
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a string containing a representation of self. As well as a fixed or
+exponential form of the number, the call may return "<code>NaN</code>",
+"<code>Infinity</code>", and "<code>-Infinity</code>".</p>
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre>static VALUE
+flo_to_s(VALUE flt)
+{
+    char *ruby_dtoa(double d_, int mode, int ndigits, int *decpt, int *sign, char **rve);
+    enum {decimal_mant = DBL_MANT_DIG-DBL_DIG};
+    enum {float_dig = DBL_DIG+1};
+    char buf[float_dig + (decimal_mant + CHAR_BIT - 1) / CHAR_BIT + 10];
+    double value = RFLOAT_VALUE(flt);
+    VALUE s;
+    char *p, *e;
+    int sign, decpt, digs;
+
+    if (isinf(value))
+        return rb_usascii_str_new2(value &lt; 0 ? &quot;-Infinity&quot; : &quot;Infinity&quot;);
+    else if (isnan(value))
+        return rb_usascii_str_new2(&quot;NaN&quot;);
+
+    p = ruby_dtoa(value, 0, 0, &amp;decpt, &amp;sign, &amp;e);
+    s = sign ? rb_usascii_str_new_cstr(&quot;-&quot;) : rb_usascii_str_new(0, 0);
+    if ((digs = (int)(e - p)) &gt;= (int)sizeof(buf)) digs = (int)sizeof(buf) - 1;
+    memcpy(buf, p, digs);
+    xfree(p);
+    if (decpt &gt; 0) {
+        if (decpt &lt; digs) {
+            memmove(buf + decpt + 1, buf + decpt, digs - decpt);
+            buf[decpt] = '.';
+            rb_str_cat(s, buf, digs + 1);
+        }
+        else if (decpt - digs &lt; float_dig) {
+            long len;
+            char *ptr;
+            rb_str_cat(s, buf, digs);
+            rb_str_resize(s, (len = RSTRING_LEN(s)) + decpt - digs + 2);
+            ptr = RSTRING_PTR(s) + len;
+            if (decpt &gt; digs) {
+                memset(ptr, '0', decpt - digs);
+                ptr += decpt - digs;
+            }
+            memcpy(ptr, &quot;.0&quot;, 2);
+        }
+        else {
+            goto exp;
+        }
+    }
+    else if (decpt &gt; -4) {
+        long len;
+        char *ptr;
+        rb_str_cat(s, &quot;0.&quot;, 2);
+        rb_str_resize(s, (len = RSTRING_LEN(s)) - decpt + digs);
+        ptr = RSTRING_PTR(s);
+        memset(ptr += len, '0', -decpt);
+        memcpy(ptr -= decpt, buf, digs);
+    }
+    else {
+      exp:
+        if (digs &gt; 1) {
+            memmove(buf + 2, buf + 1, digs - 1);
+        }
+        else {
+            buf[2] = '0';
+            digs++;
+        }
+        buf[1] = '.';
+        rb_str_cat(s, buf, digs + 1);
+        rb_str_catf(s, &quot;e%+03d&quot;, decpt - 1);
+    }
+    return s;
+}</pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+      <div id="method-i-truncate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            to_i      &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            to_int    &rarr;  integer
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq" style="background: #cfc;" >
+            truncate  &rarr;  integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <em>flt</em> truncated to an <code>Integer</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="truncate-source">
+            <pre>static VALUE
+flo_truncate(VALUE num)
+{
+    double f = RFLOAT_VALUE(num);
+    long val;
+
+    if (f &gt; 0.0) f = floor(f);
+    if (f &lt; 0.0) f = ceil(f);
+
+    if (!FIXABLE(f)) {
+        return rb_dbl2big(f);
+    }
+    val = (long)f;
+    return LONG2FIX(val);
+}</pre>
+          </div><!-- truncate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- truncate-method -->
+
+    
+      <div id="method-i-zero-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            zero?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <em>flt</em> is 0.0.</p>
+          
+
+          
+          <div class="method-source-code" id="zero-3F-source">
+            <pre>static VALUE
+flo_zero_p(VALUE num)
+{
+    if (RFLOAT_VALUE(num) == 0.0) {
+        return Qtrue;
+    }
+    return Qfalse;
+}</pre>
+          </div><!-- zero-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- zero-3F-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

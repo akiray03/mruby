@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+
+<title>class Rational - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>rational.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Numeric.html">Numeric</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-i-2A">#*</a>
+    
+    <li  ><a href="#method-i-2A-2A">#**</a>
+    
+    <li  ><a href="#method-i-2B">#+</a>
+    
+    <li  ><a href="#method-i-2D">#-</a>
+    
+    <li  ><a href="#method-i-2F">#/</a>
+    
+    <li  ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li  ><a href="#method-i-3D-3D">#==</a>
+    
+    <li  ><a href="#method-i-ceil">#ceil</a>
+    
+    <li  ><a href="#method-i-denominator">#denominator</a>
+    
+    <li  ><a href="#method-i-fdiv">#fdiv</a>
+    
+    <li  ><a href="#method-i-floor">#floor</a>
+    
+    <li  ><a href="#method-i-inspect">#inspect</a>
+    
+    <li  ><a href="#method-i-numerator">#numerator</a>
+    
+    <li  ><a href="#method-i-quo">#quo</a>
+    
+    <li  ><a href="#method-i-rationalize">#rationalize</a>
+    
+    <li  ><a href="#method-i-round">#round</a>
+    
+    <li  ><a href="#method-i-to_f">#to_f</a>
+    
+    <li  ><a href="#method-i-to_i">#to_i</a>
+    
+    <li  ><a href="#method-i-to_r">#to_r</a>
+    
+    <li  ><a href="#method-i-to_s">#to_s</a>
+    
+    <li  ><a href="#method-i-truncate">#truncate</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./ext/syslog/syslog_txt.html">syslog</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li style="background: #ffc;"><a href="./Digest.html">Digest</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/Base.html">Digest::Base</a>
+  
+    <li ><a href="./Digest/Class.html">Digest::Class</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/HMAC.html">Digest::HMAC</a>
+  
+    <li ><a href="./Digest/Instance.html">Digest::Instance</a>
+  
+    <li style="background: #ffc;"><a href="./Digest/SHA2.html">Digest::SHA2</a>
+  
+    <li ><a href="./Encoding.html">Encoding</a>
+  
+    <li ><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a>
+  
+    <li ><a href="./Encoding/Converter.html">Encoding::Converter</a>
+  
+    <li ><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a>
+  
+    <li ><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a>
+  
+    <li ><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a>
+  
+    <li ><a href="./Process.html">Process</a>
+  
+    <li ><a href="./Process/GID.html">Process::GID</a>
+  
+    <li ><a href="./Process/Status.html">Process::Status</a>
+  
+    <li ><a href="./Process/Sys.html">Process::Sys</a>
+  
+    <li ><a href="./Process/UID.html">Process::UID</a>
+  
+    <li ><a href="./Socket.html">Socket</a>
+  
+    <li ><a href="./Socket/AncillaryData.html">Socket::AncillaryData</a>
+  
+    <li ><a href="./Socket/Option.html">Socket::Option</a>
+  
+    <li ><a href="./Socket/UDPSource.html">Socket::UDPSource</a>
+  
+    <li ><a href="./Enumerator.html">Enumerator</a>
+  
+    <li ><a href="./Enumerator/Generator.html">Enumerator::Generator</a>
+  
+    <li ><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a>
+  
+    <li style="background: #ffc;"><a href="./File.html">File</a>
+  
+    <li ><a href="./File/Constants.html">File::Constants</a>
+  
+    <li ><a href="./File/Stat.html">File::Stat</a>
+  
+    <li style="background: #ffc;"><a href="./IO.html">IO</a>
+  
+    <li ><a href="./IO/WaitReadable.html">IO::WaitReadable</a>
+  
+    <li ><a href="./IO/WaitWritable.html">IO::WaitWritable</a>
+  
+    <li ><a href="./RubyVM.html">RubyVM</a>
+  
+    <li ><a href="./RubyVM/Env.html">RubyVM::Env</a>
+  
+    <li ><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a>
+  
+    <li style="background: #ffc;"><a href="./GC.html">GC</a>
+  
+    <li ><a href="./GC/Profiler.html">GC::Profiler</a>
+  
+    <li style="background: #ffc;"><a href="./Math.html">Math</a>
+  
+    <li ><a href="./Math/DomainError.html">Math::DomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Syslog.html">Syslog</a>
+  
+    <li ><a href="./Syslog/Constants.html">Syslog::Constants</a>
+  
+    <li ><a href="./ARGF.html">ARGF</a>
+  
+    <li ><a href="./Addrinfo.html">Addrinfo</a>
+  
+    <li style="background: #ffc;"><a href="./ArgumentError.html">ArgumentError</a>
+  
+    <li style="background: #ffc;"><a href="./Array.html">Array</a>
+  
+    <li style="background: #ffc;"><a href="./BasicObject.html">BasicObject</a>
+  
+    <li ><a href="./BasicSocket.html">BasicSocket</a>
+  
+    <li ><a href="./Bignum.html">Bignum</a>
+  
+    <li ><a href="./Binding.html">Binding</a>
+  
+    <li style="background: #ffc;"><a href="./Class.html">Class</a>
+  
+    <li style="background: #ffc;"><a href="./Comparable.html">Comparable</a>
+  
+    <li ><a href="./Complex.html">Complex</a>
+  
+    <li ><a href="./Continuation.html">Continuation</a>
+  
+    <li ><a href="./Data.html">Data</a>
+  
+    <li ><a href="./Dir.html">Dir</a>
+  
+    <li style="background: #ffc;"><a href="./ENV.html">ENV</a>
+  
+    <li style="background: #ffc;"><a href="./EOFError.html">EOFError</a>
+  
+    <li style="background: #ffc;"><a href="./EncodingError.html">EncodingError</a>
+  
+    <li style="background: #ffc;"><a href="./Enumerable.html">Enumerable</a>
+  
+    <li style="background: #ffc;"><a href="./Errno.html">Errno</a>
+  
+    <li style="background: #ffc;"><a href="./Exception.html">Exception</a>
+  
+    <li style="background: #ffc;"><a href="./FalseClass.html">FalseClass</a>
+  
+    <li ><a href="./Fiber.html">Fiber</a>
+  
+    <li ><a href="./FiberError.html">FiberError</a>
+  
+    <li ><a href="./FileTest.html">FileTest</a>
+  
+    <li style="background: #ffc;"><a href="./Fixnum.html">Fixnum</a>
+  
+    <li style="background: #ffc;"><a href="./Float.html">Float</a>
+  
+    <li style="background: #ffc;"><a href="./FloatDomainError.html">FloatDomainError</a>
+  
+    <li style="background: #ffc;"><a href="./Hash.html">Hash</a>
+  
+    <li style="background: #ffc;"><a href="./IOError.html">IOError</a>
+  
+    <li ><a href="./IPSocket.html">IPSocket</a>
+  
+    <li style="background: #ffc;"><a href="./IndexError.html">IndexError</a>
+  
+    <li style="background: #ffc;"><a href="./Integer.html">Integer</a>
+  
+    <li ><a href="./Interrupt.html">Interrupt</a>
+  
+    <li style="background: #ffc;"><a href="./Kernel.html">Kernel</a>
+  
+    <li style="background: #ffc;"><a href="./KeyError.html">KeyError</a>
+  
+    <li ><a href="./LoadError.html">LoadError</a>
+  
+    <li style="background: #ffc;"><a href="./LocalJumpError.html">LocalJumpError</a>
+  
+    <li ><a href="./Marshal.html">Marshal</a>
+  
+    <li style="background: #ffc;"><a href="./MatchData.html">MatchData</a>
+  
+    <li ><a href="./Method.html">Method</a>
+  
+    <li style="background: #ffc;"><a href="./Module.html">Module</a>
+  
+    <li ><a href="./Mutex.html">Mutex</a>
+  
+    <li style="background: #ffc;"><a href="./NameError.html">NameError</a>
+  
+    <li style="background: #ffc;"><a href="./NilClass.html">NilClass</a>
+  
+    <li ><a href="./NoMemoryError.html">NoMemoryError</a>
+  
+    <li style="background: #ffc;"><a href="./NoMethodError.html">NoMethodError</a>
+  
+    <li style="background: #ffc;"><a href="./NotImplementedError.html">NotImplementedError</a>
+  
+    <li style="background: #ffc;"><a href="./Numeric.html">Numeric</a>
+  
+    <li style="background: #ffc;"><a href="./Object.html">Object</a>
+  
+    <li ><a href="./ObjectSpace.html">ObjectSpace</a>
+  
+    <li style="background: #ffc;"><a href="./Proc.html">Proc</a>
+  
+    <li ><a href="./Random.html">Random</a>
+  
+    <li style="background: #ffc;"><a href="./Range.html">Range</a>
+  
+    <li style="background: #ffc;"><a href="./RangeError.html">RangeError</a>
+  
+    <li ><a href="./Rational.html">Rational</a>
+  
+    <li style="background: #ffc;"><a href="./Regexp.html">Regexp</a>
+  
+    <li style="background: #ffc;"><a href="./RegexpError.html">RegexpError</a>
+  
+    <li ><a href="./Ripper.html">Ripper</a>
+  
+    <li style="background: #ffc;"><a href="./RuntimeError.html">RuntimeError</a>
+  
+    <li ><a href="./SOCKSSocket.html">SOCKSSocket</a>
+  
+    <li style="background: #ffc;"><a href="./ScriptError.html">ScriptError</a>
+  
+    <li ><a href="./SecurityError.html">SecurityError</a>
+  
+    <li ><a href="./Signal.html">Signal</a>
+  
+    <li ><a href="./SignalException.html">SignalException</a>
+  
+    <li ><a href="./SocketError.html">SocketError</a>
+  
+    <li style="background: #ffc;"><a href="./StandardError.html">StandardError</a>
+  
+    <li ><a href="./StopIteration.html">StopIteration</a>
+  
+    <li style="background: #ffc;"><a href="./String.html">String</a>
+  
+    <li style="background: #ffc;"><a href="./Struct.html">Struct</a>
+  
+    <li style="background: #ffc;"><a href="./Symbol.html">Symbol</a>
+  
+    <li style="background: #ffc;"><a href="./SyntaxError.html">SyntaxError</a>
+  
+    <li style="background: #ffc;"><a href="./SystemCallError.html">SystemCallError</a>
+  
+    <li ><a href="./SystemExit.html">SystemExit</a>
+  
+    <li ><a href="./SystemStackError.html">SystemStackError</a>
+  
+    <li ><a href="./TCPServer.html">TCPServer</a>
+  
+    <li style="background: #ffc;"><a href="./TCPSocket.html">TCPSocket</a>
+  
+    <li ><a href="./Thread.html">Thread</a>
+  
+    <li ><a href="./ThreadError.html">ThreadError</a>
+  
+    <li ><a href="./ThreadGroup.html">ThreadGroup</a>
+  
+    <li style="background: #ffc;"><a href="./Time.html">Time</a>
+  
+    <li style="background: #ffc;"><a href="./TrueClass.html">TrueClass</a>
+  
+    <li style="background: #ffc;"><a href="./TypeError.html">TypeError</a>
+  
+    <li ><a href="./UDPSocket.html">UDPSocket</a>
+  
+    <li ><a href="./UNIXServer.html">UNIXServer</a>
+  
+    <li style="background: #ffc;"><a href="./UNIXSocket.html">UNIXSocket</a>
+  
+    <li ><a href="./UnboundMethod.html">UnboundMethod</a>
+  
+    <li ><a href="./ZeroDivisionError.html">ZeroDivisionError</a>
+  
+    <li ><a href="./fatal.html">fatal</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class"  >class Rational</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >*</span>
+    
+            <span  >**</span>
+    
+            <span  >+</span>
+    
+            <span  >-</span>
+    
+            <span  >/</span>
+    
+            <span  >&lt;=&gt;</span>
+    
+            <span  >==</span>
+    
+            <span  >ceil</span>
+    
+            <span  >denominator</span>
+    
+            <span  >fdiv</span>
+    
+            <span  >floor</span>
+    
+            <span  >inspect</span>
+    
+            <span  >numerator</span>
+    
+            <span  >quo</span>
+    
+            <span  >rationalize</span>
+    
+            <span  >round</span>
+    
+            <span  >to_f</span>
+    
+            <span  >to_i</span>
+    
+            <span  >to_r</span>
+    
+            <span  >to_s</span>
+    
+            <span  >truncate</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>A rational number can be represented as a paired integer number; a/b
+(b&gt;0).  Where a is numerator and b is denominator.  <a
+href="Integer.html">Integer</a> a equals rational a/1 mathematically.</p>
+
+<p>In ruby, you can create rational object with <a
+href="Rational.html">Rational</a>, <a
+href="Rational.html#method-i-to_r">#to_r</a> or rationalize method.  The
+return values will be irreducible.</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>)      <span class="ruby-comment">#=&gt; (1/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; (2/3)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">4</span>, <span class="ruby-value">-6</span>)  <span class="ruby-comment">#=&gt; (-2/3)</span>
+<span class="ruby-value">3</span>.<span class="ruby-identifier">to_r</span>           <span class="ruby-comment">#=&gt; (3/1)</span>
+</pre>
+
+<p>You can also create rational object from floating-point numbers or strings.</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">0.3</span>)    <span class="ruby-comment">#=&gt; (5404319552844595/18014398509481984)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-string">'0.3'</span>)  <span class="ruby-comment">#=&gt; (3/10)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-string">'2/3'</span>)  <span class="ruby-comment">#=&gt; (2/3)</span>
+
+<span class="ruby-value">0.3</span>.<span class="ruby-identifier">to_r</span>         <span class="ruby-comment">#=&gt; (5404319552844595/18014398509481984)</span>
+<span class="ruby-string">'0.3'</span>.<span class="ruby-identifier">to_r</span>       <span class="ruby-comment">#=&gt; (3/10)</span>
+<span class="ruby-string">'2/3'</span>.<span class="ruby-identifier">to_r</span>       <span class="ruby-comment">#=&gt; (2/3)</span>
+<span class="ruby-value">0.3</span>.<span class="ruby-identifier">rationalize</span>  <span class="ruby-comment">#=&gt; (3/10)</span>
+</pre>
+
+<p>A rational object is an exact number, which helps you to write program
+without any rounding errors.</p>
+
+<pre class="ruby"><span class="ruby-value">10</span>.<span class="ruby-identifier">times</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">t</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.1</span>}              <span class="ruby-comment">#=&gt; 0.9999999999999999</span>
+<span class="ruby-value">10</span>.<span class="ruby-identifier">times</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">t</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'0.1'</span>)}  <span class="ruby-comment">#=&gt; (1/1)</span>
+</pre>
+
+<p>However, when an expression has inexact factor (numerical value or
+operation), will produce an inexact result.</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">10</span>) <span class="ruby-operator">/</span> <span class="ruby-value">3</span>   <span class="ruby-comment">#=&gt; (10/3)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">10</span>) <span class="ruby-operator">/</span> <span class="ruby-value">3.0</span> <span class="ruby-comment">#=&gt; 3.3333333333333335</span>
+
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-8</span>) <span class="ruby-operator">**</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>, <span class="ruby-value">3</span>)
+                   <span class="ruby-comment">#=&gt; (1.0000000000000002+1.7320508075688772i)</span>
+</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat * numeric  &rarr;  numeric
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs multiplication.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  * <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; (4/9)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">900</span>)   * <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>)      <span class="ruby-comment">#=&gt; (900/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">9</span>) * <span class="ruby-constant">Rational</span>(<span class="ruby-value">-9</span>, <span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; (1/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">8</span>)  * <span class="ruby-value">4</span>                <span class="ruby-comment">#=&gt; (9/2)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">20</span>, <span class="ruby-value">9</span>) * <span class="ruby-value">9.8</span>              <span class="ruby-comment">#=&gt; 21.77777777777778</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre>static VALUE
+nurat_mul(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        {
+            get_dat1(self);
+
+            return f_muldiv(self,
+                            dat-&gt;num, dat-&gt;den,
+                            other, ONE, '*');
+        }
+      case T_FLOAT:
+        return f_mul(f_to_f(self), other);
+      case T_RATIONAL:
+        {
+            get_dat2(self, other);
+
+            return f_muldiv(self,
+                            adat-&gt;num, adat-&gt;den,
+                            bdat-&gt;num, bdat-&gt;den, '*');
+        }
+      default:
+        return rb_num_coerce_bin(self, other, '*');
+    }
+}</pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2A-2A" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat ** numeric  &rarr;  numeric
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs exponentiation.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>)    <span class="ruby-operator">**</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">3</span>)    <span class="ruby-comment">#=&gt; (8/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">10</span>)   <span class="ruby-operator">**</span> <span class="ruby-value">-2</span>             <span class="ruby-comment">#=&gt; (1/100)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">10</span>)   <span class="ruby-operator">**</span> <span class="ruby-value">-2.0</span>           <span class="ruby-comment">#=&gt; 0.01</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-4</span>)   <span class="ruby-operator">**</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>,<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; (1.2246063538223773e-16+2.0i)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>) <span class="ruby-operator">**</span> <span class="ruby-value">0</span>              <span class="ruby-comment">#=&gt; (1/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>) <span class="ruby-operator">**</span> <span class="ruby-value">0.0</span>            <span class="ruby-comment">#=&gt; 1.0</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="2A-2A-source">
+            <pre>static VALUE
+nurat_expt(VALUE self, VALUE other)
+{
+    if (k_numeric_p(other) &amp;&amp; k_exact_zero_p(other))
+        return f_rational_new_bang1(CLASS_OF(self), ONE);
+
+    if (k_rational_p(other)) {
+        get_dat1(other);
+
+        if (f_one_p(dat-&gt;den))
+            other = dat-&gt;num; /* c14n */
+    }
+
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+        {
+            VALUE num, den;
+
+            get_dat1(self);
+
+            switch (FIX2INT(f_cmp(other, ZERO))) {
+              case 1:
+                num = f_expt(dat-&gt;num, other);
+                den = f_expt(dat-&gt;den, other);
+                break;
+              case -1:
+                num = f_expt(dat-&gt;den, f_negate(other));
+                den = f_expt(dat-&gt;num, f_negate(other));
+                break;
+              default:
+                num = ONE;
+                den = ONE;
+                break;
+            }
+            return f_rational_new2(CLASS_OF(self), num, den);
+        }
+      case T_BIGNUM:
+        rb_warn(&quot;in a**b, b may be too big&quot;);
+        /* fall through */
+      case T_FLOAT:
+      case T_RATIONAL:
+        return f_expt(f_to_f(self), other);
+      default:
+        return rb_num_coerce_bin(self, other, id_expt);
+    }
+}</pre>
+          </div><!-- 2A-2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat + numeric  &rarr;  numeric
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs addition.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-operator">+</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; (4/3)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">900</span>)   <span class="ruby-operator">+</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>)      <span class="ruby-comment">#=&gt; (900/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">+</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">-9</span>, <span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; (-85/18)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">8</span>)  <span class="ruby-operator">+</span> <span class="ruby-value">4</span>                <span class="ruby-comment">#=&gt; (41/8)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">20</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">+</span> <span class="ruby-value">9.8</span>              <span class="ruby-comment">#=&gt; 12.022222222222222</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre>static VALUE
+nurat_add(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        {
+            get_dat1(self);
+
+            return f_addsub(self,
+                            dat-&gt;num, dat-&gt;den,
+                            other, ONE, '+');
+        }
+      case T_FLOAT:
+        return f_add(f_to_f(self), other);
+      case T_RATIONAL:
+        {
+            get_dat2(self, other);
+
+            return f_addsub(self,
+                            adat-&gt;num, adat-&gt;den,
+                            bdat-&gt;num, bdat-&gt;den, '+');
+        }
+      default:
+        return rb_num_coerce_bin(self, other, '+');
+    }
+}</pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat - numeric  &rarr;  numeric
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs subtraction.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-operator">-</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; (0/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">900</span>)   <span class="ruby-operator">-</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>)      <span class="ruby-comment">#=&gt; (899/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">-</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">-9</span>, <span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; (77/18)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">8</span>)  <span class="ruby-operator">-</span> <span class="ruby-value">4</span>                <span class="ruby-comment">#=&gt; (23/8)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">20</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">-</span> <span class="ruby-value">9.8</span>              <span class="ruby-comment">#=&gt; -7.577777777777778</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre>static VALUE
+nurat_sub(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        {
+            get_dat1(self);
+
+            return f_addsub(self,
+                            dat-&gt;num, dat-&gt;den,
+                            other, ONE, '-');
+        }
+      case T_FLOAT:
+        return f_sub(f_to_f(self), other);
+      case T_RATIONAL:
+        {
+            get_dat2(self, other);
+
+            return f_addsub(self,
+                            adat-&gt;num, adat-&gt;den,
+                            bdat-&gt;num, bdat-&gt;den, '-');
+        }
+      default:
+        return rb_num_coerce_bin(self, other, '-');
+    }
+}</pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat / numeric     &rarr;  numeric
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            quo(numeric)  &rarr;  numeric
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs division.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-operator">/</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; (1/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">900</span>)   <span class="ruby-operator">/</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>)      <span class="ruby-comment">#=&gt; (900/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">/</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">-9</span>, <span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; (4/81)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">8</span>)  <span class="ruby-operator">/</span> <span class="ruby-value">4</span>                <span class="ruby-comment">#=&gt; (9/32)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">20</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">/</span> <span class="ruby-value">9.8</span>              <span class="ruby-comment">#=&gt; 0.22675736961451246</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre>static VALUE
+nurat_div(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        if (f_zero_p(other))
+            rb_raise_zerodiv();
+        {
+            get_dat1(self);
+
+            return f_muldiv(self,
+                            dat-&gt;num, dat-&gt;den,
+                            other, ONE, '/');
+        }
+      case T_FLOAT:
+        {
+            double x = RFLOAT_VALUE(other), den;
+            get_dat1(self);
+
+            if (isnan(x)) return DBL2NUM(NAN);
+            if (isinf(x)) return INT2FIX(0);
+            if (x != 0.0 &amp;&amp; modf(x, &amp;den) == 0.0) {
+                return rb_rational_raw2(dat-&gt;num, f_mul(rb_dbl2big(den), dat-&gt;den));
+            }
+        }
+        return rb_funcall(f_to_f(self), '/', 1, other);
+      case T_RATIONAL:
+        if (f_zero_p(other))
+            rb_raise_zerodiv();
+        {
+            get_dat2(self, other);
+
+            if (f_one_p(self))
+                return f_rational_new_no_reduce2(CLASS_OF(self),
+                                                 bdat-&gt;den, bdat-&gt;num);
+
+            return f_muldiv(self,
+                            adat-&gt;num, adat-&gt;den,
+                            bdat-&gt;num, bdat-&gt;den, '/');
+        }
+      default:
+        return rb_num_coerce_bin(self, other, '/');
+    }
+}</pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat &lt;=&gt; numeric  &rarr;  -1, 0, +1 or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs comparison and returns -1, 0, or +1.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-comment">#=&gt; 0</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">5</span>)     <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-value">5</span>               <span class="ruby-comment">#=&gt; 0</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>,<span class="ruby-value">3</span>)   <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>,<span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>,<span class="ruby-value">3</span>)   <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-value">1</span>               <span class="ruby-comment">#=&gt; -1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>,<span class="ruby-value">3</span>)   <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-value">0.3</span>             <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre>static VALUE
+nurat_cmp(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        {
+            get_dat1(self);
+
+            if (FIXNUM_P(dat-&gt;den) &amp;&amp; FIX2LONG(dat-&gt;den) == 1)
+                return f_cmp(dat-&gt;num, other); /* c14n */
+            return f_cmp(self, f_rational_new_bang1(CLASS_OF(self), other));
+        }
+      case T_FLOAT:
+        return f_cmp(f_to_f(self), other);
+      case T_RATIONAL:
+        {
+            VALUE num1, num2;
+
+            get_dat2(self, other);
+
+            if (FIXNUM_P(adat-&gt;num) &amp;&amp; FIXNUM_P(adat-&gt;den) &amp;&amp;
+                FIXNUM_P(bdat-&gt;num) &amp;&amp; FIXNUM_P(bdat-&gt;den)) {
+                num1 = f_imul(FIX2LONG(adat-&gt;num), FIX2LONG(bdat-&gt;den));
+                num2 = f_imul(FIX2LONG(bdat-&gt;num), FIX2LONG(adat-&gt;den));
+            }
+            else {
+                num1 = f_mul(adat-&gt;num, bdat-&gt;den);
+                num2 = f_mul(bdat-&gt;num, adat-&gt;den);
+            }
+            return f_cmp(f_sub(num1, num2), ZERO);
+        }
+      default:
+        return rb_num_coerce_cmp(self, other, id_cmp);
+    }
+}</pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat == object  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns true if rat equals object numerically.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-operator">==</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">5</span>)     <span class="ruby-operator">==</span> <span class="ruby-value">5</span>                <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">0</span>)     <span class="ruby-operator">==</span> <span class="ruby-value">0.0</span>              <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-string">'1/3'</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0.33</span>             <span class="ruby-comment">#=&gt; false</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-string">'1/2'</span>) <span class="ruby-operator">==</span> <span class="ruby-string">'1/2'</span>            <span class="ruby-comment">#=&gt; false</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre>static VALUE
+nurat_eqeq_p(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        {
+            get_dat1(self);
+
+            if (f_zero_p(dat-&gt;num) &amp;&amp; f_zero_p(other))
+                return Qtrue;
+
+            if (!FIXNUM_P(dat-&gt;den))
+                return Qfalse;
+            if (FIX2LONG(dat-&gt;den) != 1)
+                return Qfalse;
+            if (f_eqeq_p(dat-&gt;num, other))
+                return Qtrue;
+            return Qfalse;
+        }
+      case T_FLOAT:
+        return f_eqeq_p(f_to_f(self), other);
+      case T_RATIONAL:
+        {
+            get_dat2(self, other);
+
+            if (f_zero_p(adat-&gt;num) &amp;&amp; f_zero_p(bdat-&gt;num))
+                return Qtrue;
+
+            return f_boolcast(f_eqeq_p(adat-&gt;num, bdat-&gt;num) &amp;&amp;
+                              f_eqeq_p(adat-&gt;den, bdat-&gt;den));
+        }
+      default:
+        return f_eqeq_p(other, self);
+    }
+}</pre>
+          </div><!-- 3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-method -->
+
+    
+      <div id="method-i-ceil" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil               &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            ceil(precision=0)  &rarr;  rational
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the truncated value (toward positive infinity).</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">ceil</span>      <span class="ruby-comment">#=&gt; 3</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">ceil</span>   <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-3</span>, <span class="ruby-value">2</span>).<span class="ruby-identifier">ceil</span>  <span class="ruby-comment">#=&gt; -1</span>
+
+       <span class="ruby-identifier">decimal</span>      <span class="ruby-operator">-</span>  <span class="ruby-value">1</span>  <span class="ruby-value">2</span>  <span class="ruby-value">3</span> . <span class="ruby-value">4</span>  <span class="ruby-value">5</span>  <span class="ruby-value">6</span>
+                      <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>   <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>
+      <span class="ruby-identifier">precision</span>      <span class="ruby-value">-3</span> <span class="ruby-operator">-</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span><span class="ruby-value">1</span>  <span class="ruby-value">0</span>  <span class="ruby-operator">+</span><span class="ruby-value">1</span> <span class="ruby-operator">+</span><span class="ruby-value">2</span>
+
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">ceil</span>(<span class="ruby-value">+1</span>)  <span class="ruby-comment">#=&gt; &quot;-123.400000&quot;</span>
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">ceil</span>(<span class="ruby-value">-1</span>)  <span class="ruby-comment">#=&gt; &quot;-120.000000&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="ceil-source">
+            <pre>static VALUE
+nurat_ceil_n(int argc, VALUE *argv, VALUE self)
+{
+    return f_round_common(argc, argv, self, nurat_ceil);
+}</pre>
+          </div><!-- ceil-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ceil-method -->
+
+    
+      <div id="method-i-denominator" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            denominator  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the denominator (always positive).</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">7</span>).<span class="ruby-identifier">denominator</span>             <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">7</span>, <span class="ruby-value">1</span>).<span class="ruby-identifier">denominator</span>          <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">-4</span>).<span class="ruby-identifier">denominator</span>         <span class="ruby-comment">#=&gt; 4</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">-10</span>).<span class="ruby-identifier">denominator</span>       <span class="ruby-comment">#=&gt; 5</span>
+<span class="ruby-identifier">rat</span>.<span class="ruby-identifier">numerator</span>.<span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">rat</span>.<span class="ruby-identifier">denominator</span>)  <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="denominator-source">
+            <pre>static VALUE
+nurat_denominator(VALUE self)
+{
+    get_dat1(self);
+    return dat-&gt;den;
+}</pre>
+          </div><!-- denominator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- denominator-method -->
+
+    
+      <div id="method-i-fdiv" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            fdiv(numeric)  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs division and returns the value as a float.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">fdiv</span>(<span class="ruby-value">1</span>)       <span class="ruby-comment">#=&gt; 0.6666666666666666</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">fdiv</span>(<span class="ruby-value">0.5</span>)     <span class="ruby-comment">#=&gt; 1.3333333333333333</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">fdiv</span>(<span class="ruby-value">3</span>)          <span class="ruby-comment">#=&gt; 0.6666666666666666</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="fdiv-source">
+            <pre>static VALUE
+nurat_fdiv(VALUE self, VALUE other)
+{
+    if (f_zero_p(other))
+        return f_div(self, f_to_f(other));
+    return f_to_f(f_div(self, other));
+}</pre>
+          </div><!-- fdiv-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fdiv-method -->
+
+    
+      <div id="method-i-floor" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor               &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            floor(precision=0)  &rarr;  rational
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the truncated value (toward negative infinity).</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">floor</span>      <span class="ruby-comment">#=&gt; 3</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">floor</span>   <span class="ruby-comment">#=&gt; 0</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-3</span>, <span class="ruby-value">2</span>).<span class="ruby-identifier">floor</span>  <span class="ruby-comment">#=&gt; -1</span>
+
+       <span class="ruby-identifier">decimal</span>      <span class="ruby-operator">-</span>  <span class="ruby-value">1</span>  <span class="ruby-value">2</span>  <span class="ruby-value">3</span> . <span class="ruby-value">4</span>  <span class="ruby-value">5</span>  <span class="ruby-value">6</span>
+                      <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>   <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>
+      <span class="ruby-identifier">precision</span>      <span class="ruby-value">-3</span> <span class="ruby-operator">-</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span><span class="ruby-value">1</span>  <span class="ruby-value">0</span>  <span class="ruby-operator">+</span><span class="ruby-value">1</span> <span class="ruby-operator">+</span><span class="ruby-value">2</span>
+
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">floor</span>(<span class="ruby-value">+1</span>)  <span class="ruby-comment">#=&gt; &quot;-123.500000&quot;</span>
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">floor</span>(<span class="ruby-value">-1</span>)  <span class="ruby-comment">#=&gt; &quot;-130.000000&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="floor-source">
+            <pre>static VALUE
+nurat_floor_n(int argc, VALUE *argv, VALUE self)
+{
+    return f_round_common(argc, argv, self, nurat_floor);
+}</pre>
+          </div><!-- floor-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- floor-method -->
+
+    
+      <div id="method-i-inspect" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            inspect  &rarr;  string
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value as a string for inspection.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">inspect</span>      <span class="ruby-comment">#=&gt; &quot;(2/1)&quot;</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-8</span>, <span class="ruby-value">6</span>).<span class="ruby-identifier">inspect</span>  <span class="ruby-comment">#=&gt; &quot;(-4/3)&quot;</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-string">'0.5'</span>).<span class="ruby-identifier">inspect</span>  <span class="ruby-comment">#=&gt; &quot;(1/2)&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="inspect-source">
+            <pre>static VALUE
+nurat_inspect(VALUE self)
+{
+    VALUE s;
+
+    s = rb_usascii_str_new2(&quot;(&quot;);
+    rb_str_concat(s, f_format(self, f_inspect));
+    rb_str_cat2(s, &quot;)&quot;);
+
+    return s;
+}</pre>
+          </div><!-- inspect-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- inspect-method -->
+
+    
+      <div id="method-i-numerator" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            numerator  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the numerator.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">7</span>).<span class="ruby-identifier">numerator</span>        <span class="ruby-comment">#=&gt; 7</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">7</span>, <span class="ruby-value">1</span>).<span class="ruby-identifier">numerator</span>     <span class="ruby-comment">#=&gt; 7</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">-4</span>).<span class="ruby-identifier">numerator</span>    <span class="ruby-comment">#=&gt; -9</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">-10</span>).<span class="ruby-identifier">numerator</span>  <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="numerator-source">
+            <pre>static VALUE
+nurat_numerator(VALUE self)
+{
+    get_dat1(self);
+    return dat-&gt;num;
+}</pre>
+          </div><!-- numerator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- numerator-method -->
+
+    
+      <div id="method-i-quo" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rat / numeric     &rarr;  numeric
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            quo(numeric)  &rarr;  numeric
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs division.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)  <span class="ruby-operator">/</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; (1/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">900</span>)   <span class="ruby-operator">/</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">1</span>)      <span class="ruby-comment">#=&gt; (900/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">/</span> <span class="ruby-constant">Rational</span>(<span class="ruby-value">-9</span>, <span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; (4/81)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">8</span>)  <span class="ruby-operator">/</span> <span class="ruby-value">4</span>                <span class="ruby-comment">#=&gt; (9/32)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">20</span>, <span class="ruby-value">9</span>) <span class="ruby-operator">/</span> <span class="ruby-value">9.8</span>              <span class="ruby-comment">#=&gt; 0.22675736961451246</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="quo-source">
+            <pre>static VALUE
+nurat_div(VALUE self, VALUE other)
+{
+    switch (TYPE(other)) {
+      case T_FIXNUM:
+      case T_BIGNUM:
+        if (f_zero_p(other))
+            rb_raise_zerodiv();
+        {
+            get_dat1(self);
+
+            return f_muldiv(self,
+                            dat-&gt;num, dat-&gt;den,
+                            other, ONE, '/');
+        }
+      case T_FLOAT:
+        {
+            double x = RFLOAT_VALUE(other), den;
+            get_dat1(self);
+
+            if (isnan(x)) return DBL2NUM(NAN);
+            if (isinf(x)) return INT2FIX(0);
+            if (x != 0.0 &amp;&amp; modf(x, &amp;den) == 0.0) {
+                return rb_rational_raw2(dat-&gt;num, f_mul(rb_dbl2big(den), dat-&gt;den));
+            }
+        }
+        return rb_funcall(f_to_f(self), '/', 1, other);
+      case T_RATIONAL:
+        if (f_zero_p(other))
+            rb_raise_zerodiv();
+        {
+            get_dat2(self, other);
+
+            if (f_one_p(self))
+                return f_rational_new_no_reduce2(CLASS_OF(self),
+                                                 bdat-&gt;den, bdat-&gt;num);
+
+            return f_muldiv(self,
+                            adat-&gt;num, adat-&gt;den,
+                            bdat-&gt;num, bdat-&gt;den, '/');
+        }
+      default:
+        return rb_num_coerce_bin(self, other, '/');
+    }
+}</pre>
+          </div><!-- quo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- quo-method -->
+
+    
+      <div id="method-i-rationalize" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rationalize       &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            rationalize(eps)  &rarr;  rational
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a simpler approximation of the value if an optional argument eps is
+given (rat-|eps| &lt;= result &lt;= rat+|eps|), self otherwise.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span> = <span class="ruby-constant">Rational</span>(<span class="ruby-value">5033165</span>, <span class="ruby-value">16777216</span>)
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">rationalize</span>                    <span class="ruby-comment">#=&gt; (5033165/16777216)</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">rationalize</span>(<span class="ruby-constant">Rational</span>(<span class="ruby-string">'0.01'</span>))  <span class="ruby-comment">#=&gt; (3/10)</span>
+<span class="ruby-identifier">r</span>.<span class="ruby-identifier">rationalize</span>(<span class="ruby-constant">Rational</span>(<span class="ruby-string">'0.1'</span>))   <span class="ruby-comment">#=&gt; (1/3)</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="rationalize-source">
+            <pre>static VALUE
+nurat_rationalize(int argc, VALUE *argv, VALUE self)
+{
+    VALUE e, a, b, p, q;
+
+    if (argc == 0)
+        return self;
+
+    if (f_negative_p(self))
+        return f_negate(nurat_rationalize(argc, argv, f_abs(self)));
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;e);
+    e = f_abs(e);
+    a = f_sub(self, e);
+    b = f_add(self, e);
+
+    if (f_eqeq_p(a, b))
+        return self;
+
+    nurat_rationalize_internal(a, b, &amp;p, &amp;q);
+    return f_rational_new2(CLASS_OF(self), p, q);
+}</pre>
+          </div><!-- rationalize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rationalize-method -->
+
+    
+      <div id="method-i-round" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            round               &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            round(precision=0)  &rarr;  rational
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the truncated value (toward the nearest integer; 0.5 =&gt; 1; -0.5
+=&gt; -1).</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">round</span>      <span class="ruby-comment">#=&gt; 3</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">round</span>   <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-3</span>, <span class="ruby-value">2</span>).<span class="ruby-identifier">round</span>  <span class="ruby-comment">#=&gt; -2</span>
+
+       <span class="ruby-identifier">decimal</span>      <span class="ruby-operator">-</span>  <span class="ruby-value">1</span>  <span class="ruby-value">2</span>  <span class="ruby-value">3</span> . <span class="ruby-value">4</span>  <span class="ruby-value">5</span>  <span class="ruby-value">6</span>
+                      <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>   <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>
+      <span class="ruby-identifier">precision</span>      <span class="ruby-value">-3</span> <span class="ruby-operator">-</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span><span class="ruby-value">1</span>  <span class="ruby-value">0</span>  <span class="ruby-operator">+</span><span class="ruby-value">1</span> <span class="ruby-operator">+</span><span class="ruby-value">2</span>
+
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">round</span>(<span class="ruby-value">+1</span>)  <span class="ruby-comment">#=&gt; &quot;-123.500000&quot;</span>
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">round</span>(<span class="ruby-value">-1</span>)  <span class="ruby-comment">#=&gt; &quot;-120.000000&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="round-source">
+            <pre>static VALUE
+nurat_round_n(int argc, VALUE *argv, VALUE self)
+{
+    return f_round_common(argc, argv, self, nurat_round);
+}</pre>
+          </div><!-- round-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- round-method -->
+
+    
+      <div id="method-i-to_f" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_f  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return the value as a float.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">to_f</span>      <span class="ruby-comment">#=&gt; 2.0</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">9</span>, <span class="ruby-value">4</span>).<span class="ruby-identifier">to_f</span>   <span class="ruby-comment">#=&gt; 2.25</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-3</span>, <span class="ruby-value">4</span>).<span class="ruby-identifier">to_f</span>  <span class="ruby-comment">#=&gt; -0.75</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">20</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">to_f</span>  <span class="ruby-comment">#=&gt; 6.666666666666667</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_f-source">
+            <pre>static VALUE
+nurat_to_f(VALUE self)
+{
+    get_dat1(self);
+    return f_fdiv(dat-&gt;num, dat-&gt;den);
+}</pre>
+          </div><!-- to_f-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_f-method -->
+
+    
+      <div id="method-i-to_i" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_i  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the truncated value as an integer.</p>
+
+<p>Equivalent to</p>
+
+<pre>rat.truncate.</pre>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">to_i</span>   <span class="ruby-comment">#=&gt; 0</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">to_i</span>      <span class="ruby-comment">#=&gt; 3</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">300.6</span>).<span class="ruby-identifier">to_i</span>  <span class="ruby-comment">#=&gt; 300</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">98</span>,<span class="ruby-value">71</span>).<span class="ruby-identifier">to_i</span>  <span class="ruby-comment">#=&gt; 1</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-30</span>,<span class="ruby-value">2</span>).<span class="ruby-identifier">to_i</span>  <span class="ruby-comment">#=&gt; -15</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_i-source">
+            <pre>static VALUE
+nurat_truncate(VALUE self)
+{
+    get_dat1(self);
+    if (f_negative_p(dat-&gt;num))
+        return f_negate(f_idiv(f_negate(dat-&gt;num), dat-&gt;den));
+    return f_idiv(dat-&gt;num, dat-&gt;den);
+}</pre>
+          </div><!-- to_i-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_i-method -->
+
+    
+      <div id="method-i-to_r" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_r  &rarr;  self
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns self.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">to_r</span>      <span class="ruby-comment">#=&gt; (2/1)</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-8</span>, <span class="ruby-value">6</span>).<span class="ruby-identifier">to_r</span>  <span class="ruby-comment">#=&gt; (-4/3)</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_r-source">
+            <pre>static VALUE
+nurat_to_r(VALUE self)
+{
+    return self;
+}</pre>
+          </div><!-- to_r-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_r-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            to_s  &rarr;  string
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value as a string.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">to_s</span>      <span class="ruby-comment">#=&gt; &quot;2/1&quot;</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-8</span>, <span class="ruby-value">6</span>).<span class="ruby-identifier">to_s</span>  <span class="ruby-comment">#=&gt; &quot;-4/3&quot;</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-string">'0.5'</span>).<span class="ruby-identifier">to_s</span>  <span class="ruby-comment">#=&gt; &quot;1/2&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre>static VALUE
+nurat_to_s(VALUE self)
+{
+    return f_format(self, f_to_s);
+}</pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+      <div id="method-i-truncate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate               &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            truncate(precision=0)  &rarr;  rational
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the truncated value (toward zero).</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-constant">Rational</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">truncate</span>      <span class="ruby-comment">#=&gt; 3</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">2</span>, <span class="ruby-value">3</span>).<span class="ruby-identifier">truncate</span>   <span class="ruby-comment">#=&gt; 0</span>
+<span class="ruby-constant">Rational</span>(<span class="ruby-value">-3</span>, <span class="ruby-value">2</span>).<span class="ruby-identifier">truncate</span>  <span class="ruby-comment">#=&gt; -1</span>
+
+       <span class="ruby-identifier">decimal</span>      <span class="ruby-operator">-</span>  <span class="ruby-value">1</span>  <span class="ruby-value">2</span>  <span class="ruby-value">3</span> . <span class="ruby-value">4</span>  <span class="ruby-value">5</span>  <span class="ruby-value">6</span>
+                      <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>   <span class="ruby-operator">^</span>  <span class="ruby-operator">^</span>
+      <span class="ruby-identifier">precision</span>      <span class="ruby-value">-3</span> <span class="ruby-operator">-</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span><span class="ruby-value">1</span>  <span class="ruby-value">0</span>  <span class="ruby-operator">+</span><span class="ruby-value">1</span> <span class="ruby-operator">+</span><span class="ruby-value">2</span>
+
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">truncate</span>(<span class="ruby-value">+1</span>)  <span class="ruby-comment">#=&gt;  &quot;-123.400000&quot;</span>
+<span class="ruby-string">'%f'</span> <span class="ruby-operator">%</span> <span class="ruby-constant">Rational</span>(<span class="ruby-string">'-123.456'</span>).<span class="ruby-identifier">truncate</span>(<span class="ruby-value">-1</span>)  <span class="ruby-comment">#=&gt;  &quot;-120.000000&quot;</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="truncate-source">
+            <pre>static VALUE
+nurat_truncate_n(int argc, VALUE *argv, VALUE self)
+{
+    return f_round_common(argc, argv, self, nurat_truncate);
+}</pre>
+          </div><!-- truncate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- truncate-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

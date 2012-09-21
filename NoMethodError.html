@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class NoMethodError - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,42 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>error.c
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="NameError.html">NameError</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li  ><a href="#method-c-new">::new</a>
+    
+    <li  ><a href="#method-i-args">#args</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -319,7 +355,137 @@
   </div>
 </nav>
 
-<p>This is the API documentation for RDoc Documentation.
+<div id="documentation">
+  <h1 class="class" style="background: #ffc;" >class NoMethodError</h1>
+
+  <div style="background: #ddd;">
+    
+            <span  >new</span>
+    
+            <span  >args</span>
+    
+  </div>
+
+  <div id="description" class="description">
+    
+<p>Raised when a method is called on a receiver which doesn't have it defined
+and also fails to respond with <code>method_missing</code>.</p>
+
+<pre>&quot;hello&quot;.to_ary</pre>
+
+<p><em>raises the exception:</em></p>
+
+<pre>NoMethodError: undefined method `to_ary' for &quot;hello&quot;:String</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            new(msg, name [, args])  &rarr; no_method_error
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Construct a <a href="NoMethodError.html">NoMethodError</a> exception for a
+method of the given name called with the given arguments. The name may be
+accessed using the <code>#name</code> method on the resulting object, and
+the arguments using the <code>#args</code> method.</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+nometh_err_initialize(int argc, VALUE *argv, VALUE self)
+{
+    VALUE args = (argc &gt; 2) ? argv[--argc] : Qnil;
+    name_err_initialize(argc, argv, self);
+    rb_iv_set(self, &quot;args&quot;, args);
+    return self;
+}</pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-args" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq"  >
+            args  &rarr; obj
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return the arguments passed in as the third parameter to the constructor.</p>
+          
+
+          
+          <div class="method-source-code" id="args-source">
+            <pre>static VALUE
+nometh_err_args(VALUE self)
+{
+    return rb_attr_get(self, rb_intern(&quot;args&quot;));
+}</pre>
+          </div><!-- args-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- args-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">
