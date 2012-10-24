@@ -72,11 +72,19 @@
     
     <li  ><a href="#method-c-getaddress">::getaddress</a>
     
+    <li  ><a href="#method-c-getaddress_orig">::getaddress_orig</a>
+    
+    <li  ><a href="#method-c-valid-3F">::valid?</a>
+    
+    <li  ><a href="#method-c-valid_v4-3F">::valid_v4?</a>
+    
+    <li  ><a href="#method-c-valid_v6-3F">::valid_v6?</a>
+    
     <li  ><a href="#method-i-addr">#addr</a>
     
     <li  ><a href="#method-i-peeraddr">#peeraddr</a>
     
-    <li  ><a href="#method-i-recvfrom">#recvfrom</a>
+    <li style="background: #cfc;" ><a href="#method-i-recvfrom">#recvfrom</a>
     
   </ul>
 </nav>
@@ -187,7 +195,7 @@
   
     <li style="background: #ffc;"><a href="./BasicObject.html">BasicObject</a>
   
-    <li ><a href="./BasicSocket.html">BasicSocket</a>
+    <li style="background: #ffc;"><a href="./BasicSocket.html">BasicSocket</a>
   
     <li ><a href="./Bignum.html">Bignum</a>
   
@@ -203,7 +211,7 @@
   
     <li ><a href="./Data.html">Data</a>
   
-    <li ><a href="./Dir.html">Dir</a>
+    <li style="background: #ffc;"><a href="./Dir.html">Dir</a>
   
     <li style="background: #ffc;"><a href="./ENV.html">ENV</a>
   
@@ -235,7 +243,9 @@
   
     <li style="background: #ffc;"><a href="./IOError.html">IOError</a>
   
-    <li ><a href="./IPSocket.html">IPSocket</a>
+    <li style="background: #ffc;"><a href="./IPAddr.html">IPAddr</a>
+  
+    <li style="background: #ffc;"><a href="./IPSocket.html">IPSocket</a>
   
     <li style="background: #ffc;"><a href="./IndexError.html">IndexError</a>
   
@@ -341,7 +351,7 @@
   
     <li style="background: #ffc;"><a href="./TypeError.html">TypeError</a>
   
-    <li ><a href="./UDPSocket.html">UDPSocket</a>
+    <li style="background: #ffc;"><a href="./UDPSocket.html">UDPSocket</a>
   
     <li ><a href="./UNIXServer.html">UNIXServer</a>
   
@@ -360,17 +370,25 @@
 </nav>
 
 <div id="documentation">
-  <h1 class="class"  >class IPSocket</h1>
+  <h1 class="class" style="background: #ffc;" >class IPSocket</h1>
 
   <div style="background: #ddd;">
     
             <span  >getaddress</span>
     
+            <span  >getaddress_orig</span>
+    
+            <span  >valid?</span>
+    
+            <span  >valid_v4?</span>
+    
+            <span  >valid_v6?</span>
+    
             <span  >addr</span>
     
             <span  >peeraddr</span>
     
-            <span  >recvfrom</span>
+            <span style="background: #cfc;" >recvfrom</span>
     
   </div>
 
@@ -442,9 +460,143 @@ ip_s_getaddress(VALUE obj, VALUE host)
         </div>
 
         
+        <div class="aliases">
+          Also aliased as: <a href="IPSocket.html#method-c-getaddress_orig">getaddress_orig</a>
+        </div>
+        
 
         
       </div><!-- getaddress-method -->
+
+    
+      <div id="method-c-getaddress_orig" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">getaddress_orig</span><span
+            class="method-args">(p1)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="IPSocket.html#method-c-getaddress">getaddress</a>
+        </div>
+        
+      </div><!-- getaddress_orig-method -->
+
+    
+      <div id="method-c-valid-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">valid?</span><span
+            class="method-args">(addr)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <code>addr</code> is either a valid IPv4 or
+IPv6 address.</p>
+          
+
+          
+          <div class="method-source-code" id="valid-3F-source">
+            <pre><span class="ruby-comment"># File lib/ipaddr.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-identifier">valid_v4?</span>(<span class="ruby-identifier">addr</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">valid_v6?</span>(<span class="ruby-identifier">addr</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- valid-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- valid-3F-method -->
+
+    
+      <div id="method-c-valid_v4-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">valid_v4?</span><span
+            class="method-args">(addr)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <code>addr</code> is a valid IPv4 address.</p>
+          
+
+          
+          <div class="method-source-code" id="valid_v4-3F-source">
+            <pre><span class="ruby-comment"># File lib/ipaddr.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">valid_v4?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$~</span>.<span class="ruby-identifier">captures</span>.<span class="ruby-identifier">all?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">256</span>}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- valid_v4-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- valid_v4-3F-method -->
+
+    
+      <div id="method-c-valid_v6-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">valid_v6?</span><span
+            class="method-args">(addr)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <code>addr</code> is a valid IPv6 address.</p>
+          
+
+          
+          <div class="method-source-code" id="valid_v6-3F-source">
+            <pre><span class="ruby-comment"># File lib/ipaddr.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">valid_v6?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-comment"># IPv6 (normal)</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*)?\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*)?\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+  <span class="ruby-comment"># IPv6 (IPv4 compat)</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*:/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_v4?</span>(<span class="ruby-node">$'</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*:)?/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_v4?</span>(<span class="ruby-node">$'</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">%r\A::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*:)?/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_v4?</span>(<span class="ruby-node">$'</span>)
+
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- valid_v6-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- valid_v6-3F-method -->
 
     
     </section><!-- public-class-method-details -->
@@ -586,7 +738,7 @@ ip_peeraddr(int argc, VALUE *argv, VALUE sock)
         
         
         <div class="method-heading">
-          <span class="method-callseq"  >
+          <span class="method-callseq" style="background: #cfc;" >
             recvfrom(maxlen)        &rarr; [mesg, ipaddr]
           </span>
           
@@ -595,7 +747,7 @@ ip_peeraddr(int argc, VALUE *argv, VALUE sock)
         </div>
         
         <div class="method-heading">
-          <span class="method-callseq"  >
+          <span class="method-callseq" style="background: #cfc;" >
             recvfrom(maxlen, flags) &rarr; [mesg, ipaddr]
           </span>
           
