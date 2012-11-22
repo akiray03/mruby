@@ -1,5 +1,5 @@
 ---
-:date: 2012-11-22 23:34:11.682429626 +09:00
+:date: 2012-11-23 08:40:11.223589810 +09:00
 :hostname: netbsd_mips
 :id: iij-mruby-b99c114
 :ball_id: iij-mruby-b99c114
@@ -275,7 +275,7 @@
     ../lib/libmruby.a -lm -lcrypto\ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
     mrubytest.rb\n# exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis
     is a very early version, please test and report errors.\nThanks :)\n\n........................................................................................F........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nFail:
-    BS Block 33\nTotal: 593\n   OK: 592\n   KO: 1\nCrash: 0\n Time: 3.213902 seconds\n"
+    BS Block 33\nTotal: 593\n   OK: 592\n   KO: 1\nCrash: 0\n Time: 3.217866 seconds\n"
   :stderr: ! '/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented
     algorithm; link against libcrypto_mdc2.a
 
@@ -295,20 +295,20 @@
   :mrubytest_mrb: ''
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.06294 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.065214 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.006247 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.006378 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.02414 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.025011 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.149401 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.166919 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.073232 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.032368 seconds\n\n###################################\n#
+    0.08738 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.062467 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.657657 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.618996 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.040604 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.02563 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success
