@@ -1,0 +1,80 @@
+--- 
+:date: 2012-11-22 16:17:15.076577 +09:00
+:id: mruby-mruby-8856c89
+:zipball_url: https://github.com/mruby/mruby/zipball/8856c89
+:make: 
+  :stdout: |-
+    gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c array.c -o array.o
+    gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c cdump.c -o cdump.o
+    gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c class.c -o class.o
+  :stderr: |-
+    class.c: In function 'mrb_singleton_class_ptr':
+    class.c:767: error: 'o' undeclared (first use in this function)
+    class.c:767: error: (Each undeclared identifier is reported only once
+    class.c:767: error: for each function it appears in.)
+    class.c:767: warning: 'return' with no value, in function returning non-void
+    make[1]: *** [class.o] Error 1
+    make: *** [all] Error 2
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:make_test: 
+  :stdout: gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c class.c -o class.o
+  :stderr: |-
+    class.c: In function 'mrb_singleton_class_ptr':
+    class.c:767: error: 'o' undeclared (first use in this function)
+    class.c:767: error: (Each undeclared identifier is reported only once
+    class.c:767: error: for each function it appears in.)
+    class.c:767: warning: 'return' with no value, in function returning non-void
+    make[1]: *** [class.o] Error 1
+    make: *** [all] Error 2
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:repository: mruby/mruby
+:commit: 8856c89
+:ball_id: mruby-mruby-8856c89
+:hostname: mac-ppc
+:env: 
+  :gcc: 
+    :stdout: |-
+      powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+      Copyright (C) 2005 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for powerpc-apple-darwin9.0
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make CFLAGS='-DDISABLE_SOCKET'
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.3
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2006 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :gcc: gcc
+  :make: make CFLAGS='-DDISABLE_SOCKET'
+  :bison: bison

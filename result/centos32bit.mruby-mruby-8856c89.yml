@@ -1,0 +1,80 @@
+--- 
+:date: 2012-11-20 00:36:56.199126 +09:00
+:id: mruby-mruby-8856c89
+:zipball_url: https://github.com/mruby/mruby/zipball/8856c89
+:make: 
+  :stdout: |-
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+  :stderr: |-
+    class.c: In function 'mrb_singleton_class_ptr':
+    class.c:767: error: 'o' undeclared (first use in this function)
+    class.c:767: error: (Each undeclared identifier is reported only once
+    class.c:767: error: for each function it appears in.)
+    class.c:767: warning: 'return' with no value, in function returning non-void
+    make[1]: *** [class.o] Error 1
+    make: *** [all] Error 2
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:make_test: 
+  :stdout: gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+  :stderr: |-
+    class.c: In function 'mrb_singleton_class_ptr':
+    class.c:767: error: 'o' undeclared (first use in this function)
+    class.c:767: error: (Each undeclared identifier is reported only once
+    class.c:767: error: for each function it appears in.)
+    class.c:767: warning: 'return' with no value, in function returning non-void
+    make[1]: *** [class.o] Error 1
+    make: *** [all] Error 2
+  :status_info: !ruby/object:Process::Status {}
+
+  :status: failed
+:repository: mruby/mruby
+:commit: 8856c89
+:ball_id: mruby-mruby-8856c89
+:hostname: centos32bit
+:env: 
+  :gcc: 
+    :stdout: |-
+      gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+      Copyright (C) 2010 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: gcc
+  :make: 
+    :stdout: |-
+      GNU Make 3.81
+      Copyright (C) 2006  Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.
+      There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+      PARTICULAR PURPOSE.
+      
+      This program built for i386-redhat-linux-gnu
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: make
+  :bison: 
+    :stdout: |-
+      bison (GNU Bison) 2.4.1
+      Written by Robert Corbett and Richard Stallman.
+      
+      Copyright (C) 2008 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    :stderr: ""
+    :status_info: !ruby/object:Process::Status {}
+
+    :status: success
+    :path: bison
+:opts: 
+  :gcc: gcc
+  :make: make
+  :bison: bison

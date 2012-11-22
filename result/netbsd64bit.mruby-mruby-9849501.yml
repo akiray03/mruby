@@ -1,0 +1,236 @@
+---
+:date: 2012-11-20 00:42:43.351052848 +09:00
+:id: mruby-mruby-9849501
+:zipball_url: https://github.com/mruby/mruby/zipball/9849501
+:make:
+  :stdout: ! 'gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c array.c -o array.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c symbol.c -o symbol.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c kernel.c -o kernel.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c init_ext.c -o init_ext.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c st.c -o st.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c string.c -o string.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c gc.c -o gc.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c numeric.c -o numeric.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c enum.c -o enum.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c regerror.c -o regerror.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c range.c -o range.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c variable.c -o variable.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c regexec.c -o regexec.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c codegen.c -o codegen.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c compar.c -o compar.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c vm.c -o vm.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c object.c -o object.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c hash.c -o hash.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c struct.c -o struct.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c regcomp.c -o regcomp.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c re.c -o re.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c math.c -o math.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c dump.c -o dump.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c load.c -o load.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c etc.c -o etc.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c regenc.c -o regenc.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c class.c -o class.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c regparse.c -o regparse.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c pool.c -o pool.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c proc.c -o proc.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c init.c -o init.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c time.c -o time.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c error.c -o error.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c crc.c -o crc.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c cdump.c -o cdump.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c sprintf.c -o sprintf.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c print.c -o print.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c state.c -o state.o
+
+    bison -o ./y.tab.c ./parse.y
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c ./y.tab.c -o ./y.tab.o
+
+    ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o
+    ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o
+    ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o
+    ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o
+    ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o   ./y.tab.o
+
+    cat ./*.rb > mrblib.rbtmp
+
+    gmake -C ../tools/mrbc CC=''gcc'' LL=''gcc'' ALL_CFLAGS=''-Wall -Werror-implicit-function-declaration
+    -g -O3''
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include
+    -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+
+    gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a
+    -lm
+
+    ../bin/mrbc -Bmrblib_irep -omrblib.ctmp mrblib.rbtmp; cat init_mrblib.c mrblib.ctmp
+    > mrblib.c
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include
+    -c mrblib.c -o mrblib.o
+
+    cp ../lib/libmruby_core.a ../lib/libmruby.a
+
+    ar r ../lib/libmruby.a mrblib.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include
+    -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+
+    gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include
+    -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+
+    gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm'
+  :stderr: ! 'ar: creating ../lib/libmruby_core.a'
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:make_test:
+  :stdout: ! "gmake[1]: Nothing to be done for `all'.\ngmake[1]: Nothing to be done
+    for `all'.\ngmake[1]: Nothing to be done for `all'.\ngmake[1]: Nothing to be done
+    for `all'.\ngcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src
+    -I./../include -c driver.c -o driver.o\ncat ./assert.rb ./t/*.rb > mrbtest.rbtmp\n../bin/mrbc
+    -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp >
+    mrbtest.c\ngcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src
+    -I./../include -c mrbtest.c -o mrbtest.o\ngcc -o mrbtest -g -O3 driver.o mrbtest.o
+    ../lib/libmruby.a -lm\ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
+    mrubytest.rb\n# exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis
+    is a very early version, please test and report errors.\nThanks :)\n\n........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    488\n   OK: 488\n   KO: 0\nCrash: 0\n Time: 0.019487 seconds\n\n# exec mruby test
+    with ruby script\nmrubytest.rb success.\n\n# exec mruby test with mrb file\nmrubytest.mrb
+    success."
+  :stderr: ''
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+  :mrubytest_rb: ! "........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    488\n   OK: 488\n   KO: 0\nCrash: 0\n Time: 0.003063 seconds\n"
+  :mrubytest_mrb: ! "........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    488\n   OK: 488\n   KO: 0\nCrash: 0\n Time: 0.003108 seconds\n"
+:repository: mruby/mruby
+:commit: '9849501'
+:ball_id: mruby-mruby-9849501
+:hostname: netbsd64bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+
+      Copyright (C) 2006 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for x86_64--netbsd
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.5.1
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2012 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake
+  :bison: bison

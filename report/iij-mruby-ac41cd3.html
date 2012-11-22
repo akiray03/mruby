@@ -1,0 +1,3076 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>mruby build & test report</title>
+    <style>
+      pre {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -pre-wrap;     /* Opera 4-6 */
+        white-space: -o-pre-wrap;   /* Opera 7 */
+        white-space: pre-wrap;      /* CSS3 */
+        word-wrap: break-word;      /* IE 5.5+ */
+      }
+      textarea {
+        width: 100%;
+        height: 400px;
+        font-family: monospace !important;
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
+  <body>
+    
+    
+    <h1>mruby build & test report (<a href="http://github.com/iij/mruby/commit/ac41cd3" target="_blank">iij-mruby-ac41cd3</a>)</h1>
+
+    <h2>mrbtest</h2>
+    <table border="1">
+      <tr>
+        
+          <th>Name</th>
+        
+          <th>Build-Status</th>
+        
+          <th>Mrbtest-Status</th>
+        
+          <th>Total</th>
+        
+          <th>OK</th>
+        
+          <th>KO</th>
+        
+          <th>Crash</th>
+        
+          <th>Fail</th>
+        
+          <th>Msg</th>
+        
+      </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos32bit">centos32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#centos64bit">centos64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd32bit">freebsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#freebsd64bit">freebsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#mac-ppc">mac-ppc</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1168</td>
+          <td>1168</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd32bit">netbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#netbsd64bit">netbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd32bit">openbsd32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#openbsd64bit">openbsd64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu32bit">ubuntu32bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+        
+        
+        <tr style="background-color:#99ff99">
+          <td><a href="#ubuntu64bit">ubuntu64bit</a></td>
+          <td>success</td>
+          <td>success</td>
+          <td>1785</td>
+          <td>1785</td>
+          <td>0</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+    </table>
+
+    
+      <h2>posix test</h2>
+      <table border="1">
+        <tr>
+          
+            <th>Name</th>
+          
+            <th>Status</th>
+          
+            <th>Total</th>
+          
+            <th>OK</th>
+          
+            <th>KO</th>
+          
+            <th>Crash</th>
+          
+            <th>Fail</th>
+          
+            <th>Msg</th>
+          
+        </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#centos32bit">centos32bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#centos64bit">centos64bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#freebsd32bit">freebsd32bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#freebsd64bit">freebsd64bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#mac-ppc">mac-ppc</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#netbsd32bit">netbsd32bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#netbsd64bit">netbsd64bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#openbsd32bit">openbsd32bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#openbsd64bit">openbsd64bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#ubuntu32bit">ubuntu32bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+          
+          
+          <tr style="background-color:#99ff99">
+            <td><a href="#ubuntu64bit">ubuntu64bit</a></td>
+            <td>success</td>
+            <td>113</td>
+            <td>113</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td>POSIX test result: OK</td>
+          </tr>
+        
+      </table>
+    
+
+    <h2>environment</h2>
+    <table border='1'>
+      <tr>
+        <th>Name</th>
+        <th>software version</th>
+      </tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">centos64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-redhat-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">freebsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for amd64-portbld-freebsd9.0
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.4.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">mac-ppc</td>
+          <td><b>gcc</b><br/><pre>powerpc-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5493)
+Copyright (C) 2005 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for powerpc-apple-darwin9.0</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386--netbsdelf
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">netbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.1.3 20080704 prerelease (NetBSD nb2 20081120)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64--netbsd
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5.1
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for i386-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">openbsd64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (GCC) 4.2.1 20070719 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.82
+Built for x86_64-unknown-openbsd5.1
+Copyright (C) 2010  Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.3
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu32bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i686-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+        
+        <tr>
+          <td rowspan="3">ubuntu64bit</td>
+          <td><b>gcc</b><br/><pre>gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td>
+        </tr>
+        <tr><td><b>make</b><br/><pre>GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-pc-linux-gnu</pre></td></tr>
+        <tr><td><b>bison</b><br/><pre>bison (GNU Bison) 2.5
+Written by Robert Corbett and Richard Stallman.
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</pre></td></tr>
+      
+    </table>
+
+    <h2>Build Log</h2>
+    
+      
+      <h3><a name="centos32bit">centos32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./cdump.o ./class.o ./codegen.o ./compar.o ./crc.o ./dump.o ./enum.o ./error.o ./etc.o ./gc.o ./hash.o ./init.o ./init_ext.o ./kernel.o ./load.o ./math.o ./numeric.o ./object.o ./pool.o ./print.o ./proc.o ./range.o ./re.o ./regcomp.o ./regenc.o ./regerror.o ./regexec.o ./regparse.o ./sprintf.o ./st.o ./state.o ./string.o ./struct.o ./symbol.o ./time.o ./variable.o ./vm.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+make -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>load.c: In function 'mrb_load_irep':
+load.c:140: warning: 'hex2' may be used uninitialized in this function
+load.c:140: note: 'hex2' was declared here
+ext/socket/socket.c: In function 'mrb_ipsocket_recvfrom':
+ext/socket/socket.c:34: warning: dereferencing pointer 'ss.60' does break strict-aliasing rules
+ext/socket/socket.c:256: note: initialized from here
+ext/socket/socket.c:37: warning: dereferencing pointer 'sa.19' does break strict-aliasing rules
+ext/socket/socket.c:37: note: initialized from here
+ext/socket/socket.c:41: warning: dereferencing pointer 'sa.20' does break strict-aliasing rules
+ext/socket/socket.c:41: note: initialized from here
+ar: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.114659 seconds
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.00095 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000239 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.00031 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.002851 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.006026 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.003854 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.052079 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.000792 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="centos64bit">centos64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./cdump.o ./class.o ./codegen.o ./compar.o ./crc.o ./dump.o ./enum.o ./error.o ./etc.o ./gc.o ./hash.o ./init.o ./init_ext.o ./kernel.o ./load.o ./math.o ./numeric.o ./object.o ./pool.o ./print.o ./proc.o ./range.o ./re.o ./regcomp.o ./regenc.o ./regerror.o ./regexec.o ./regparse.o ./sprintf.o ./st.o ./state.o ./string.o ./struct.o ./symbol.o ./time.o ./variable.o ./vm.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+make -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>load.c: In function 'mrb_load_irep':
+load.c:140: warning: 'hex2' may be used uninitialized in this function
+load.c:140: note: 'hex2' was declared here
+ext/socket/socket.c: In function 'mrb_ipsocket_recvfrom':
+ext/socket/socket.c:34: warning: dereferencing pointer 'ss.55' does break strict-aliasing rules
+ext/socket/socket.c:256: note: initialized from here
+ext/socket/socket.c:37: warning: dereferencing pointer 'sa.19' does break strict-aliasing rules
+ext/socket/socket.c:37: note: initialized from here
+ext/socket/socket.c:41: warning: dereferencing pointer 'sa.20' does break strict-aliasing rules
+ext/socket/socket.c:41: note: initialized from here
+ar: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.20698 seconds
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.000984 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000237 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000266 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.004942 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.06941 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.005113 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.051969 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.000747 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd32bit">freebsd32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>dump.c: In function 'get_syms_block_size':
+dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c: In function 'write_syms_block':
+dump.c:439: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c:446: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+regparse.c: In function 'onig_parse_make_tree':
+regparse.c:5588: warning: passing argument 3 of 'parse_regexp' discards qualifiers from pointer target type
+ext/io/io.c: In function 'mrb_io_select':
+ext/io/io.c:1651: warning: 't.tv_sec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_sec' was declared here
+ext/io/io.c:1651: warning: 't.tv_usec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_usec' was declared here
+ar: warning: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.230415 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.005327 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000346 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000361 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.004856 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.006088 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.036113 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.050434 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.001857 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="freebsd64bit">freebsd64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>dump.c: In function 'get_syms_block_size':
+dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c: In function 'write_syms_block':
+dump.c:439: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c:446: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+regparse.c: In function 'onig_parse_make_tree':
+regparse.c:5588: warning: passing argument 3 of 'parse_regexp' discards qualifiers from pointer target type
+ext/io/io.c: In function 'mrb_io_select':
+ext/io/io.c:1651: warning: 't.tv_sec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_sec' was declared here
+ext/io/io.c:1651: warning: 't.tv_usec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_usec' was declared here
+ar: warning: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.286493 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.008576 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000423 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000413 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.014276 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.016756 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.007323 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.106874 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.007424 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="mac-ppc">mac-ppc</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./cdump.o ./class.o ./codegen.o ./compar.o ./crc.o ./dump.o ./enum.o ./error.o ./etc.o ./gc.o ./hash.o ./init.o ./init_ext.o ./kernel.o ./load.o ./math.o ./numeric.o ./object.o ./pool.o ./print.o ./proc.o ./range.o ./re.o ./regcomp.o ./regenc.o ./regerror.o ./regexec.o ./regparse.o ./sprintf.o ./st.o ./state.o ./string.o ./struct.o ./symbol.o ./time.o ./variable.o ./vm.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+make CFLAGS='-DDISABLE_SOCKET' -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET'
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -DDISABLE_SOCKET ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -DDISABLE_SOCKET ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>ar: creating archive ../lib/libmruby_core.a
+ranlib: file: ../lib/libmruby_core.a(socket.o) has no symbols
+ranlib: file: ../lib/libmruby.a(socket.o) has no symbols</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -DDISABLE_SOCKET -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -DDISABLE_SOCKET driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 584
+   OK: 584
+   KO: 0
+Crash: 0
+ Time: 0.836675 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file</textarea></td>
+          <td><textarea>failed to load mrb file: mrubytest.mrb
+mruby(83363) malloc: *** error for object 0x23c000: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x1375d0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x128830: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x1376e0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x137790: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x137970: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x137c00: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x137c30: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x137cd0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x138810: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x138d80: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x138ed0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139130: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139370: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139490: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x801a00: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139810: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139830: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139920: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139940: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139a10: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x139fb0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13a1f0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13a550: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b020: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b080: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b0d0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b140: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b1a0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b220: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b240: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b2f0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b360: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b480: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b500: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b630: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b700: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b770: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b7d0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b830: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b890: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b910: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13b9a0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13ba30: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13bb10: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13bbf0: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13bc90: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13bd00: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13bd70: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13be10: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13c150: double free
+*** set a breakpoint in malloc_error_break to debug
+mruby(83363) malloc: *** error for object 0x13c440: double free
+*** set a breakpoint in malloc_error_break to debug</textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.009395 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.002276 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.002631 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.016009 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.012946 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.024745 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.203426 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.005741 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd32bit">netbsd32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>ext/io/io.c: In function 'mrb_io_select':
+ext/io/io.c:1651: warning: 't.tv_sec' may be used uninitialized in this function
+ext/io/io.c:1651: warning: 't.tv_usec' may be used uninitialized in this function
+ar: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.517891 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.026788 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000316 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000775 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.025505 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.024973 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.039036 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.205808 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.001348 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="netbsd64bit">netbsd64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>ext/io/io.c: In function 'mrb_io_select':
+ext/io/io.c:1651: warning: 't.tv_sec' may be used uninitialized in this function
+ext/io/io.c:1651: warning: 't.tv_usec' may be used uninitialized in this function
+ar: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.15227 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.026449 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000257 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000632 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.004653 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.004646 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.006214 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.072997 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.000892 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd32bit">openbsd32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>dump.c: In function 'get_syms_block_size':
+dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c: In function 'write_syms_block':
+dump.c:439: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c:446: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+regparse.c: In function 'onig_parse_make_tree':
+regparse.c:5588: warning: passing argument 3 of 'parse_regexp' discards qualifiers from pointer target type
+ext/io/io.c: In function 'mrb_io_select':
+ext/io/io.c:1651: warning: 't.tv_sec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_sec' was declared here
+ext/io/io.c:1651: warning: 't.tv_usec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_usec' was declared here
+ar: creating ../lib/libmruby_core.a
+../../src/../tools/mrbc/mrbc.o(.text+0x5b): In function `get_outfilename':
+../../src/../tools/mrbc/mrbc.c:57: warning: strcpy() is almost always misused, please use strlcpy()
+../../lib/libmruby_core.a(dump.o)(.text+0xa9): In function `get_pool_block_size':
+/home/mruby/mruby-test-tool/tmp/20121122130040-17907-build/iij-mruby-ac41cd3/src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+../../src/../tools/mruby/mruby.o(.text+0xa53): In function `main':
+../../src/../tools/mruby/mruby.c:145: warning: strcpy() is almost always misused, please use strlcpy()
+../../src/../tools/mruby/mruby.o(.text+0x4f7):../../src/../tools/mruby/mruby.c:116: warning: strcat() is almost always misused, please use strlcat()
+../../lib/libmruby.a(string.o)(.text+0x4d96): In function `mrb_str_dump':
+/home/mruby/mruby-test-tool/tmp/20121122130040-17907-build/iij-mruby-ac41cd3/src/string.c:2966: warning: sprintf() is often misused, please use snprintf()
+../../src/../tools/mirb/mirb.o(.text+0x7b0): In function `main':
+../../src/../tools/mirb/mirb.c:226: warning: strcpy() is almost always misused, please use strlcpy()
+../../src/../tools/mirb/mirb.o(.text+0x366):../../src/../tools/mirb/mirb.c:217: warning: strcat() is almost always misused, please use strlcat()
+../../lib/libmruby.a(string.o)(.text+0x4d96): In function `mrb_str_dump':
+/home/mruby/mruby-test-tool/tmp/20121122130040-17907-build/iij-mruby-ac41cd3/src/string.c:2966: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.094026 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea>../lib/libmruby.a(string.o)(.text+0x4d96): In function `mrb_str_dump':
+/home/mruby/mruby-test-tool/tmp/20121122130040-17907-build/iij-mruby-ac41cd3/src/string.c:2966: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.007881 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000319 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000665 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.005018 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.005314 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.011762 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.071679 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.001251 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="openbsd64bit">openbsd64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+gmake -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>dump.c: In function 'get_syms_block_size':
+dump.c:293: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c: In function 'write_syms_block':
+dump.c:439: warning: passing argument 1 of 'str_dump_len' discards qualifiers from pointer target type
+dump.c:446: warning: passing argument 1 of 'str_dump' discards qualifiers from pointer target type
+regparse.c: In function 'onig_parse_make_tree':
+regparse.c:5588: warning: passing argument 3 of 'parse_regexp' discards qualifiers from pointer target type
+ext/io/io.c: In function 'mrb_io_select':
+ext/io/io.c:1651: warning: 't.tv_sec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_sec' was declared here
+ext/io/io.c:1651: warning: 't.tv_usec' may be used uninitialized in this function
+ext/io/io.c:1651: note: 't.tv_usec' was declared here
+ar: creating ../lib/libmruby_core.a
+../../src/../tools/mrbc/mrbc.o(.text+0x5d): In function `get_outfilename':
+../../src/../tools/mrbc/mrbc.c:57: warning: strcpy() is almost always misused, please use strlcpy()
+../../lib/libmruby_core.a(dump.o)(.text+0x59): In function `get_pool_block_size':
+/home/mruby/mruby-test-tool/tmp/20121122130043-22648-build/iij-mruby-ac41cd3/src/dump.c:247: warning: sprintf() is often misused, please use snprintf()
+../../src/../tools/mruby/mruby.o(.text+0x89d): In function `main':
+../../src/../tools/mruby/mruby.c:145: warning: strcpy() is almost always misused, please use strlcpy()
+../../src/../tools/mruby/mruby.o(.text+0x47e):../../src/../tools/mruby/mruby.c:116: warning: strcat() is almost always misused, please use strlcat()
+../../lib/libmruby.a(string.o)(.text+0x4f11): In function `mrb_str_dump':
+/home/mruby/mruby-test-tool/tmp/20121122130043-22648-build/iij-mruby-ac41cd3/src/string.c:2966: warning: sprintf() is often misused, please use snprintf()
+../../src/../tools/mirb/mirb.o(.text+0x621): In function `main':
+../../src/../tools/mirb/mirb.c:226: warning: strcpy() is almost always misused, please use strlcpy()
+../../src/../tools/mirb/mirb.o(.text+0x2ed):../../src/../tools/mirb/mirb.c:223: warning: strcat() is almost always misused, please use strlcat()
+../../lib/libmruby.a(string.o)(.text+0x4f11): In function `mrb_str_dump':
+/home/mruby/mruby-test-tool/tmp/20121122130043-22648-build/iij-mruby-ac41cd3/src/string.c:2966: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gmake[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.074336 seconds
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea>../lib/libmruby.a(string.o)(.text+0x4f11): In function `mrb_str_dump':
+/home/mruby/mruby-test-tool/tmp/20121122130043-22648-build/iij-mruby-ac41cd3/src/string.c:2966: warning: sprintf() is often misused, please use snprintf()</textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.006474 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000206 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000341 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.011083 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.002836 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.004623 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.030725 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.00067 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu32bit">ubuntu32bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./cdump.o ./class.o ./codegen.o ./compar.o ./crc.o ./dump.o ./enum.o ./error.o ./etc.o ./gc.o ./hash.o ./init.o ./init_ext.o ./kernel.o ./load.o ./math.o ./numeric.o ./object.o ./pool.o ./print.o ./proc.o ./range.o ./re.o ./regcomp.o ./regenc.o ./regerror.o ./regexec.o ./regparse.o ./sprintf.o ./st.o ./state.o ./string.o ./struct.o ./symbol.o ./time.o ./variable.o ./vm.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+make -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>regcomp.c: In function 'is_not_included':
+regcomp.c:2433:13: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+regcomp.c: In function 'update_string_node_case_fold':
+regcomp.c:3225:14: warning: variable 'q' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'fetch_escaped_value':
+regparse.c:2392:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'fetch_name':
+regparse.c:2605:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'parse_posix_bracket':
+regparse.c:3984:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'fetch_char_property_to_ctype':
+regparse.c:4037:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'code_exist_check':
+regparse.c:4194:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+string.c: In function 'mrb_str_sub':
+string.c:2411:7: warning: variable 'iter' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'rb_io_close':
+ext/io/io.c:491:11: warning: variable 'fd2' set but not used [-Wunused-but-set-variable]
+ext/io/io.c:491:7: warning: variable 'fd' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'pipe_open':
+ext/io/io.c:937:16: warning: variable 'write_fd' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'mrb_io_s_popen':
+ext/io/io.c:1509:13: warning: variable 'io' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'appendlineOld':
+ext/io/io.c:552:12: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+ext/io/io.c: In function 'appendline':
+ext/io/io.c:653:12: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+ext/pack/pack.c: In function 'mrb_pack_unpack':
+ext/pack/pack.c:316:7: warning: variable 'star' set but not used [-Wunused-but-set-variable]
+ext/process/process.c: In function 'mrb_f_system':
+ext/process/process.c:103:16: warning: variable 'chfunc' set but not used [-Wunused-but-set-variable]
+ext/require/require.c: In function 'find_file_check':
+ext/require/require.c:88:11: warning: ignoring return value of 'realpath', declared with attribute warn_unused_result [-Wunused-result]
+ar: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.196341 seconds
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.001438 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.00021 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000277 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.003455 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.006211 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.00896 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.035644 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.00073 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+      
+      <h3><a name="ubuntu64bit">ubuntu64bit</a></h3>
+      <table border='1' style="width:90%;">
+        <tr>
+          <th style="width:100px;">task</th>
+          <th>stdout</th>
+          <th>stderr</th>
+        </tr>
+        <tr>
+          <th>make</th>
+          <td><textarea>gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c array.c -o array.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c cdump.c -o cdump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c class.c -o class.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c codegen.c -o codegen.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c compar.c -o compar.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c crc.c -o crc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c dump.c -o dump.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c enum.c -o enum.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c error.c -o error.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c etc.c -o etc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c gc.c -o gc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c hash.c -o hash.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init.c -o init.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c init_ext.c -o init_ext.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c kernel.c -o kernel.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c load.c -o load.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c math.c -o math.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c numeric.c -o numeric.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c object.c -o object.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c pool.c -o pool.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c print.c -o print.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c proc.c -o proc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c range.c -o range.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c re.c -o re.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regcomp.c -o regcomp.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regenc.c -o regenc.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regerror.c -o regerror.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regexec.c -o regexec.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c regparse.c -o regparse.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c sprintf.c -o sprintf.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c st.c -o st.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c state.c -o state.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c string.c -o string.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c struct.c -o struct.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c symbol.c -o symbol.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c time.c -o time.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c variable.c -o variable.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c vm.c -o vm.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/digest/digest.c -o ext/digest/digest.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/dir/dir.c -o ext/dir/dir.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/enc/ascii.c -o ext/enc/ascii.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/env/env.c -o ext/env/env.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/errno/errno.c -o ext/errno/errno.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/file.c -o ext/io/file.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/io/io.c -o ext/io/io.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/pack/pack.c -o ext/pack/pack.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/process/process.c -o ext/process/process.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/random/random.c -o ext/random/random.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/require/require.c -o ext/require/require.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/socket/socket.c -o ext/socket/socket.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+bison -o ./y.tab.c ./parse.y
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include -c ./y.tab.c -o ./y.tab.o
+ar r ../lib/libmruby_core.a ./array.o ./cdump.o ./class.o ./codegen.o ./compar.o ./crc.o ./dump.o ./enum.o ./error.o ./etc.o ./gc.o ./hash.o ./init.o ./init_ext.o ./kernel.o ./load.o ./math.o ./numeric.o ./object.o ./pool.o ./print.o ./proc.o ./range.o ./re.o ./regcomp.o ./regenc.o ./regerror.o ./regexec.o ./regparse.o ./sprintf.o ./st.o ./state.o ./string.o ./struct.o ./symbol.o ./time.o ./variable.o ./vm.o ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
+cat ./*.rb > mrblib1.rbtmp
+cat ./ext/*.rb > mrblib2.rbtmp
+make -C ../tools/mrbc CC='gcc' LL='gcc' ALL_CFLAGS='-Wall -Werror-implicit-function-declaration -g -O3'
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
+gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a -lm -lcrypto
+../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
+../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
+cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include -c mrblib.c -o mrblib.o
+cp ../lib/libmruby_core.a ../lib/libmruby.a
+ar r ../lib/libmruby.a mrblib.o
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
+gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm -lcrypto
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
+gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm -lcrypto</textarea></td>
+          <td><textarea>regcomp.c: In function 'is_not_included':
+regcomp.c:2433:13: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+regcomp.c: In function 'update_string_node_case_fold':
+regcomp.c:3225:14: warning: variable 'q' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'fetch_escaped_value':
+regparse.c:2392:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'fetch_name':
+regparse.c:2605:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'parse_posix_bracket':
+regparse.c:3984:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'fetch_char_property_to_ctype':
+regparse.c:4037:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+regparse.c: In function 'code_exist_check':
+regparse.c:4194:3: warning: variable 'pfetch_prev' set but not used [-Wunused-but-set-variable]
+string.c: In function 'mrb_str_sub':
+string.c:2411:7: warning: variable 'iter' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'rb_io_close':
+ext/io/io.c:491:11: warning: variable 'fd2' set but not used [-Wunused-but-set-variable]
+ext/io/io.c:491:7: warning: variable 'fd' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'pipe_open':
+ext/io/io.c:937:16: warning: variable 'write_fd' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'mrb_io_s_popen':
+ext/io/io.c:1509:13: warning: variable 'io' set but not used [-Wunused-but-set-variable]
+ext/io/io.c: In function 'appendlineOld':
+ext/io/io.c:552:12: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+ext/io/io.c: In function 'appendline':
+ext/io/io.c:653:12: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+ext/pack/pack.c: In function 'mrb_pack_unpack':
+ext/pack/pack.c:316:7: warning: variable 'star' set but not used [-Wunused-but-set-variable]
+ext/process/process.c: In function 'mrb_f_system':
+ext/process/process.c:103:16: warning: variable 'chfunc' set but not used [-Wunused-but-set-variable]
+ext/require/require.c: In function 'find_file_check':
+ext/require/require.c:88:11: warning: ignoring return value of 'realpath', declared with attribute warn_unused_result [-Wunused-result]
+ar: creating ../lib/libmruby_core.a</textarea></td>
+        </tr>
+        <tr>
+          <th>make test</th>
+          <td><textarea>make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+make[1]: Nothing to be done for `all'.
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c driver.c -o driver.o
+cat ./assert.rb ./t/*.rb > mrbtest.rbtmp
+../bin/mrbc -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp > mrbtest.c
+gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src -I./../include -c mrbtest.c -o mrbtest.o
+gcc -o mrbtest -g -O3 driver.o mrbtest.o ../lib/libmruby.a -lm -lcrypto
+cat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb
+../bin/mrbc mrubytest.rb
+# exec mrbtest
+./mrbtest
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Total: 595
+   OK: 595
+   KO: 0
+Crash: 0
+ Time: 0.100197 seconds
+mrbtest - Embeddable Ruby Test
+
+This is a very early version, please test and report errors.
+Thanks :)
+
+
+# exec mruby test with ruby script
+mrubytest.rb success.
+
+# exec mruby test with mrb file
+mrubytest.mrb success.</textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        
+          <tr>
+            <th>posix test</th>
+            <td><textarea>###################################
+# exec test/posix/dir.sh; start...
+.....................
+Total: 21
+   OK: 21
+   KO: 0
+Crash: 0
+ Time: 0.001112 seconds
+
+###################################
+# exec test/posix/env.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000256 seconds
+
+###################################
+# exec test/posix/errno.sh; start...
+..............
+Total: 14
+   OK: 14
+   KO: 0
+Crash: 0
+ Time: 0.000173 seconds
+
+###################################
+# exec test/posix/file.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.020294 seconds
+
+###################################
+# exec test/posix/io.sh; start...
+..................
+Total: 18
+   OK: 18
+   KO: 0
+Crash: 0
+ Time: 0.003813 seconds
+
+###################################
+# exec test/posix/process.sh; start...
+....
+Total: 4
+   OK: 4
+   KO: 0
+Crash: 0
+ Time: 0.004075 seconds
+
+###################################
+# exec test/posix/require.sh; start...
+....................
+Total: 20
+   OK: 20
+   KO: 0
+Crash: 0
+ Time: 0.022759 seconds
+
+###################################
+# exec test/posix/syslog.sh; start...
+...........
+Total: 11
+   OK: 11
+   KO: 0
+Crash: 0
+ Time: 0.000663 seconds
+
+###################################
+POSIX test result: OK
+###################################</textarea></td>
+            <td><textarea></textarea></td>
+          </tr>
+        
+      </table>
+    
+  </body>
+</html>
