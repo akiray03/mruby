@@ -1,31 +1,7 @@
 ---
-:date: 2012-11-22 23:34:11.755832366 +09:00
-:hostname: netbsd_arm
-:id: iij-mruby-de109e5
-:ball_id: iij-mruby-de109e5
-:zipball_url: https://github.com/iij/mruby/zipball/de109e5
-:repository: iij/mruby
-:commit: de109e5
-:env:
-  :gcc:
-    :stdout: ''
-    :stderr: ''
-    :status: success
-    :path: gcc
-  :make:
-    :stdout: ''
-    :stderr: ''
-    :status: success
-    :path: gmake
-  :bison:
-    :stdout: ''
-    :stderr: ''
-    :status: success
-    :path: bison
-:opts:
-  :gcc: gcc
-  :make: gmake CFLAGS='-DDISABLE_SOCKET'
-  :bison: bison
+:date: 2012-11-22 21:58:16.186264468 +09:00
+:id: iij-mruby-b99c114
+:zipball_url: https://github.com/iij/mruby/zipball/b99c114
 :make:
   :stdout: ! 'gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c array.c -o array.o
@@ -34,19 +10,22 @@
     -c symbol.c -o symbol.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c kernel.c -o kernel.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c init_ext.c -o init_ext.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c st.c -o st.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c string.c -o string.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c proc.c -o proc.o
+    -c gc.c -o gc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c numeric.c -o numeric.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c init_ext.c -o init_ext.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c enum.c -o enum.o
@@ -79,7 +58,7 @@
     -c hash.c -o hash.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c error.c -o error.o
+    -c struct.c -o struct.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c regcomp.c -o regcomp.o
@@ -112,10 +91,7 @@
     -c pool.c -o pool.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c gc.c -o gc.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c kernel.c -o kernel.o
+    -c proc.c -o proc.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c init.c -o init.o
@@ -124,7 +100,7 @@
     -c time.c -o time.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c struct.c -o struct.o
+    -c error.c -o error.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c crc.c -o crc.o
@@ -133,40 +109,28 @@
     -c cdump.c -o cdump.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c sprintf.c -o sprintf.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c print.c -o print.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c state.c -o state.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c sprintf.c -o sprintf.o
+    -c ext/digest/digest.c -o ext/digest/digest.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c ext/dir/dir.c -o ext/dir/dir.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/env/env.c -o ext/env/env.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c ext/enc/ascii.c -o ext/enc/ascii.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/digest/digest.c -o ext/digest/digest.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/pack/pack.c -o ext/pack/pack.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/syslog/syslog.c -o ext/syslog/syslog.o
+    -c ext/env/env.c -o ext/env/env.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c ext/errno/errno.c -o ext/errno/errno.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/process/process.c -o ext/process/process.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/require/require.c -o ext/require/require.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c ext/io/file.c -o ext/io/file.o
@@ -175,24 +139,36 @@
     -c ext/io/io.c -o ext/io/io.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/socket/socket.c -o ext/socket/socket.o
+    -c ext/pack/pack.c -o ext/pack/pack.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c ext/process/process.c -o ext/process/process.o
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c ext/random/random.c -o ext/random/random.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c ext/require/require.c -o ext/require/require.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c ext/socket/socket.c -o ext/socket/socket.o
+
+    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
+    -c ext/syslog/syslog.c -o ext/syslog/syslog.o
 
     bison -o ./y.tab.c ./parse.y
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c ./y.tab.c -o ./y.tab.o
 
-    ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./st.o ./string.o ./proc.o ./numeric.o
-    ./init_ext.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o
-    ./compar.o ./vm.o ./object.o ./hash.o ./error.o ./regcomp.o ./re.o ./math.o ./dump.o
-    ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./gc.o ./kernel.o
-    ./init.o ./time.o ./struct.o ./crc.o ./cdump.o ./print.o ./state.o ./sprintf.o
-    ./ext/dir/dir.o ./ext/env/env.o ./ext/enc/ascii.o ./ext/digest/digest.o ./ext/pack/pack.o
-    ./ext/syslog/syslog.o ./ext/errno/errno.o ./ext/process/process.o ./ext/require/require.o
-    ./ext/io/file.o ./ext/io/io.o ./ext/socket/socket.o ./ext/random/random.o  ./y.tab.o
+    ar r ../lib/libmruby_core.a ./array.o ./symbol.o ./kernel.o ./init_ext.o ./st.o
+    ./string.o ./gc.o ./numeric.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o
+    ./codegen.o ./compar.o ./vm.o ./object.o ./hash.o ./struct.o ./regcomp.o ./re.o
+    ./math.o ./dump.o ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o
+    ./proc.o ./init.o ./time.o ./error.o ./crc.o ./cdump.o ./sprintf.o ./print.o ./state.o
+    ./ext/digest/digest.o ./ext/dir/dir.o ./ext/enc/ascii.o ./ext/env/env.o ./ext/errno/errno.o
+    ./ext/io/file.o ./ext/io/io.o ./ext/pack/pack.o ./ext/process/process.o ./ext/random/random.o
+    ./ext/require/require.o ./ext/socket/socket.o ./ext/syslog/syslog.o  ./y.tab.o
 
     cat ./*.rb > mrblib1.rbtmp
 
@@ -230,20 +206,37 @@
     -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
 
     gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm
-    -lcrypto
+    -lcrypto'
+  :stderr: ! 'dump.c: In function ''get_syms_block_size'':
 
-'
-  :stderr: ! 'ar: creating ../lib/libmruby_core.a
+    dump.c:293: warning: passing argument 1 of ''str_dump_len'' discards qualifiers
+    from pointer target type
 
-    ../../tools/mirb/mirb.c: In function `main'':
+    dump.c: In function ''write_syms_block'':
 
-    ../../tools/mirb/mirb.c:200: warning: comparison is always false due to limited
-    range of data type
+    dump.c:439: warning: passing argument 1 of ''str_dump_len'' discards qualifiers
+    from pointer target type
 
-    ../../tools/mirb/mirb.c:203: warning: comparison is always false due to limited
-    range of data type
+    dump.c:446: warning: passing argument 1 of ''str_dump'' discards qualifiers from
+    pointer target type
 
-'
+    regparse.c: In function ''onig_parse_make_tree'':
+
+    regparse.c:5588: warning: passing argument 3 of ''parse_regexp'' discards qualifiers
+    from pointer target type
+
+    ext/io/io.c: In function ''mrb_io_select'':
+
+    ext/io/io.c:1651: warning: ''t.tv_sec'' may be used uninitialized in this function
+
+    ext/io/io.c:1651: note: ''t.tv_sec'' was declared here
+
+    ext/io/io.c:1651: warning: ''t.tv_usec'' may be used uninitialized in this function
+
+    ext/io/io.c:1651: note: ''t.tv_usec'' was declared here
+
+    ar: warning: creating ../lib/libmruby_core.a'
+  :status_info: !ruby/object:Process::Status {}
   :status: success
 :make_test:
   :stdout: ! "gmake[1]: Nothing to be done for `all'.\ngmake[1]: Nothing to be done
@@ -255,34 +248,82 @@
     -I./../include -c mrbtest.c -o mrbtest.o\ngcc -o mrbtest -g -O3 driver.o mrbtest.o
     ../lib/libmruby.a -lm -lcrypto\ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
     mrubytest.rb\n# exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis
-    is a very early version, please test and report errors.\nThanks :)\n\n.......................................................................................................................................................XXX.......................................................................................................................................................................................................................................................................................................................................................................................................................................................\nError:
-    Digest::SHA256#hexdigest => uninitialized constant SHA256\nError: Digest::SHA384#hexdigest
-    => uninitialized constant SHA384\nError: Digest::SHA512#hexdigest => uninitialized
-    constant SHA512\nTotal: 590\n   OK: 590\n   KO: 0\nCrash: 3\n Time: 2.414903 seconds\n"
+    is a very early version, please test and report errors.\nThanks :)\n\n........................................................................................F...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nFail:
+    BS Block 33\nTotal: 596\n   OK: 595\n   KO: 1\nCrash: 0\n Time: 0.250719 seconds"
   :stderr: ! 'gmake[1]: *** [all] Error 1
 
-    gmake: *** [test] Error 2
-
-'
+    gmake: *** [test] Error 2'
+  :status_info: !ruby/object:Process::Status {}
   :status: failed
-  :mrubytest_rb: ''
-  :mrubytest_mrb: ''
 :posix_test:
-  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n..................F..\nFail:
-    Dir#pos\nTotal: 21\n   OK: 20\n   KO: 1\nCrash: 0\n Time: 0.051944 seconds\n\n###################################\n#
+  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.075747 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.006358 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.000377 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.022031 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.000511 seconds\n\n###################################\n#
     exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.047559 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\n Time: 0.027591 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.077511 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.061429 seconds\n\n###################################\n#
+    0.007492 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.011294 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.52522 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.181783 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.035503 seconds\n\n###################################\nPOSIX
-    test result: NG\n  fail test is :  dir.sh\n###################################\n"
+    0\nCrash: 0\n Time: 0.000925 seconds\n\n###################################\nPOSIX
+    test result: OK\n###################################"
   :stderr: ''
-  :status: failed
+  :status_info: !ruby/object:Process::Status {}
+  :status: success
+:repository: iij/mruby
+:commit: b99c114
+:ball_id: iij-mruby-b99c114
+:hostname: freebsd64bit
+:env:
+  :gcc:
+    :stdout: ! 'gcc (GCC) 4.2.1 20070831 patched [FreeBSD]
+
+      Copyright (C) 2007 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gcc
+  :make:
+    :stdout: ! 'GNU Make 3.82
+
+      Built for amd64-portbld-freebsd9.0
+
+      Copyright (C) 2010  Free Software Foundation, Inc.
+
+      License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+      This is free software: you are free to change and redistribute it.
+
+      There is NO WARRANTY, to the extent permitted by law.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: gmake
+  :bison:
+    :stdout: ! 'bison (GNU Bison) 2.4.3
+
+      Written by Robert Corbett and Richard Stallman.
+
+
+      Copyright (C) 2010 Free Software Foundation, Inc.
+
+      This is free software; see the source for copying conditions.  There is NO
+
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+    :stderr: ''
+    :status_info: !ruby/object:Process::Status {}
+    :status: success
+    :path: bison
+:opts:
+  :gcc: gcc
+  :make: gmake
+  :bison: bison
