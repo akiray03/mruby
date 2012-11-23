@@ -1,11 +1,11 @@
 ---
-:date: 2012-11-24 00:18:47.256402677 +09:00
-:hostname: netbsd_arm
-:id: iij-mruby-7395ae1
-:ball_id: iij-mruby-7395ae1
-:zipball_url: https://github.com/iij/mruby/zipball/7395ae1
-:repository: iij/mruby
-:commit: 7395ae1
+:date: 2012-11-24 00:18:47.150780227 +09:00
+:hostname: netbsd_mips
+:id: mruby-mruby-6c8d2ca
+:ball_id: mruby-mruby-6c8d2ca
+:zipball_url: https://github.com/mruby/mruby/zipball/6c8d2ca
+:repository: mruby/mruby
+:commit: 6c8d2ca
 :env:
   :gcc:
     :stdout: ''
@@ -141,45 +141,6 @@
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
     -c sprintf.c -o sprintf.o
 
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/dir/dir.c -o ext/dir/dir.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/env/env.c -o ext/env/env.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/enc/ascii.c -o ext/enc/ascii.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/digest/digest.c -o ext/digest/digest.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/pack/pack.c -o ext/pack/pack.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/syslog/syslog.c -o ext/syslog/syslog.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/errno/errno.c -o ext/errno/errno.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/process/process.c -o ext/process/process.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/require/require.c -o ext/require/require.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/io/file.c -o ext/io/file.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/io/io.c -o ext/io/io.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/socket/socket.c -o ext/socket/socket.o
-
-    gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
-    -c ext/random/random.c -o ext/random/random.o
-
     bison -o ./y.tab.c ./parse.y
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I. -I./../include
@@ -189,14 +150,9 @@
     ./init_ext.o ./enum.o ./regerror.o ./range.o ./variable.o ./regexec.o ./codegen.o
     ./compar.o ./vm.o ./object.o ./hash.o ./error.o ./regcomp.o ./re.o ./math.o ./dump.o
     ./load.o ./etc.o ./regenc.o ./class.o ./regparse.o ./pool.o ./gc.o ./kernel.o
-    ./init.o ./time.o ./struct.o ./crc.o ./cdump.o ./print.o ./state.o ./sprintf.o
-    ./ext/dir/dir.o ./ext/env/env.o ./ext/enc/ascii.o ./ext/digest/digest.o ./ext/pack/pack.o
-    ./ext/syslog/syslog.o ./ext/errno/errno.o ./ext/process/process.o ./ext/require/require.o
-    ./ext/io/file.o ./ext/io/io.o ./ext/socket/socket.o ./ext/random/random.o  ./y.tab.o
+    ./init.o ./time.o ./struct.o ./crc.o ./cdump.o ./print.o ./state.o ./sprintf.o   ./y.tab.o
 
-    cat ./*.rb > mrblib1.rbtmp
-
-    cat ./ext/*.rb > mrblib2.rbtmp
+    cat ./*.rb > mrblib.rbtmp
 
     gmake -C ../tools/mrbc CC=''gcc'' LL=''gcc'' ALL_CFLAGS=''-Wall -Werror-implicit-function-declaration
     -g -O3''
@@ -205,13 +161,10 @@
     -c ../../src/../tools/mrbc/mrbc.c -o ../../src/../tools/mrbc/mrbc.o
 
     gcc -o ../../bin/mrbc ../../src/../tools/mrbc/mrbc.o ../../lib/libmruby_core.a
-    -lm -lcrypto
+    -lm
 
-    ../bin/mrbc -Bmrblib_irep -omrblib1.ctmp mrblib1.rbtmp
-
-    ../bin/mrbc -Bmrblib_ext_irep -omrblib2.ctmp mrblib2.rbtmp
-
-    cat init_mrblib.c mrblib1.ctmp mrblib2.ctmp > mrblib.c
+    ../bin/mrbc -Bmrblib_irep -omrblib.ctmp mrblib.rbtmp; cat init_mrblib.c mrblib.ctmp
+    > mrblib.c
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../src -I../include
     -c mrblib.c -o mrblib.o
@@ -224,24 +177,14 @@
     -c ../../src/../tools/mruby/mruby.c -o ../../src/../tools/mruby/mruby.o
 
     gcc -o ../../bin/mruby -g -O3 ../../src/../tools/mruby/mruby.o ../../lib/libmruby.a  -lm
-    -lcrypto
 
     gcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I../../src -I../../src/../include
     -c ../../src/../tools/mirb/mirb.c -o ../../src/../tools/mirb/mirb.o
 
     gcc -o ../../bin/mirb -g -O3 ../../src/../tools/mirb/mirb.o ../../lib/libmruby.a  -lm
-    -lcrypto
 
 '
   :stderr: ! 'ar: creating ../lib/libmruby_core.a
-
-    ../../tools/mirb/mirb.c: In function `main'':
-
-    ../../tools/mirb/mirb.c:200: warning: comparison is always false due to limited
-    range of data type
-
-    ../../tools/mirb/mirb.c:203: warning: comparison is always false due to limited
-    range of data type
 
 '
   :status: success
@@ -253,34 +196,15 @@
     -Bmrbtest_irep -omrbtest.ctmp mrbtest.rbtmp; cat init_mrbtest.c mrbtest.ctmp >
     mrbtest.c\ngcc -Wall -Werror-implicit-function-declaration -g -O3 -MMD -I./../src
     -I./../include -c mrbtest.c -o mrbtest.o\ngcc -o mrbtest -g -O3 driver.o mrbtest.o
-    ../lib/libmruby.a -lm -lcrypto\ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
+    ../lib/libmruby.a -lm\ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
     mrubytest.rb\n# exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis
-    is a very early version, please test and report errors.\nThanks :)\n\n................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    592\n   OK: 592\n   KO: 0\nCrash: 0\n Time: 2.419106 seconds\n\n# exec mruby test
+    is a very early version, please test and report errors.\nThanks :)\n\n.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    493\n   OK: 493\n   KO: 0\nCrash: 0\n Time: 0.144826 seconds\n\n# exec mruby test
     with ruby script\nmrubytest.rb success.\n\n# exec mruby test with mrb file\nmrubytest.mrb
     success.\n\n"
   :stderr: ''
   :status: success
-  :mrubytest_rb: ! "................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    592\n   OK: 592\n   KO: 0\nCrash: 0\n Time: 2.358182 seconds\n"
-  :mrubytest_mrb: ! "................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    592\n   OK: 592\n   KO: 0\nCrash: 0\n Time: 2.356201 seconds\n"
-:posix_test:
-  :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.048768 seconds\n\n###################################\n#
-    exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.005964 seconds\n\n###################################\n#
-    exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.031016 seconds\n\n###################################\n#
-    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.047814 seconds\n\n###################################\n# exec test/posix/io.sh;
-    start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.069259 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.068695 seconds\n\n###################################\n#
-    exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.512965 seconds\n\n###################################\n#
-    exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.049077 seconds\n\n###################################\nPOSIX
-    test result: OK\n###################################\n"
-  :stderr: ''
-  :status: success
+  :mrubytest_rb: ! ".............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    493\n   OK: 493\n   KO: 0\nCrash: 0\n Time: 0.104766 seconds\n"
+  :mrubytest_mrb: ! ".............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    493\n   OK: 493\n   KO: 0\nCrash: 0\n Time: 0.098143 seconds\n"
