@@ -1,11 +1,11 @@
 ---
-:date: 2012-11-26 08:37:51.615282624 +09:00
-:hostname: netbsd_arm
-:id: iij-mruby-2b1617a
-:ball_id: iij-mruby-2b1617a
-:zipball_url: https://github.com/iij/mruby/zipball/2b1617a
+:date: 2012-11-26 08:37:51.513322588 +09:00
+:hostname: netbsd_mips
+:id: iij-mruby-a823f1f
+:ball_id: iij-mruby-a823f1f
+:zipball_url: https://github.com/iij/mruby/zipball/a823f1f
 :repository: iij/mruby
-:commit: 2b1617a
+:commit: a823f1f
 :env:
   :gcc:
     :stdout: ''
@@ -235,13 +235,32 @@
 '
   :stderr: ! 'ar: creating ../lib/libmruby_core.a
 
-    ../../tools/mirb/mirb.c: In function `main'':
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
 
-    ../../tools/mirb/mirb.c:200: warning: comparison is always false due to limited
-    range of data type
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
 
-    ../../tools/mirb/mirb.c:203: warning: comparison is always false due to limited
-    range of data type
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
 
 '
   :status: success
@@ -255,32 +274,41 @@
     -I./../include -c mrbtest.c -o mrbtest.o\ngcc -o mrbtest -g -O3 driver.o mrbtest.o
     ../lib/libmruby.a -lm -lcrypto\ncat ./assert.rb ./t/*.rb ./report.rb > mrubytest.rb\n../bin/mrbc
     mrubytest.rb\n# exec mrbtest\n./mrbtest\nmrbtest - Embeddable Ruby Test\n\nThis
-    is a very early version, please test and report errors.\nThanks :)\n\n..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    594\n   OK: 594\n   KO: 0\nCrash: 0\n Time: 2.431634 seconds\n\n# exec mruby test
+    is a very early version, please test and report errors.\nThanks :)\n\n...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    595\n   OK: 595\n   KO: 0\nCrash: 0\n Time: 2.881422 seconds\n\n# exec mruby test
     with ruby script\nmrubytest.rb success.\n\n# exec mruby test with mrb file\nmrubytest.mrb
     success.\n\n"
-  :stderr: ''
+  :stderr: ! '/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented
+    algorithm; link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0x5c): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+    /usr/lib/libcrypto.a(m_mdc2.o)(.text+0xa4): warning: MDC2 is a patented algorithm;
+    link against libcrypto_mdc2.a
+
+'
   :status: success
-  :mrubytest_rb: ! "..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    594\n   OK: 594\n   KO: 0\nCrash: 0\n Time: 2.358249 seconds\n"
-  :mrubytest_mrb: ! "..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
-    594\n   OK: 594\n   KO: 0\nCrash: 0\n Time: 2.35969 seconds\n"
+  :mrubytest_rb: ! "...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    595\n   OK: 595\n   KO: 0\nCrash: 0\n Time: 3.180071 seconds\n"
+  :mrubytest_mrb: ! "...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\nTotal:
+    595\n   OK: 595\n   KO: 0\nCrash: 0\n Time: 3.168112 seconds\n"
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n.....................\nTotal:
-    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.048389 seconds\n\n###################################\n#
+    21\n   OK: 21\n   KO: 0\nCrash: 0\n Time: 0.047761 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.006044 seconds\n\n###################################\n#
+    0\nCrash: 0\n Time: 0.00682 seconds\n\n###################################\n#
     exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.0214 seconds\n\n###################################\n# exec
-    test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
-    0\n Time: 0.068502 seconds\n\n###################################\n# exec test/posix/io.sh;
+    0\nCrash: 0\n Time: 0.035606 seconds\n\n###################################\n#
+    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
+    0\n Time: 0.066454 seconds\n\n###################################\n# exec test/posix/io.sh;
     start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
-    0.071411 seconds\n\n###################################\n# exec test/posix/process.sh;
-    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.059862 seconds\n\n###################################\n#
+    0.070776 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.028945 seconds\n\n###################################\n#
     exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
-    20\n   KO: 0\nCrash: 0\n Time: 0.541964 seconds\n\n###################################\n#
+    20\n   KO: 0\nCrash: 0\n Time: 0.597265 seconds\n\n###################################\n#
     exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
-    0\nCrash: 0\n Time: 0.028847 seconds\n\n###################################\nPOSIX
+    0\nCrash: 0\n Time: 0.027665 seconds\n\n###################################\nPOSIX
     test result: OK\n###################################\n"
   :stderr: ''
   :status: success
