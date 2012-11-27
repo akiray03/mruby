@@ -1,5 +1,5 @@
 ---
-:date: 2012-11-26 18:28:21.854407929 +09:00
+:date: 2012-11-27 14:42:03.923359275 +09:00
 :hostname: netbsd_mips
 :id: iij-mruby-b4d48db
 :ball_id: iij-mruby-b4d48db
@@ -277,7 +277,7 @@
     is a very early version, please test and report errors.\nThanks :)\n\n.......................................................................................................................................................XXX.......................................................................................................................................................................................................................................................................................................................................................................................................................................................\nError:
     Digest::SHA256#hexdigest => uninitialized constant SHA256\nError: Digest::SHA384#hexdigest
     => uninitialized constant SHA384\nError: Digest::SHA512#hexdigest => uninitialized
-    constant SHA512\nTotal: 590\n   OK: 590\n   KO: 0\nCrash: 3\n Time: 3.315317 seconds\n"
+    constant SHA512\nTotal: 590\n   OK: 590\n   KO: 0\nCrash: 3\n Time: 3.312813 seconds\n"
   :stderr: ! '/usr/lib/libcrypto.a(m_mdc2.o)(.text+0x1c): warning: MDC2 is a patented
     algorithm; link against libcrypto_mdc2.a
 
@@ -297,20 +297,20 @@
   :mrubytest_mrb: ''
 :posix_test:
   :stdout: ! "###################################\n# exec test/posix/dir.sh; start...\n..................F..\nFail:
-    Dir#pos\nTotal: 21\n   OK: 20\n   KO: 1\nCrash: 0\n Time: 0.054555 seconds\n\n###################################\n#
+    Dir#pos\nTotal: 21\n   OK: 20\n   KO: 1\nCrash: 0\n Time: 0.060628 seconds\n\n###################################\n#
     exec test/posix/env.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
-    0\nCrash: 0\n Time: 0.0062 seconds\n\n###################################\n# exec
-    test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO: 0\nCrash:
-    0\n Time: 0.02419 seconds\n\n###################################\n# exec test/posix/file.sh;
-    start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash: 0\n Time: 0.041114
-    seconds\n\n###################################\n# exec test/posix/io.sh; start...\n..................\nTotal:
-    18\n   OK: 18\n   KO: 0\nCrash: 0\n Time: 0.076486 seconds\n\n###################################\n#
-    exec test/posix/process.sh; start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash:
-    0\n Time: 0.036843 seconds\n\n###################################\n# exec test/posix/require.sh;
-    start...\n....................\nTotal: 20\n   OK: 20\n   KO: 0\nCrash: 0\n Time:
-    0.588752 seconds\n\n###################################\n# exec test/posix/syslog.sh;
-    start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash: 0\n Time: 0.028699
-    seconds\n\n###################################\nPOSIX test result: NG\n  fail
-    test is :  dir.sh\n###################################\n"
+    0\nCrash: 0\n Time: 0.006638 seconds\n\n###################################\n#
+    exec test/posix/errno.sh; start...\n..............\nTotal: 14\n   OK: 14\n   KO:
+    0\nCrash: 0\n Time: 0.024276 seconds\n\n###################################\n#
+    exec test/posix/file.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO: 0\nCrash:
+    0\n Time: 0.04246 seconds\n\n###################################\n# exec test/posix/io.sh;
+    start...\n..................\nTotal: 18\n   OK: 18\n   KO: 0\nCrash: 0\n Time:
+    0.073017 seconds\n\n###################################\n# exec test/posix/process.sh;
+    start...\n....\nTotal: 4\n   OK: 4\n   KO: 0\nCrash: 0\n Time: 0.031781 seconds\n\n###################################\n#
+    exec test/posix/require.sh; start...\n....................\nTotal: 20\n   OK:
+    20\n   KO: 0\nCrash: 0\n Time: 0.585893 seconds\n\n###################################\n#
+    exec test/posix/syslog.sh; start...\n...........\nTotal: 11\n   OK: 11\n   KO:
+    0\nCrash: 0\n Time: 0.029024 seconds\n\n###################################\nPOSIX
+    test result: NG\n  fail test is :  dir.sh\n###################################\n"
   :stderr: ''
   :status: failed
