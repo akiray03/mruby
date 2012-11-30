@@ -722,3 +722,163 @@ mrb_bdump_irep(mrb_state *mrb, int n, FILE *f,const char *initname)
 
   return rc;
 }
+
+static int
+copy_irep_record(mrb_state *mrb, mrb_irep *irep, mrb_state *mrb2, mrb_irep *irep2)
+{
+  int i, ret = MRB_DUMP_OK;
+  int arena_idx = mrb_gc_arena_save(mrb);
+  mrb_value val;
+
+  irep2->nlocals = irep->nlocals;
+  irep2->nregs   = irep->nregs;
+
+  /* iseq */
+  irep2->ilen    = irep->ilen;
+  if (irep->ilen > 0) {
+    irep2->iseq = (mrb_code *)mrb_malloc(mrb, sizeof(mrb_code) * irep->ilen);
+    if (irep2->iseq == NULL) {
+      ret = MRB_DUMP_GENERAL_FAILURE;
+      goto error_exit;
+    }
+
+    for (i=0; i<irep->ilen; i++) {
+      irep2->iseq[i] = irep->iseq[i];
+    }
+  }
+
+  /* pool */
+  irep2->plen    = irep->plen;
+  if (irep->plen > 0) {
+    irep2->pool = (mrb_value *)mrb_malloc(mrb, sizeof(mrb_value) * irep->plen);
+    if (irep->pool == NULL) {
+      ret = MRB_DUMP_GENERAL_FAILURE;
+      goto error_exit;
+    }
+
+    for (i=0; i<irep->plen; i++) {
+      val = irep->pool[i];
+      switch(mrb_type(val)) {
+        case MRB_TT_FIXNUM:
+          irep2->pool[i] = mrb_fixnum_value(mrb_fixnum(val));
+          break;
+
+        case MRB_TT_FLOAT:
+          irep2->pool[i] = mrb_float_value(mrb_float(val));
+          break;
+
+        case MRB_TT_STRING:
+          irep2->pool[i] = mrb_str_new(mrb2, mrb_string_value_ptr(mrb, val), RSTRING_LEN(val));
+          break;
+
+#ifdef ENABLE_REGEXP
+        case MRB_TT_REGEX:
+          printf("copy_irep_record: REGEX not impl...\n");
+          break;
+#endif
+
+        default:
+          irep2->pool[i] = mrb_nil_value();
+          break;
+      }
+    }
+  }
+
+  irep2->slen    = irep->slen;
+  if (irep->slen > 0) {
+    irep2->syms = (mrb_sym *)mrb_malloc(mrb, sizeof(mrb_sym) * irep->slen);
+    if (irep->syms == NULL) {
+      ret = MRB_DUMP_GENERAL_FAILURE;
+      goto error_exit;
+    }
+
+    for (i=0; i<irep->slen; i++) {
+      const char *name;
+
+      if (irep->syms[i] == 0) {
+        irep2->syms[i] = 0;
+      } else {
+        int len;
+        name = mrb_sym2name_len(mrb, irep->syms[i], &len);
+        irep2->syms[i] = mrb_intern2(mrb2, name, len);
+      }
+    }
+  }
+
+  if (irep->filename != NULL) {
+    val = mrb_str_new2(mrb2, irep->filename);
+    irep2->filename = mrb_string_value_ptr(mrb2, val);
+  }
+
+  if (irep->lines != NULL) {
+    uint32_t lines_size = sizeof(irep->lines);
+    irep2->lines = (short*)mrb_malloc(mrb2, lines_size);
+    memcpy(irep2->lines, irep->lines, lines_size);
+  }
+
+error_exit:
+  mrb_gc_arena_restore(mrb, arena_idx);
+
+  return ret;
+}
+
+int
+mrb_copy_irep(mrb_state *mrb, int top, mrb_state *mrb2)
+{
+  int ret;
+  int irep_no, i, nirep, sirep;
+  mrb_irep *irep, *irep2;
+
+  if (mrb == NULL || top < 0 || top >= mrb->irep_len || mrb2 == NULL)
+    return MRB_DUMP_INVALID_ARGUMENT;
+
+  sirep = mrb2->irep_len;
+  nirep = mrb->irep_len - top;
+  mrb_add_irep(mrb2, sirep + nirep);
+
+  for (i=sirep; i<sirep+nirep; i++) {
+    mrb2->irep[i] = (mrb_irep *)mrb_malloc(mrb, sizeof(mrb_irep));
+    if (mrb2->irep[i] == NULL) {
+      ret = MRB_DUMP_GENERAL_FAILURE;
+      goto error_exit;
+    }
+  }
+
+  for (irep_no=top, i=sirep; irep_no<mrb->irep_len; irep_no++, i++) {
+    irep  = mrb->irep[irep_no];
+    irep2 = mrb2->irep[i] = (mrb_irep *)mrb_malloc(mrb, sizeof(mrb_irep));
+    if (mrb2->irep[i] == NULL) {
+      ret = MRB_DUMP_GENERAL_FAILURE;
+      goto error_exit;
+    }
+
+    ret = copy_irep_record(mrb, irep, mrb2, irep2);
+    if (ret != MRB_DUMP_OK) {
+      ret = MRB_DUMP_INVALID_IREP;
+      goto error_exit;
+    }
+
+    mrb2->irep[mrb2->irep_len++]->idx = i;
+  }
+
+error_exit:
+  if (ret != MRB_DUMP_OK) {
+    for (i=sirep; i<sirep+nirep; i++) {
+      if (mrb->irep[i]) {
+        if (mrb->irep[i]->iseq)
+          mrb_free(mrb, mrb->irep[i]->iseq);
+
+        if (mrb->irep[i]->pool)
+          mrb_free(mrb, mrb->irep[i]->pool);
+
+        if (mrb->irep[i]->syms)
+          mrb_free(mrb, mrb->irep[i]->syms);
+
+        mrb_free(mrb, mrb->irep[i]);
+      }
+    }
+    return ret;
+  }
+
+  return mrb2->irep_len - 1;
+}

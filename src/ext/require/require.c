@@ -30,7 +30,7 @@
 #define MAXPATHLEN 1024
 #endif
 
-#if 0
+#if 1
   #include <stdarg.h>
   #define debug(s,...)   printf("%s:%d " s, __FILE__, __LINE__,__VA_ARGS__)
 #else
@@ -221,6 +221,7 @@ mrb_compile(mrb_state *mrb0, char *tmpfilepath, char *filepath)
   mrb_value result;
   FILE *fp;
   int irep_len = mrb->irep_len;
+  int n;
 
   debug("irep_len=%d\n", mrb->irep_len);
   fp = fopen(filepath, "r");
@@ -231,6 +232,7 @@ mrb_compile(mrb_state *mrb0, char *tmpfilepath, char *filepath)
   fclose(fp);
   debug("result=%d, irep_len=%d\n", mrb_fixnum(result), mrb->irep_len);
 
+  /*
   fp = fopen(tmpfilepath, "w");
   mrb->irep += mrb_fixnum(result);
   debug("**dbg : %d\n", mrb->irep_len - irep_len);
@@ -240,6 +242,29 @@ mrb_compile(mrb_state *mrb0, char *tmpfilepath, char *filepath)
 
   mrb->irep -= mrb_fixnum(result);
   mrb->irep_len += irep_len;
+*/
+
+  int sirep = mrb0->irep_len;
+  int arena_idx = mrb_gc_arena_save(mrb0);
+  n = mrb_copy_irep(mrb, irep_len, mrb0);
+  mrb_gc_arena_restore(mrb, arena_idx);
+
+  if (n >= 0) {
+    struct RProc *proc;
+    mrb_irep *irep = mrb0->irep[n];
+
+    replace_stop_with_return(mrb0, irep);
+    proc = mrb_proc_new(mrb0, irep);
+    proc->target_class = mrb0->object_class;
+
+    arena_idx = mrb_gc_arena_save(mrb0);
+    mrb_yield_internal(mrb0, mrb_obj_value(proc), 0, NULL, mrb_top_self(mrb0), mrb0->object_class);
+    mrb_gc_arena_restore(mrb0, arena_idx);
+  } else if (mrb0->exc) {
+    // fail to load
+    longjmp(*(jmp_buf*)mrb->jmp, 1);
+  }
+
   mrb_close(mrb);
 
   return mrb_nil_value();
@@ -266,9 +291,13 @@ load_rb_file(mrb_state *mrb, mrb_value filepath)
 
   mrb_compile(mrb, mrb_string_value_ptr(mrb, tmpfilepath),
       mrb_string_value_ptr(mrb, filepath));
-  load_mrb_file_with_filepath(mrb, tmpfilepath, filepath);
+  // load_mrb_file_with_filepath(mrb, tmpfilepath, filepath);
 
-  remove(RSTRING_PTR(tmpfilepath));
+  // remove(RSTRING_PTR(tmpfilepath));
+
+  FILE *fp = fopen("tmp/custom.mrb", "w");
+  mrb_dump_irep(mrb, 0, fp);
+  fclose(fp);
 }
 
 

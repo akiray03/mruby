@@ -22,6 +22,8 @@ int mrb_read_irep(mrb_state*,const char*);
 
 int mrb_bdump_irep(mrb_state *mrb, int n, FILE *f,const char *initname);
 
+int mrb_copy_irep(mrb_state *mrb, int top, mrb_state *mrb2);
+
 /* dump type */
 #define DUMP_TYPE_CODE 0
 #define DUMP_TYPE_BIN  1
